@@ -1,22 +1,22 @@
 @utility heading-1 {
-  @apply text-[61px] font-bold;
+  @apply text-[61px];
 }
 
 @utility heading-2 {
-  @apply text-[48px] font-bold; /* letter-spacing: -1.6px */
+  @apply text-[48px]; /* letter-spacing: -1.6px */
 }
 
 @utility heading-3 {
-  @apply text-[39px] font-bold;
+  @apply text-[39px];
 }
 @utility heading-4 {
-  @apply text-[31.3px] font-bold;
+  @apply text-[31.3px];
 }
 @utility heading-5 {
-  @apply text-[25px] font-bold;
+  @apply text-[25px];
 }
 @utility heading-6 {
-  @apply text-[20px] font-bold;
+  @apply text-[20px];
 }
 
 @utility paragraph-lg {
@@ -27,6 +27,6 @@
   @apply text-[12.9px] leading-[22px] font-normal;
 }
 
-@utility paragraph-sh {
+@utility paragraph-sm {
   @apply text-[10.2px] leading-[26px] font-normal;
 }

@@ -40,13 +40,13 @@
   --color-primary-50: var(--spring-leaf-50);
   --color-primary-100: var(--spring-leaf-100);
   --color-primary-200: var(--spring-leaf-200);
-  --color-primary-300: var(----spring-leaf-300);
-  --color-primary-400: var(----spring-leaf-500);
-  --color-primary-500: var(----spring-leaf-500);
-  --color-primary-600: var(----spring-leaf-600);
-  --color-primary-700: var(----spring-leaf-700);
-  --color-primary-800: var(----spring-leaf-800);
-  --color-primary-900: var(----spring-leaf-900);
+  --color-primary-300: var(--spring-leaf-300);
+  --color-primary-400: var(--spring-leaf-500);
+  --color-primary-500: var(--spring-leaf-500);
+  --color-primary-600: var(--spring-leaf-600);
+  --color-primary-700: var(--spring-leaf-700);
+  --color-primary-800: var(--spring-leaf-800);
+  --color-primary-900: var(--spring-leaf-900);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);

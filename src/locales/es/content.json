@@ -14,7 +14,7 @@
                     "description": "Servicios profesionales de mantenimiento integral para tu jardín, incluyendo corte de césped, podado, fumigación y cuidado especializado.",
                     "button": {
                         "label": "Ver servicios",
-                        "link": "#"
+                        "link": "/services"
                     },
                     "img": {
                         "src": "/images/home/service-1.jpg",
@@ -75,6 +75,61 @@
                     }
                 }
             ]
+        }
+    },
+    "services": {
+        "banner": {
+            "title": "Servicios de Jardinería",
+            "description": "Ofrecemos servicios profesionales de mantenimiento y cuidado integral para mantener tu jardín siempre perfecto"
+        },
+        "main": {
+            "title": "¿Qué incluye nuestro servicio?",
+            "cards": [
+                {
+                    "title": "Corte de césped",
+                    "description": "Servicio profesional de corte y mantenimiento de césped",
+                    "img": {
+                        "alt": "Corte de césped",
+                        "src": "/images/services/service-1.jpg"
+                    },
+                    "icon": "MdOutlineContentCut"
+                },
+                {
+                    "title": "Podado de árboles",
+                    "description": "Servicio profesional de poda y mantenimiento de árboles",
+                    "img": {
+                        "alt": "Podado de árboles",
+                        "src": "/images/services/service-1.jpg"
+                    },
+                    "icon": "SiGumtree"
+                },
+                {
+                    "title": "Mantenimiento Integral",
+                    "description": "Servicio profesional de corte y mantenimiento de jardines",
+                    "img": {
+                        "alt": "Mantenimiento integral",
+                        "src": "/images/services/service-1.jpg"
+                    },
+                    "icon": "MdOutlineWaterDrop"
+                },
+                {
+                    "title": "Fumigación y control de plagas",
+                    "description": "Servicio profesional de fumigación y control de plagas en jardines",
+                    "img": {
+                        "alt": "Fumigación y control de plagas",
+                        "src": "/images/services/service-1.jpg"
+                    },
+                    "icon": "LuBug"
+                }
+            ]
+        },
+        "callToAction": {
+            "title": "¿Listo para transformar tu jardín?",
+            "description": "Contáctanos ahora y recibe una cotización personalizada para el mantenimiento de tu jardín. Nuestros expertos están listos para ayudarte.",
+            "link": {
+                "label": "Solicitar Cotización",
+                "href": "#"
+            }
         }
     }
 }
