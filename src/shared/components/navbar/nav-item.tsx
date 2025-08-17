@@ -1,6 +1,6 @@
 import { clsx } from "@/libs/clsx";
 import Link from "next/link";
-import { Text } from "../text/text.component";
+import { Text } from "../text";
 
 import styles from "./navbar.module.css";
 

@@ -1,386 +1,80 @@
 {
-  "es": {
-    "site": {
-      "name": "Jardinería Jabes",
-      "tagline": "Especialistas en jardinería y mantenimiento",
-      "description": "Especialistas en jardinería y mantenimiento de áreas verdes. Ofrecemos productos de calidad y servicios profesionales para mantener tu jardín siempre hermoso.",
-      "phone": "+51 999 999 999",
-      "email": "info@jardineriajabes.com",
-      "address": "Lima, Perú",
-      "whatsappNumber": "51999999999"
-    },
-    "navigation": {
-      "home": "Inicio",
-      "products": "Productos",
-      "services": "Servicios",
-      "contact": "Contactar",
-      "backToWebsite": "← Volver al sitio web",
-      "backToProducts": "Volver a Productos"
-    },
-    "hero": {
-      "title": "Tu jardín perfecto con",
-      "titleHighlight": "Jardinería Jabes",
-      "subtitle": "Especialistas en mantenimiento de jardines y venta de productos de jardinería. Transformamos tus espacios verdes con calidad y profesionalismo.",
-      "viewServices": "Ver Servicios",
-      "viewProducts": "Ver Productos",
-      "stats": {
-        "gardensManaged": "+500",
-        "gardensText": "Jardines cuidados"
-      },
-      "features": {
-        "maintenance": {
-          "title": "Mantenimiento Profesional",
-          "description": "Corte, podado, fumigación y cuidado integral de tu jardín"
+    "home": {
+        "hero": {
+            "title": "Tu jardín perfecto con",
+            "titleHighlight": "Jardinería Jabes",
+            "subtitle": "Especialistas en mantenimiento de jardines y venta de productos de jardinería. Transformamos tus espacios verdes con calidad y profesionalismo."
         },
-        "products": {
-          "title": "Productos de Calidad",
-          "description": "Fertilizantes, tierras, plantas y todo lo que necesitas"
+        "ourServices": {
+            "title": "Nuestros Servicios",
+            "description": "Ofrecemos servicios completos de jardinería y una amplia gama de productos para mantener tu jardín siempre perfecto",
+            "services": [
+                {
+                    "title": "Jardinería y Mantenimiento",
+                    "description": "Servicios profesionales de mantenimiento integral para tu jardín, incluyendo corte de césped, podado, fumigación y cuidado especializado.",
+                    "button": {
+                        "label": "Ver servicios",
+                        "link": "#"
+                    },
+                    "img": {
+                        "src": "/images/home/service-1.jpg",
+                        "alt": "Imagen de servicios de jardinería"
+                    }
+                },
+                {
+                    "title": "Venta de Productos",
+                    "description": "Amplio catálogo de productos para jardinería: fertilizantes, tierras, plantas, piedras decorativas y todo lo que necesitas para tu jardín.",
+                    "button": {
+                        "label": "Ver productos",
+                        "link": "#"
+                    },
+                    "img": {
+                        "src": "/images/home/service-2.jpg",
+                        "alt": "Imagen de productos de jardinería"
+                    }
+                }
+            ]
         },
-        "delivery": {
-          "title": "Entrega a Domicilio",
-          "description": "Llevamos nuestros productos directamente a tu hogar"
-        }
-      }
-    },
-    "services": {
-      "title": "Nuestros Servicios",
-      "subtitle": "Ofrecemos servicios completos de jardinería y una amplia gama de productos para mantener tu jardín siempre perfecto",
-      "maintenanceService": {
-        "title": "Jardinería y Mantenimiento",
-        "description": "Servicios profesionales de mantenimiento integral para tu jardín, incluyendo corte de césped, podado, fumigación y cuidado especializado.",
-        "features": [
-          "Corte de césped profesional",
-          "Podado técnico de árboles",
-          "Fumigación y control de plagas",
-          "Mantenimiento integral"
-        ]
-      },
-      "productsService": {
-        "title": "Venta de Productos",
-        "description": "Amplio catálogo de productos para jardinería: fertilizantes, tierras, plantas, piedras decorativas y todo lo que necesitas para tu jardín.",
-        "features": [
-          "Fertilizantes y abonos orgánicos",
-          "Tierras preparadas y sustratos",
-          "Plantas y césped natural",
-          "Piedras decorativas"
-        ]
-      },
-      "detailPage": {
-        "title": "Servicios de Jardinería",
-        "subtitle": "Ofrecemos servicios profesionales de mantenimiento y cuidado integral para mantener tu jardín siempre perfecto",
-        "whatIncludes": "¿Qué incluye nuestro servicio?",
-        "whatIncludesSubtitle": "Contamos con un equipo de profesionales especializados y herramientas de última generación para brindar el mejor cuidado a tu jardín",
-        "includes": "Lo que incluye:",
-        "cta": {
-          "title": "¿Listo para transformar tu jardín?",
-          "subtitle": "Contáctanos ahora y recibe una cotización personalizada para el mantenimiento de tu jardín. Nuestros expertos están listos para ayudarte.",
-          "requestQuote": "Solicitar Cotización",
-          "callNow": "Llamar Ahora"
-        },
-        "process": {
-          "title": "Nuestro Proceso de Trabajo",
-          "subtitle": "Así es como trabajamos para garantizar los mejores resultados",
-          "steps": [
-            {
-              "title": "Evaluación",
-              "description": "Visitamos tu jardín para evaluar sus necesidades específicas"
+        "ourProducts": {
+            "title": "Productos",
+            "description": "Algunos de nuestros productos más populares",
+            "actionCardLabel": "Ver detalles",
+            "action": {
+                "label": "Ver productos",
+                "link": "#"
             },
-            {
-              "title": "Planificación",
-              "description": "Creamos un plan personalizado y te enviamos la cotización"
-            },
-            {
-              "title": "Ejecución",
-              "description": "Realizamos el trabajo con equipos profesionales y técnicas especializadas"
-            },
-            {
-              "title": "Seguimiento",
-              "description": "Programamos visitas regulares para mantener tu jardín perfecto"
-            }
-          ]
+            "products": [
+                {
+                    "id": 1,
+                    "title": "Humuz de lombris",
+                    "description": "Abono orgánico de alta calidad para todo tipo de plantas",
+                    "imageUrl": "/images/home/product-1.jpg",
+                    "button": {
+                        "label": "Ver detalles",
+                        "link": "#"
+                    }
+                },
+                {
+                    "id": 2,
+                    "title": "Humuz de lombris",
+                    "description": "Mezcla especial de tierra negra con compost para jardines",
+                    "imageUrl": "/images/home/product-1.jpg",
+                    "button": {
+                        "label": "Ver detalles",
+                        "link": "#"
+                    }
+                },
+                {
+                    "id": 3,
+                    "title": "Humuz de lombris",
+                    "description": "Piedras decorativas naturales para jardines y senderos",
+                    "imageUrl": "/images/home/product-1.jpg",
+                    "button": {
+                        "label": "Ver detalles",
+                        "link": "#"
+                    }
+                }
+            ]
         }
-      },
-      "servicesList": {
-        "grassCutting": {
-          "name": "Corte de Césped",
-          "description": "Servicio profesional de corte y mantenimiento de césped",
-          "features": [
-            "Corte con equipos profesionales",
-            "Frecuencia personalizada",
-            "Limpieza de bordes",
-            "Retiro de residuos vegetales"
-          ]
-        },
-        "treePruning": {
-          "name": "Podado de Árboles",
-          "description": "Poda técnica y estética de árboles y arbustos",
-          "features": [
-            "Poda técnica especializada",
-            "Herramientas profesionales",
-            "Respeto por la salud del árbol",
-            "Limpieza completa del área"
-          ]
-        },
-        "maintenance": {
-          "name": "Mantenimiento Integral",
-          "description": "Cuidado completo de jardines y áreas verdes",
-          "features": [
-            "Riego y fertilización",
-            "Control de malezas",
-            "Cuidado de plantas ornamentales",
-            "Mantenimiento de sistemas de riego"
-          ]
-        },
-        "fumigation": {
-          "name": "Fumigación y Control de Plagas",
-          "description": "Tratamiento profesional contra plagas y enfermedades",
-          "features": [
-            "Productos certificados",
-            "Tratamientos específicos",
-            "Respeto por el medio ambiente",
-            "Seguimiento post-tratamiento"
-          ]
-        }
-      }
-    },
-    "products": {
-      "title": "Nuestros Productos",
-      "subtitle": "Todo lo que necesitas para mantener tu jardín perfecto",
-      "featuredTitle": "Productos Destacados",
-      "featuredSubtitle": "Algunos de nuestros productos más populares",
-      "viewAllProducts": "Ver Todos los Productos",
-      "viewDetails": "Ver Detalles",
-      "categories": "Categorías",
-      "allProducts": "Todos los Productos",
-      "noProductsFound": "No se encontraron productos en esta categoría.",
-      "mainFeatures": "Características principales:",
-      "consultWhatsApp": "Consultar por WhatsApp",
-      "relatedProducts": "Productos Relacionados",
-      "contactInfo": "Contáctanos para obtener información sobre precios, disponibilidad y opciones de entrega",
-      "categoryNames": {
-        "fertilizantes": "Fertilizantes y Abonos",
-        "tierras": "Tierras y Sustratos",
-        "piedras": "Piedras Decorativas",
-        "plantas": "Plantas y Grass"
-      }
-    },
-    "footer": {
-      "description": "Especialistas en jardinería y mantenimiento de áreas verdes. Ofrecemos productos de calidad y servicios profesionales para mantener tu jardín siempre hermoso.",
-      "quickLinks": "Enlaces Rápidos",
-      "contact": "Contacto",
-      "whatsapp": "WhatsApp",
-      "copyright": "© 2024 Jardinería Jabes. Todos los derechos reservados."
-    },
-    "buttons": {
-      "seeMore": "Ver más",
-      "viewDetails": "Ver Detalles",
-      "viewServices": "Ver Servicios",
-      "viewProducts": "Ver Productos",
-      "contact": "Contactar",
-      "whatsapp": "WhatsApp",
-      "callNow": "Llamar Ahora",
-      "requestQuote": "Solicitar Cotización",
-      "exportReport": "Exportar Reporte",
-      "addProduct": "Agregar Producto",
-      "edit": "Editar",
-      "delete": "Eliminar",
-      "view": "Ver",
-      "save": "Guardar",
-      "cancel": "Cancelar",
-      "search": "Buscar",
-      "filter": "Filtrar"
-    },
-    "whatsappMessages": {
-      "general": "Hola, me gustaría obtener más información sobre sus servicios de jardinería",
-      "services": "Hola, me gustaría obtener información sobre sus servicios de jardinería y mantenimiento. ¿Podrían enviarme una cotización?",
-      "products": {
-        "humusLombriz": "Hola, me interesa el Humus de Lombriz Premium. ¿Podrían darme más información sobre precios y disponibilidad?",
-        "tierraPreparada": "Hola, necesito información sobre la Tierra Preparada Premium. ¿Qué cantidades manejan?",
-        "piedrasCanto": "Hola, me interesan las Piedras de Canto Rodado. ¿Podrían enviarme el catálogo de tamaños y precios?",
-        "grassNatural": "Hola, necesito cotizar Grass Natural Premium para mi jardín. ¿Hacen instalación?",
-        "fertilizanteTriple": "Hola, me interesa el Fertilizante Triple 15. ¿Manejan venta al por mayor?",
-        "arenaRio": "Hola, necesito Arena de Río Lavada. ¿Cuál es el precio por metro cúbico?"
-      }
-    },
-    "admin": {
-      "login": {
-        "title": "Panel de Administración",
-        "subtitle": "Iniciar Sesión",
-        "description": "Ingresa tus credenciales para acceder",
-        "email": "Correo Electrónico",
-        "password": "Contraseña",
-        "emailPlaceholder": "admin@jardineriajabes.com",
-        "passwordPlaceholder": "••••••••",
-        "rememberMe": "Recordarme",
-        "forgotPassword": "¿Olvidaste tu contraseña?",
-        "signIn": "Iniciar Sesión"
-      },
-      "navigation": {
-        "adminPanel": "Admin Panel",
-        "dashboard": "Dashboard",
-        "products": "Productos",
-        "services": "Servicios",
-        "categories": "Categorías",
-        "users": "Usuarios",
-        "settings": "Configuración",
-        "logout": "Cerrar Sesión"
-      },
-      "dashboard": {
-        "title": "Dashboard",
-        "subtitle": "Resumen general del sitio web",
-        "stats": {
-          "totalProducts": "Total Productos",
-          "activeServices": "Servicios Activos",
-          "whatsappQueries": "Consultas WhatsApp",
-          "siteVisits": "Visitas del Sitio"
-        },
-        "changes": {
-          "thisMonth": "este mes",
-          "thisWeek": "esta semana",
-          "noChanges": "Sin cambios",
-          "vsLastMonth": "vs mes anterior"
-        },
-        "recentActivity": "Actividad Reciente",
-        "popularProducts": "Productos Más Populares",
-        "sitePerformance": "Rendimiento del Sitio Web",
-        "performancePlaceholder": "Aquí se mostraría un gráfico con las estadísticas",
-        "activities": {
-          "productAdded": "Nuevo producto agregado",
-          "productUpdated": "Producto actualizado",
-          "whatsappQuery": "Consulta por WhatsApp",
-          "productDeleted": "Producto eliminado"
-        },
-        "timeAgo": {
-          "hours": "Hace {count} horas",
-          "days": "Hace {count} día",
-          "minutes": "Hace {count} minutos"
-        }
-      },
-      "products": {
-        "title": "Gestión de Productos",
-        "subtitle": "Administra el catálogo de productos",
-        "addProduct": "Agregar Producto",
-        "searchPlaceholder": "Buscar productos...",
-        "category": "Categoría",
-        "allCategories": "Todas las categorías",
-        "tableHeaders": {
-          "product": "Producto",
-          "category": "Categoría",
-          "description": "Descripción",
-          "status": "Estado",
-          "actions": "Acciones"
-        },
-        "actions": {
-          "viewDetails": "Ver detalles",
-          "edit": "Editar",
-          "delete": "Eliminar"
-        },
-        "status": {
-          "active": "Activo",
-          "inactive": "Inactivo"
-        },
-        "noProductsFound": "No se encontraron productos",
-        "quickStats": {
-          "totalProducts": "Total Productos",
-          "fertilizers": "Fertilizantes",
-          "plants": "Plantas",
-          "stones": "Piedras"
-        }
-      },
-      "services": {
-        "title": "Gestión de Servicios",
-        "subtitle": "Administra los servicios ofrecidos",
-        "addService": "Agregar Servicio",
-        "availableServices": "Servicios Disponibles",
-        "tableHeaders": {
-          "service": "Servicio",
-          "description": "Descripción",
-          "features": "Características",
-          "status": "Estado",
-          "actions": "Acciones"
-        },
-        "features": "Características:",
-        "moreFeatures": "+{count} más..."
-      },
-      "common": {
-        "search": "Buscar...",
-        "notifications": "3",
-        "administrator": "Administrador",
-        "views": "vistas",
-        "inquiries": "consultas",
-        "active": "Activo",
-        "inactive": "Inactivo"
-      }
-    },
-    "productData": {
-      "humusLombriz": {
-        "name": "Humus de Lombriz Premium",
-        "description": "Abono orgánico de alta calidad para todo tipo de plantas",
-        "features": [
-          "Rico en nutrientes naturales",
-          "Mejora la estructura del suelo",
-          "Aumenta la retención de agua",
-          "Libre de químicos dañinos"
-        ]
-      },
-      "tierraPreparada": {
-        "name": "Tierra Preparada Premium",
-        "description": "Mezcla especial de tierra negra con compost para jardines",
-        "features": ["Mezcla balanceada de nutrientes", "Excelente drenaje", "pH equilibrado", "Lista para plantar"]
-      },
-      "piedrasCanto": {
-        "name": "Piedras de Canto Rodado",
-        "description": "Piedras decorativas naturales para jardines y senderos",
-        "features": [
-          "Piedras naturales seleccionadas",
-          "Diferentes tamaños disponibles",
-          "Resistentes a la intemperie",
-          "Ideales para decoración"
-        ]
-      },
-      "grassNatural": {
-        "name": "Grass Natural Premium",
-        "description": "Césped natural de alta calidad para jardines residenciales",
-        "features": [
-          "Césped de primera calidad",
-          "Resistente al tráfico",
-          "Adaptado al clima local",
-          "Instalación profesional disponible"
-        ]
-      },
-      "fertilizanteTriple": {
-        "name": "Fertilizante Triple 15",
-        "description": "Fertilizante completo NPK 15-15-15 para todo tipo de cultivos",
-        "features": [
-          "Fórmula balanceada NPK",
-          "Liberación gradual",
-          "Para todo tipo de plantas",
-          "Presentación en sacos"
-        ]
-      },
-      "arenaRio": {
-        "name": "Arena de Río Lavada",
-        "description": "Arena fina de río, lavada y cernida para construcción y jardinería",
-        "features": ["Arena lavada y cernida", "Libre de impurezas", "Ideal para mezclas", "Entrega a domicilio"]
-      }
-    },
-    "meta": {
-      "home": {
-        "title": "Jardinería Jabes - Especialistas en Jardinería y Mantenimiento",
-        "description": "Servicios profesionales de jardinería, mantenimiento de jardines y venta de productos. Corte de césped, podado, fertilizantes y más en Lima, Perú."
-      },
-      "products": {
-        "title": "Productos de Jardinería - Jardinería Jabes",
-        "description": "Amplio catálogo de productos para jardinería: fertilizantes, tierras, plantas, piedras decorativas. Venta al por mayor y menor en Lima, Perú."
-      },
-      "services": {
-        "title": "Servicios de Jardinería - Jardinería Jabes",
-        "description": "Servicios profesionales de mantenimiento de jardines: corte de césped, podado de árboles, fumigación y cuidado integral en Lima, Perú."
-      },
-      "admin": {
-        "title": "Panel de Administración - Jardinería Jabes",
-        "description": "Panel de administración para gestionar contenido del sitio web de Jardinería Jabes."
-      }
     }
-  }
 }

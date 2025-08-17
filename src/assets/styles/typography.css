@@ -1,0 +1,32 @@
+@utility heading-1 {
+  @apply text-[61px] font-bold;
+}
+
+@utility heading-2 {
+  @apply text-[48px] font-bold; /* letter-spacing: -1.6px */
+}
+
+@utility heading-3 {
+  @apply text-[39px] font-bold;
+}
+@utility heading-4 {
+  @apply text-[31.3px] font-bold;
+}
+@utility heading-5 {
+  @apply text-[25px] font-bold;
+}
+@utility heading-6 {
+  @apply text-[20px] font-bold;
+}
+
+@utility paragraph-lg {
+  @apply text-[16px] leading-[24px] font-normal;
+}
+
+@utility paragraph {
+  @apply text-[12.9px] leading-[22px] font-normal;
+}
+
+@utility paragraph-sh {
+  @apply text-[10.2px] leading-[26px] font-normal;
+}
