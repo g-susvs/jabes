@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  --spring-leaf-50: #FBFCF8;
+  --spring-leaf-100: #EFF5E6;
+  --spring-leaf-200: #D8E8C0;
+  --spring-leaf-300: #C1DA9B;
+  --spring-leaf-400: #A9CC76;
+  --spring-leaf-500: #92BE51;
+  --spring-leaf-600: #78A03C;
+  --spring-leaf-700: #5C7B2E;
+  --spring-leaf-800: #405620;
+  --spring-leaf-900: #243112;
+
+  --dark-gray: #333333;
+
+  --font-size-h1: 61px;
+  --font-size-h2: 48.8px;
+  --font-size-h3: 39.1px;
+  --font-size-h4: 31.3px;
+  --font-size-h5: 25px;
+  --font-size-h6: 20px;
+
+  --font-size-regular: 16px;
+  --line-height-regular: 24px;
+  
+  --font-size-large: 12.9px;
+  --line-height-large: 22px;
+  
+  --font-size-small: 10.2px;
+  --line-height-large: 16px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  font-family: Inter, Arial, Helvetica, sans-serif;
+}
