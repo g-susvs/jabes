@@ -26,7 +26,7 @@
                     "description": "Amplio catálogo de productos para jardinería: fertilizantes, tierras, plantas, piedras decorativas y todo lo que necesitas para tu jardín.",
                     "button": {
                         "label": "Ver productos",
-                        "link": "#"
+                        "link": "/products"
                     },
                     "img": {
                         "src": "/images/home/service-2.jpg",
@@ -41,7 +41,7 @@
             "actionCardLabel": "Ver detalles",
             "action": {
                 "label": "Ver productos",
-                "link": "#"
+                "link": "/products"
             },
             "products": [
                 {
@@ -129,6 +129,114 @@
             "link": {
                 "label": "Solicitar Cotización",
                 "href": "#"
+            }
+        }
+    },
+    "products": {
+        "banner": {
+            "title": "Nuestros Productos",
+            "description": "Todo lo que necesitas para mantener tu jardín perfecto"
+        },
+        "main": {
+            "title": "Categorias:",
+            "categories": [
+                {
+                    "label": "Todas las categorias",
+                    "value": "all"
+                },
+                {
+                    "label": "Fertilizantes y Abonos",
+                    "value": "1"
+                },
+                {
+                    "label": "Tierras y Sustratos",
+                    "value": "2"
+                },
+                {
+                    "label": "Piedras decorativas",
+                    "value": "3"
+                },
+                {
+                    "label": "Plantas y Grass",
+                    "value": "4"
+                }
+            ],
+            "products": [
+                {
+                    "id": 1,
+                    "name": "Fertilizante Universal 5kg",
+                    "categoryLabel": "Fertilizantes y Abonos",
+                    "categoryId": "1",
+                    "description": "Fertilizante completo para todo tipo de plantas, con nutrientes balanceados",
+                    "imgUrl": "/images/products/product-2.jpg"
+                },
+                {
+                    "id": 2,
+                    "name": "Sustrato para Plantas Premium",
+                    "categoryLabel": "Tierras y Sustratos",
+                    "categoryId": "2",
+                    "description": "Mezcla especial para macetas con retención de humedad ideal",
+                    "imgUrl": "/images/products/product-1.jpg"
+                },
+                {
+                    "id": 3,
+                    "name": "Césped Natural en Rollo",
+                    "categoryLabel": "Plantas y Grass",
+                    "categoryId": "4",
+                    "description": "Césped listo para instalar, de rápido enraizamiento y alta resistencia",
+                    "imgUrl": "/images/products/product-1.jpg"
+                },
+                {
+                    "id": 4,
+                    "name": "Abono Orgánico 10kg",
+                    "categoryLabel": "Fertilizantes y Abonos",
+                    "categoryId": "1",
+                    "description": "Abono 100% natural ideal para huertos y jardines orgánicos",
+                    "imgUrl": "/images/products/product-1.jpg"
+                },
+                {
+                    "id": 5,
+                    "name": "Piedras Blancas Decorativas 20kg",
+                    "categoryLabel": "Piedras decorativas",
+                    "categoryId": "3",
+                    "description": "Piedras de mármol blanco para decoración de jardines y senderos",
+                    "imgUrl": "/images/products/product-1.jpg"
+                },
+                {
+                    "id": 6,
+                    "name": "Tierra Negra Mejorada 40L",
+                    "categoryLabel": "Tierras y Sustratos",
+                    "categoryId": "2",
+                    "description": "Tierra enriquecida con nutrientes para todo tipo de plantas",
+                    "imgUrl": "/images/products/product-1.jpg"
+                },
+                {
+                    "id": 7,
+                    "name": "Hortensias en Maceta",
+                    "categoryLabel": "Plantas y Grass",
+                    "categoryId": "4",
+                    "description": "Planta florecida lista para trasplantar, variedad de colores disponibles",
+                    "imgUrl": "/images/products/product-1.jpg"
+                },
+                {
+                    "id": 8,
+                    "name": "Fertilizante Líquido Concentrado",
+                    "categoryLabel": "Fertilizantes y Abonos",
+                    "categoryId": "1",
+                    "description": "Fórmula concentrada para crecimiento rápido y floración abundante",
+                    "imgUrl": "/images/products/product-1.jpg"
+                },
+                {
+                    "id": 9,
+                    "name": "Grava Volcánica 15kg",
+                    "categoryLabel": "Piedras decorativas",
+                    "categoryId": "3",
+                    "description": "Piedra volcánica para decoración y drenaje en jardinería",
+                    "imgUrl": "/images/products/product-1.jpg"
+                }
+            ],
+            "cardContent": {
+                "label":"Ver detalles"
             }
         }
     }
