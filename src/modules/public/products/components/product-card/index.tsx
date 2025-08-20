@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import { IProduct, IProductCardContent } from "../../interface/products";
+import { useRouter } from "next/navigation";
 
 interface IProps {
   product: IProduct;
@@ -7,6 +10,11 @@ interface IProps {
 }
 
 export const ProductCard = ({ product, content }: IProps) => {
+
+  const router = useRouter();
+
+  const handleViewDetail = (slug: string) => router.push(`/products/${slug}`)
+
   return (
     <article
       key={product.id}
@@ -35,7 +43,10 @@ export const ProductCard = ({ product, content }: IProps) => {
             </p>
           </div>
         </div>
-        <button className="bg-zinc-800 hover:bg-zinc-950 transition-all text-white px-4 py-2 rounded-lg cursor-pointer mt-4">
+        <button 
+        className="bg-zinc-800 hover:bg-zinc-950 transition-all text-white px-4 py-2 rounded-lg cursor-pointer mt-4"
+        onClick={() => handleViewDetail(product.slug)}
+        >
           {content.label}
         </button>
       </div>

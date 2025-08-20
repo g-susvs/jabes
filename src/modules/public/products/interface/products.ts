@@ -31,4 +31,11 @@ export interface IProduct {
   categoryId: string;
   description: string;
   imgUrl: string;
+  slug: string;
+  features: IFeature[];
+}
+
+export interface IFeature {
+  id: string;
+  text: string;
 }

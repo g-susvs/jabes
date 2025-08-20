@@ -28,14 +28,16 @@ export const OurServicesSection = ({ content }: IProps) => {
                   src={service.img.src}
                 />
               </figure>
-              <div>
-                <span className={styles.title}>{service.title}</span>
-                <p className={styles.description}>{service.description}</p>
+              <div className="flex flex-col gap-4 justify-between flex-grow">
+                <div className="flex flex-col gap-2 items-start">
+                  <span className={styles.title}>{service.title}</span>
+                  <p className={styles.description}>{service.description}</p>
+                </div>
+                <Link href={service.button.link}>
+                  <span>{service.button.label}</span>
+                  <IoArrowForward size={20} />
+                </Link>
               </div>
-              <Link href={service.button.link}>
-                <span>{service.button.label}</span>
-                <IoArrowForward size={20} />
-              </Link>
             </article>
           ))}
         </div>

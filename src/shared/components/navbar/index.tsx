@@ -15,7 +15,11 @@ interface IProps {
 }
 
 export const Navbar = ({ className }: IProps) => {
-  const links = ["INICIO", "SERVICIOS", "PRODUCTOS"];
+  const links = [
+    { label: "INICIO", link: "/" },
+    { label: "SERVICIOS", link: "/services" },
+    { label: "PRODUCTOS", link: "/products" },
+  ];
   const [openDrawer, setOpenDrawer] = useState(false);
 
   const handleToggleOpenDrawer = () => setOpenDrawer(!openDrawer);
@@ -29,8 +33,10 @@ export const Navbar = ({ className }: IProps) => {
           </button>
           <span className={styles.logo}>JABES</span>
           <div className={clsx(styles.navMenu, !openDrawer && styles.none)}>
-            {links.map((item) => (
-              <NavItem key={item}>{item}</NavItem>
+            {links.map((item, index) => (
+              <NavItem key={index} href={item.link}>
+                {item.label}
+              </NavItem>
             ))}
             <Link href={""} className={styles.navbarContactButton}>
               <Text>Contactar</Text>

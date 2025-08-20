@@ -168,7 +168,22 @@
                     "categoryLabel": "Fertilizantes y Abonos",
                     "categoryId": "1",
                     "description": "Fertilizante completo para todo tipo de plantas, con nutrientes balanceados",
-                    "imgUrl": "/images/products/product-2.jpg"
+                    "imgUrl": "/images/products/product-2.jpg",
+                    "slug": "fertilizante-universal-5kg",
+                    "features": [
+                        {
+                            "id": "1",
+                            "text": "Aporta macro y micronutrientes"
+                        },
+                        {
+                            "id": "2",
+                            "text": "Ideal para todo tipo de cultivos"
+                        },
+                        {
+                            "id": "3",
+                            "text": "Formato práctico de 5kg"
+                        }
+                    ]
                 },
                 {
                     "id": 2,
@@ -176,7 +191,22 @@
                     "categoryLabel": "Tierras y Sustratos",
                     "categoryId": "2",
                     "description": "Mezcla especial para macetas con retención de humedad ideal",
-                    "imgUrl": "/images/products/product-1.jpg"
+                    "imgUrl": "/images/products/product-1.jpg",
+                    "slug": "sustrato-para-plantas-premium",
+                    "features": [
+                        {
+                            "id": "1",
+                            "text": "Alta retención de agua"
+                        },
+                        {
+                            "id": "2",
+                            "text": "Textura aireada que favorece raíces"
+                        },
+                        {
+                            "id": "3",
+                            "text": "Contiene compost natural"
+                        }
+                    ]
                 },
                 {
                     "id": 3,
@@ -184,7 +214,22 @@
                     "categoryLabel": "Plantas y Grass",
                     "categoryId": "4",
                     "description": "Césped listo para instalar, de rápido enraizamiento y alta resistencia",
-                    "imgUrl": "/images/products/product-1.jpg"
+                    "imgUrl": "/images/products/product-1.jpg",
+                    "slug": "cesped-natural-en-rollo",
+                    "features": [
+                        {
+                            "id": "1",
+                            "text": "Fácil instalación"
+                        },
+                        {
+                            "id": "2",
+                            "text": "Rápido enraizamiento"
+                        },
+                        {
+                            "id": "3",
+                            "text": "Resistente al tránsito"
+                        }
+                    ]
                 },
                 {
                     "id": 4,
@@ -192,7 +237,22 @@
                     "categoryLabel": "Fertilizantes y Abonos",
                     "categoryId": "1",
                     "description": "Abono 100% natural ideal para huertos y jardines orgánicos",
-                    "imgUrl": "/images/products/product-1.jpg"
+                    "imgUrl": "/images/products/product-1.jpg",
+                    "slug": "abono-organico-10kg",
+                    "features": [
+                        {
+                            "id": "1",
+                            "text": "Mejora la estructura del suelo"
+                        },
+                        {
+                            "id": "2",
+                            "text": "Favorece la retención de agua"
+                        },
+                        {
+                            "id": "3",
+                            "text": "Apto para agricultura orgánica"
+                        }
+                    ]
                 },
                 {
                     "id": 5,
@@ -200,7 +260,22 @@
                     "categoryLabel": "Piedras decorativas",
                     "categoryId": "3",
                     "description": "Piedras de mármol blanco para decoración de jardines y senderos",
-                    "imgUrl": "/images/products/product-1.jpg"
+                    "imgUrl": "/images/products/product-1.jpg",
+                    "slug": "piedras-blancas-decorativas-20kg",
+                    "features": [
+                        {
+                            "id": "1",
+                            "text": "Ideal para senderos y jardines"
+                        },
+                        {
+                            "id": "2",
+                            "text": "Alta durabilidad"
+                        },
+                        {
+                            "id": "3",
+                            "text": "Presentación de 20kg"
+                        }
+                    ]
                 },
                 {
                     "id": 6,
@@ -208,7 +283,22 @@
                     "categoryLabel": "Tierras y Sustratos",
                     "categoryId": "2",
                     "description": "Tierra enriquecida con nutrientes para todo tipo de plantas",
-                    "imgUrl": "/images/products/product-1.jpg"
+                    "imgUrl": "/images/products/product-1.jpg",
+                    "slug": "tierra-negra-mejorada-40l",
+                    "features": [
+                        {
+                            "id": "1",
+                            "text": "Enriquecida con nutrientes"
+                        },
+                        {
+                            "id": "2",
+                            "text": "Ideal para macetas y jardines"
+                        },
+                        {
+                            "id": "3",
+                            "text": "Presentación de 40L"
+                        }
+                    ]
                 },
                 {
                     "id": 7,
@@ -216,7 +306,22 @@
                     "categoryLabel": "Plantas y Grass",
                     "categoryId": "4",
                     "description": "Planta florecida lista para trasplantar, variedad de colores disponibles",
-                    "imgUrl": "/images/products/product-1.jpg"
+                    "imgUrl": "/images/products/product-1.jpg",
+                    "slug": "hortensias-en-maceta",
+                    "features": [
+                        {
+                            "id": "1",
+                            "text": "Variedad de colores"
+                        },
+                        {
+                            "id": "2",
+                            "text": "Lista para trasplantar"
+                        },
+                        {
+                            "id": "3",
+                            "text": "Florece varias temporadas"
+                        }
+                    ]
                 },
                 {
                     "id": 8,
@@ -224,7 +329,22 @@
                     "categoryLabel": "Fertilizantes y Abonos",
                     "categoryId": "1",
                     "description": "Fórmula concentrada para crecimiento rápido y floración abundante",
-                    "imgUrl": "/images/products/product-1.jpg"
+                    "imgUrl": "/images/products/product-1.jpg",
+                    "slug": "fertilizante-liquido-concentrado",
+                    "features": [
+                        {
+                            "id": "1",
+                            "text": "Rápida absorción"
+                        },
+                        {
+                            "id": "2",
+                            "text": "Favorece el crecimiento"
+                        },
+                        {
+                            "id": "3",
+                            "text": "Presentación concentrada"
+                        }
+                    ]
                 },
                 {
                     "id": 9,
@@ -232,12 +352,40 @@
                     "categoryLabel": "Piedras decorativas",
                     "categoryId": "3",
                     "description": "Piedra volcánica para decoración y drenaje en jardinería",
-                    "imgUrl": "/images/products/product-1.jpg"
+                    "imgUrl": "/images/products/product-1.jpg",
+                    "slug": "grava-volcanica-15kg",
+                    "features": [
+                        {
+                            "id": "1",
+                            "text": "Favorece drenaje en macetas"
+                        },
+                        {
+                            "id": "2",
+                            "text": "Ideal para paisajismo"
+                        },
+                        {
+                            "id": "3",
+                            "text": "Bolsa de 15kg"
+                        }
+                    ]
                 }
             ],
             "cardContent": {
-                "label":"Ver detalles"
+                "label": "Ver detalles"
             }
+        }
+    },
+    "product-detail": {
+        "header": {
+            "action": "Volver a los productos"
+        },
+        "detail": {
+            "subtitle": "Características:",
+            "action": "Consultar por WhatsApp",
+            "extraInfo": "Contáctanos para obtener información sobre precios, disponibilidad y opciones de entrega"
+        },
+        "relatedProducts": {
+            "title": "Productos relacionados"
         }
     }
 }
