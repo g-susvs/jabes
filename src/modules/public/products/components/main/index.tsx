@@ -22,6 +22,7 @@ export const MainSection = ({ content }: IProps) => {
     );
 
     setFilteredProducts(filteredProducts);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedCategory]);
 
   return (

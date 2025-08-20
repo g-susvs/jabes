@@ -6,7 +6,7 @@ import { IProductsPageContent } from "@/modules/public/products/interface/produc
 export default async function ProductDetail({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
   const productsContent = (await getContent(

@@ -8,20 +8,20 @@ type ContentData = typeof contentData
 
 export function useTranslation() {
   const [language, setLanguage] = useState<Language>("es")
-  const [content, setContent] = useState<ContentData["es"]>(contentData.es)
+  const [content, setContent] = useState<ContentData>(contentData)
 
   useEffect(() => {
     // Cargar idioma desde localStorage si existe
     const savedLanguage = localStorage.getItem("language") as Language
     if (savedLanguage && (savedLanguage === "es")) {
       setLanguage(savedLanguage)
-      setContent(contentData[savedLanguage])
+      setContent(contentData)
     }
   }, [])
 
   const changeLanguage = (newLanguage: Language) => {
     setLanguage(newLanguage)
-    setContent(contentData[newLanguage])
+    setContent(contentData)
     localStorage.setItem("language", newLanguage)
   }
 
