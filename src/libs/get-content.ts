@@ -1,8 +1,6 @@
-import { promises as fs } from "fs";
-
+import content from "@/locales/es/content.json";
 
 export const getContent = async (page: string) => {
-    const content = await fs.readFile(process.cwd() +"/src/locales/es/content.json", "utf8");
-    const contentParsed = JSON.parse(content) as { [key: string]: object };
-    return contentParsed[page];
-}
+  const contentParsed = content as { [key: string]: object };
+  return contentParsed[page];
+};
