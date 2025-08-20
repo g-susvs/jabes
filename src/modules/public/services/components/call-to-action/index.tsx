@@ -8,7 +8,7 @@ interface IProps {
 
 export const CallToActionSection = ({ content }: IProps) => {
   return (
-    <Container className="pt-8 pb-16 sm:pt-[100px] sm:pb-[200px]">
+    <Container className="pt-8 pb-16 sm:pt-[100px] sm:pb-[200px] px-4">
       <section className="flex flex-col gap-6 items-center bg-primary-600 max-w-[1028px] rounded-2xl px-4 py-[48px]">
         <div className="flex flex-col gap-[10px] max-w-[734]">
           <h2 className="heading-5 sm:heading-3 font-semibold text-white text-center">

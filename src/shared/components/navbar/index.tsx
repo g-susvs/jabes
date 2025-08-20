@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { NavItem } from "./nav-item";
 import { Text } from "../text";
@@ -9,12 +9,14 @@ import { IoMenu, IoClose } from "react-icons/io5";
 import styles from "./navbar.module.css";
 import { clsx } from "@/libs/clsx";
 import { Container } from "../container";
+import { usePathname } from "next/navigation";
 
 interface IProps {
   className?: string;
 }
 
 export const Navbar = ({ className }: IProps) => {
+  const path = usePathname();
   const links = [
     { label: "INICIO", link: "/" },
     { label: "SERVICIOS", link: "/services" },
@@ -23,6 +25,10 @@ export const Navbar = ({ className }: IProps) => {
   const [openDrawer, setOpenDrawer] = useState(false);
 
   const handleToggleOpenDrawer = () => setOpenDrawer(!openDrawer);
+
+  useEffect(() => {
+    setOpenDrawer(false);
+  }, [path]);
 
   return (
     <header className={className}>

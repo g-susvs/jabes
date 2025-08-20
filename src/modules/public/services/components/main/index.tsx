@@ -8,7 +8,7 @@ interface IProps {
 
 export const MainSection = ({ content }: IProps) => {
   return (
-    <Container className="flex flex-col gap-8 py-8 sm:py-[100px]">
+    <Container className="flex flex-col gap-8 px-4 py-8 sm:py-[100px]">
       <h2 className="heading-6 md:heading-5 font-semibold md:font-semibold text-center text-primary-800">
         {content.title}
       </h2>
