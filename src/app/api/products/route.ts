@@ -1,6 +1,7 @@
 import { dbConnect } from "@/libs/mongodb";
 import Product from "@/models/product";
 import { ICreateProductDTO, IProduct } from "@/shared/interfaces/product";
+import { updateFileService } from "@/shared/services/upload-file.service";
 import { NextResponse } from "next/server";
 import { v4 as uuid } from "uuid";
 
@@ -12,20 +13,29 @@ export async function GET() {
 
 export async function POST(request: Request) {
   await dbConnect();
-  const body = (await request.json()) as ICreateProductDTO;
 
-  const features = buildFeatures(body.features ?? []);
-  const slug = createSlug(body.name);
+  const formData = await request.formData();
+  const rawData = formData.get("data");
+  const data =
+    typeof rawData === "string"
+      ? (JSON.parse(rawData) as ICreateProductDTO)
+      : ({} as ICreateProductDTO);
+
+  const imageFile = formData.get("image") as File | null;
+  const imgUrl = (await updateFileService(imageFile, "jabes/products")) ?? "";
+
+  const features = buildFeatures(data.features ?? []);
+  const slug = createSlug(data.name);
 
   const dataToCreate: IProduct = {
     productId: uuid(),
-    name: body.name,
-    description: body.description,
-    imgUrl: "image:path",
+    name: data.name,
+    description: data.description,
+    imgUrl: imgUrl,
     slug,
     features,
     active: true,
-    categoryId: body.categoryId,
+    categoryId: data.categoryId,
   };
 
   const category = await Product.create(dataToCreate);
@@ -40,6 +50,7 @@ function buildFeatures(features: string[]) {
     };
   });
 }
+
 function createSlug(name: string) {
   return name.toLowerCase().split(" ").join("-");
 }

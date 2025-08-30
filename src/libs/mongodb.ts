@@ -1,3 +1,4 @@
+import { environment } from "@/shared/config/env/environment";
 import { connect, connection } from "mongoose";
 
 const conn = {
@@ -9,9 +10,7 @@ export async function dbConnect() {
     return;
   }
 
-  const db = await connect(
-    process.env.MONGODB_URI || "mongodb://localhost:27017/nextjs"
-  );
+  const db = await connect(environment.mongoUri);
   conn.isConnected = db.connections[0].readyState === 1;
 }
 
