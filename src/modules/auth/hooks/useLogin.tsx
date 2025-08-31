@@ -12,7 +12,7 @@ export const useLogin = () => {
     try {
       const resp = await authInstance.post<IApiResponse<unknown>>("/login", data);
       if(resp.data.success){
-        return router.push("/")
+        return router.push("/admin/dashboard")
       }
     } catch (error) {
       console.error(error);
