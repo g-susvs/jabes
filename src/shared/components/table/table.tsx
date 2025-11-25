@@ -84,7 +84,7 @@ function TableCell({ className, ...props }: React.ComponentProps<"td">) {
     <td
       data-slot="table-cell"
       className={clsx(
-        "p-2 max-w-[200px] align-middle whitespace-nowrap text-center",
+        "p-2 min-w-[140px] max-w-[200px] align-middle truncate text-center",
         className
       )}
       {...props}
