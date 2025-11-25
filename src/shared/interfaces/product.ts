@@ -15,3 +15,18 @@ export interface ICreateProductDTO {
   features?: string[];
   categoryId: string;
 }
+
+export interface IProductDTO {
+  productId: string;
+  name: string;
+  description?: string;
+  imgUrl?: string;
+  slug: string;
+  features?: { id: string; text: string }[];
+  active: boolean;
+  categoryId: string;
+  category: {
+    name: string;
+    categoryId: string;
+  }
+}

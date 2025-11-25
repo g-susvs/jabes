@@ -31,7 +31,7 @@ export default function RootLayout({
       >
         <div className="flex flex-col xs:flex-row w-full h-screen">
           <NavbarAdmin className="block xs:hidden" />
-          <aside className="border-r-2 border-zinc-300 w-[240px] hidden xs:block">
+          <aside className="border-r-2 border-zinc-300 w-[200px] hidden xs:block">
             <div className="p-4">
               <span className="text-primary-600 font-bold">Jabes</span>
             </div>
@@ -39,7 +39,9 @@ export default function RootLayout({
               <MenuList />
             </div>
           </aside>
-          <section className="w-full h-full p-4">{children}</section>
+          <section className="w-ful xs:w-[calc(100%-200px)] h-full p-4">
+            {children}
+          </section>
         </div>
       </body>
     </html>

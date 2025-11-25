@@ -1,3 +1,5 @@
+import { CategoriesPage } from "@/modules/private/categories/CategoriesPage";
+
 export default function Categories() {
-  return <div>CategoriesPage</div>;
+  return <CategoriesPage/>
 }
