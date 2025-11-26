@@ -1,11 +1,73 @@
+"use client";
+
+import { Button } from "@/shared/components/button";
 import { AdminPageLayout } from "../layouts/admin-page-layout";
 
 import { CategoriesTable } from "./components/categories-table";
+import { LuPlus } from "react-icons/lu";
+import { useState } from "react";
+import { Modal } from "@/shared/components/modal";
+import { SubmitHandler, useForm } from "react-hook-form";
+
+interface ICreateCategory {
+  name: string;
+  active: boolean;
+}
 
 export const CategoriesPage = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const { handleSubmit, register } = useForm<ICreateCategory>({
+    defaultValues: {
+      name: "",
+      active: true,
+    },
+  });
+
+  const onSubmit: SubmitHandler<ICreateCategory> = (data) => {
+    console.log(data);
+  };
+
   return (
     <AdminPageLayout title="Categorias">
-      <CategoriesTable />
+      <main className="flex flex-col gap-4 items-start">
+        <Button
+          onClick={() => setIsModalOpen(true)}
+          className="flex justify-center items-center gap-2"
+        >
+          <LuPlus size={20} />
+          <span>Añadir nueva categoría</span>
+        </Button>
+        <CategoriesTable />
+        <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+          <h3 className="text-2xl mb-4">Crea una nueva categoría</h3>
+          <form
+            className="flex flex-col justify-start items-start gap-4"
+            onSubmit={handleSubmit(onSubmit)}
+          >
+            <input
+              placeholder="Ingresa el nombre de la categoría"
+              className="border p-2 rounded w-full"
+              {...register("name")}
+            />
+            <label>
+              <input type="checkbox" {...register("active")} />
+              <span className="w-auto"> Activar categoría</span>
+            </label>
+            <div className="flex justify-between gap-2 w-full">
+              <Button
+                onClick={() => setIsModalOpen(false)}
+                className="bg-red-800 hover:bg-red-900 transition-all"
+              >
+                Cancelar
+              </Button>
+              <Button type="submit" onClick={() => {}}>
+                Guardar
+              </Button>
+            </div>
+          </form>
+        </Modal>
+      </main>
     </AdminPageLayout>
   );
 };
