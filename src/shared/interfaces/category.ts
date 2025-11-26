@@ -4,4 +4,4 @@ export interface ICategory {
   active: boolean;
 }
 
-export type ICreateCategoryDTO = Omit<ICategory, "categoryId" | "active">;
+export type ICreateCategoryDTO = Omit<ICategory, "categoryId" >;

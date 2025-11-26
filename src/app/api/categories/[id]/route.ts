@@ -13,7 +13,18 @@ export async function PATCH(
   const category = await Category.findOneAndUpdate(
     { categoryId: categoryId },
     body,
-    { new: true }
+    { new: true,  }
   );
+  return NextResponse.json(category, { status: 201 });
+}
+
+export async function DELETE(
+  _request: Request,
+  { params }: { params: { id: string } }
+) {
+  await dbConnect();
+  const { id: categoryId } = await params;
+
+  const category = await Category.deleteOne({ categoryId: categoryId });
   return NextResponse.json(category, { status: 201 });
 }

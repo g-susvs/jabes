@@ -22,6 +22,8 @@ import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { SlOptionsVertical } from "react-icons/sl";
 import { ActiveLabel } from "../active-label";
+import { useDeleteCategory } from "../../hooks/useDeleteCategory";
+import { useEditCategory } from "../../hooks/useEditCategory";
 
 interface IEditCategory {
   name: string;
@@ -34,18 +36,40 @@ interface IProps {
 }
 
 export const CategoriesTable = ({ className, categories }: IProps) => {
+  const [selectedCategoryId, setSelectedCategoryId] = useState("");
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
 
-  const { handleSubmit, register } = useForm<IEditCategory>({
+  const { onDeleteCategory } = useDeleteCategory();
+  const { onEditCategory } = useEditCategory();
+
+  const { handleSubmit, register, setValue } = useForm<IEditCategory>({
     defaultValues: {
       name: "",
       active: true,
     },
   });
 
-  const onSubmit: SubmitHandler<IEditCategory> = (data) => {
-    console.log(data);
+  const onSubmitEdit: SubmitHandler<IEditCategory> = (data) => {
+    onEditCategory({ categoryId: selectedCategoryId, data }).finally(() => {
+      setIsEditModalOpen(false);
+    });
+  };
+
+  const onSubmitDelete = () =>
+    onDeleteCategory(selectedCategoryId).finally(() => {
+      setIsDeleteModalOpen(false);
+    });
+
+  const onOpenEditModal = (category: ICategory) => {
+    setSelectedCategoryId(category.categoryId);
+    setValue("name", category.name);
+    setValue("active", category.active);
+    setIsEditModalOpen(true);
+  };
+  const onOpenDeleteModal = (categoryId: string) => {
+    setSelectedCategoryId(categoryId);
+    setIsDeleteModalOpen(true);
   };
 
   return (
@@ -80,13 +104,15 @@ export const CategoriesTable = ({ className, categories }: IProps) => {
                           >
                             <DropdownMenuItem
                               className="p-2 hover:bg-zinc-200 hover:cursor-pointer"
-                              onClick={() => setIsEditModalOpen(true)}
+                              onClick={() => onOpenEditModal(category)}
                             >
                               Editar
                             </DropdownMenuItem>
                             <DropdownMenuItem
                               className="text-red-600 p-2 hover:bg-zinc-200 hover:cursor-pointer"
-                              onClick={() => setIsDeleteModalOpen(true)}
+                              onClick={() =>
+                                onOpenDeleteModal(category.categoryId)
+                              }
                             >
                               Elimar
                             </DropdownMenuItem>
@@ -106,7 +132,7 @@ export const CategoriesTable = ({ className, categories }: IProps) => {
         <h3 className="text-2xl mb-4">Editar categoría</h3>
         <form
           className="flex flex-col justify-start items-start gap-4"
-          onSubmit={handleSubmit(onSubmit)}
+          onSubmit={handleSubmit(onSubmitEdit)}
         >
           <input
             placeholder="Ingresa el nombre de la categoría"
@@ -137,10 +163,7 @@ export const CategoriesTable = ({ className, categories }: IProps) => {
         <h3 className="text-2xl mb-4">
           ¿Estas seguro de eliminar la categoría?
         </h3>
-        <div
-          className="flex flex-col justify-start items-start gap-4"
-          onSubmit={handleSubmit(onSubmit)}
-        >
+        <div className="flex flex-col justify-start items-start gap-4">
           <p>Se eliminará permanentemente</p>
 
           <div className="flex justify-between gap-2 w-full">
@@ -150,7 +173,7 @@ export const CategoriesTable = ({ className, categories }: IProps) => {
             >
               Cancelar
             </Button>
-            <Button type="button" onClick={() => console.log("Eliminar")}>
+            <Button type="button" onClick={onSubmitDelete}>
               Si, estoy seguro
             </Button>
           </div>

@@ -1,9 +1,10 @@
-import { CategoryService } from "@/services/category.service";
+import { ECategoryQueryKeys } from "@/shared/constants/query-keys";
+import { CategoryService } from "@/shared/services/category.service";
 import { useQuery } from "@tanstack/react-query";
 
 export const useGetCategories = () => {
   const { data, isPending, error } = useQuery({
-    queryKey: ["categories"],
+    queryKey: [ECategoryQueryKeys.GET_ALL],
     queryFn: () => CategoryService.getAll(),
   });
 

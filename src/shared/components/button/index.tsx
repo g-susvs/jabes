@@ -5,8 +5,9 @@ interface IProps {
   children: React.ReactNode | React.ReactNode[];
   onClick?: () => void;
   type?: "submit" | "reset" | "button";
+  disabled?: boolean;
 }
-export const Button = ({ children, onClick, className, type }: IProps) => {
+export const Button = ({ children, onClick, className, type, disabled }: IProps) => {
   return (
     <button
       className={clsx(
@@ -15,6 +16,7 @@ export const Button = ({ children, onClick, className, type }: IProps) => {
       )}
       type={type}
       onClick={onClick}
+      disabled={disabled}
     >
       {children}
     </button>

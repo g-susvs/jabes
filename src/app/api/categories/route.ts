@@ -17,7 +17,7 @@ export async function POST(request: Request) {
   const dataToCreate: ICategory = {
     categoryId: uuid(),
     name: body.name,
-    active: true,
+    active: body.active,
   };
 
   const category = await Category.create(dataToCreate);
