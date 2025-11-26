@@ -8,6 +8,7 @@ import { LuPlus } from "react-icons/lu";
 import { useState } from "react";
 import { Modal } from "@/shared/components/modal";
 import { SubmitHandler, useForm } from "react-hook-form";
+import { useGetCategories } from "./hooks/useGetCategories";
 
 interface ICreateCategory {
   name: string;
@@ -15,6 +16,7 @@ interface ICreateCategory {
 }
 
 export const CategoriesPage = () => {
+  const {data} = useGetCategories();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const { handleSubmit, register } = useForm<ICreateCategory>({
@@ -38,7 +40,9 @@ export const CategoriesPage = () => {
           <LuPlus size={20} />
           <span>Añadir nueva categoría</span>
         </Button>
-        <CategoriesTable />
+        {data && 
+        <CategoriesTable categories={data} />
+        }
         <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
           <h3 className="text-2xl mb-4">Crea una nueva categoría</h3>
           <form

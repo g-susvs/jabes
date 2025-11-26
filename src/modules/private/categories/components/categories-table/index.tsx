@@ -11,6 +11,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/shared/components/table/table";
+import { ICategory } from "@/shared/interfaces/category";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -20,12 +21,7 @@ import {
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { SlOptionsVertical } from "react-icons/sl";
-
-const category = {
-  categoryId: "5ac3183b-2575-441d-b72e-f0806e7dafba",
-  name: "Fertilizantes y Abonos",
-  active: true,
-};
+import { ActiveLabel } from "../active-label";
 
 interface IEditCategory {
   name: string;
@@ -33,10 +29,11 @@ interface IEditCategory {
 }
 
 interface IProps {
+  categories: ICategory[];
   className?: string;
 }
 
-export const CategoriesTable = ({ className }: IProps) => {
+export const CategoriesTable = ({ className, categories }: IProps) => {
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
 
@@ -64,11 +61,13 @@ export const CategoriesTable = ({ className }: IProps) => {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {[category, category, category].map((category, index) => {
+              {categories.map((category, index) => {
                 return (
                   <TableRow key={index}>
                     <TableCell>{category.name}</TableCell>
-                    <TableCell>activo</TableCell>
+                    <TableCell>
+                      <ActiveLabel active={category.active} />
+                    </TableCell>
                     <TableCell>
                       <div className="flex justify-center">
                         <DropdownMenu>

@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "../../assets/styles/globals.css";
 import { NavbarAdmin } from "@/shared/components/navbar-admin";
 import { MenuList } from "@/shared/components/navbar-admin/menu-list";
+import { Providers } from "./providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,20 +30,22 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="flex flex-col xs:flex-row w-full h-screen">
-          <NavbarAdmin className="block xs:hidden" />
-          <aside className="border-r-2 border-zinc-300 w-[200px] hidden xs:block">
-            <div className="p-4">
-              <span className="text-primary-600 font-bold">Jabes</span>
-            </div>
-            <div className="mt-4 border-t-2 border-zinc-300 p-4">
-              <MenuList />
-            </div>
-          </aside>
-          <section className="w-ful xs:w-[calc(100%-200px)] h-full p-4">
-            {children}
-          </section>
-        </div>
+        <Providers>
+          <div className="flex flex-col xs:flex-row w-full h-screen">
+            <NavbarAdmin className="block xs:hidden" />
+            <aside className="border-r-2 border-zinc-300 w-[200px] hidden xs:block">
+              <div className="p-4">
+                <span className="text-primary-600 font-bold">Jabes</span>
+              </div>
+              <div className="mt-4 border-t-2 border-zinc-300 p-4">
+                <MenuList />
+              </div>
+            </aside>
+            <section className="w-ful xs:w-[calc(100%-200px)] h-full p-4">
+              {children}
+            </section>
+          </div>
+        </Providers>
       </body>
     </html>
   );
