@@ -13,39 +13,13 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@radix-ui/react-dropdown-menu";
-import Image from "next/image";
 import { SlOptionsVertical } from "react-icons/sl";
 
-const product: IProductDTO = {
-  productId: "424",
-  name: "Fertilizante Universal 5kg",
-  category: {
-    name: "Fertilizantes y Abonos",
-    categoryId: "fsafs",
-  },
-  categoryId: "1",
-  description:
-    "Fertilizante completo para todo tipo de plantas, con nutrientes balanceados",
-  imgUrl: "/images/products/product-2.jpg",
-  slug: "fertilizante-universal-5kg",
-  features: [
-    {
-      id: "1",
-      text: "Aporta macro y micronutrientes",
-    },
-    {
-      id: "2",
-      text: "Ideal para todo tipo de cultivos",
-    },
-    {
-      id: "3",
-      text: "Formato práctico de 5kg",
-    },
-  ],
-  active: true,
-};
+interface IProps {
+  products: IProductDTO[];
+}
 
-export const ProductTable = () => {
+export const ProductTable = ({ products }: IProps) => {
   return (
     <div className="w-full">
       <div className="overflow-x-auto">
@@ -60,12 +34,13 @@ export const ProductTable = () => {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {[product, product, product].map((product, index) => {
+            {products.map((product, index) => {
               return (
                 <TableRow key={index}>
                   <TableCell className="flex justify-center items-center">
                     <div className="space-x-3">
-                      <Image
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
                         src={product.imgUrl ?? ""}
                         width={100}
                         height={100}

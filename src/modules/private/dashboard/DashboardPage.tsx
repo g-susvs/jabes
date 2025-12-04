@@ -17,11 +17,11 @@ export const DashboardPage = () => {
               <span>Categorias</span>
             </div>
           </section>
-          <CategoriesTable className="max-w-[70%]" />
+          {/* <CategoriesTable className="max-w-[70%]" /> */}
         </section>
         {/*  */}
         <section>
-          <ProductTable />
+          {/* <ProductTable /> */}
         </section>
       </main>
     </AdminPageLayout>

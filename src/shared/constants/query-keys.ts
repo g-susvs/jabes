@@ -4,3 +4,10 @@ export const enum ECategoryQueryKeys {
   EDIT = "edit-category",
   DELETE = "delete-category",
 }
+
+export const enum EProductQueryKeys {
+  GET_ALL = "products",
+  CREATE = "create-product",
+  EDIT = "edit-product",
+  DELETE = "delete-product",
+}
