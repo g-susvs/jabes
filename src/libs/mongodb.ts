@@ -1,4 +1,4 @@
-import { environment } from "@/shared/config/env/environment";
+import { environment } from "@/config/env/environment";
 import { connect, connection } from "mongoose";
 
 const conn = {

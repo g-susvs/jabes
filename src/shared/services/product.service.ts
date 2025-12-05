@@ -1,6 +1,9 @@
 import { productsInstance } from "@/libs/axios";
 import { ICategory } from "@/shared/interfaces/category";
-import { ICreateProductParams } from "../interfaces/product-params";
+import {
+  ICreateProductParams,
+  IEditProductParams,
+} from "../interfaces/product-params";
 import { IProductDTO } from "../interfaces/product";
 
 export class ProductService {
@@ -28,16 +31,28 @@ export class ProductService {
     return resp.data as ICategory;
   }
 
-  static async edit(
-    categoryId: string,
-    data: { name: string; active: boolean }
-  ) {
-    const resp = await productsInstance.patch(`/${categoryId}`, {});
+  static async edit(params: IEditProductParams) {
+    const { productId, data, image } = params;
+    const formData = new FormData();
+
+    if (data.name) formData.append("name", data.name);
+    if (data.description) formData.append("description", data.description);
+    if (data.active) formData.append("active", String(data.active));
+    if (data.features)
+      formData.append("features", JSON.stringify(data.features));
+    if (data.categoryId) formData.append("categoryId", data.categoryId);
+    if (image) formData.append("image", image);
+
+    const resp = await productsInstance.patch(`/${productId}`, formData, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    });
     return resp.data as ICategory;
   }
 
-  static async delete(categoryId: string) {
-    const resp = await productsInstance.delete(`/${categoryId}`);
+  static async delete(productId: string) {
+    const resp = await productsInstance.delete(`/${productId}`);
     return resp.data;
   }
 }

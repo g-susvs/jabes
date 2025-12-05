@@ -1,4 +1,4 @@
-import { environment } from "@/shared/config/env/environment";
+import { environment } from "@/config/env/environment";
 import axios from "axios";
 
 export const authInstance = axios.create({
