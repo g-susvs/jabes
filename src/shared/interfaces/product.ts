@@ -12,8 +12,9 @@ export interface IProduct {
 export interface ICreateProductDTO {
   name: string;
   description?: string;
-  features?: string[];
+  features: string[];
   categoryId: string;
+  active: boolean;
 }
 
 export interface IProductDTO {

@@ -1,4 +1,4 @@
-export function parseFormDataToJson(formData: FormData) {
+export function parseFormDataToJson<T>(formData: FormData): T {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const obj: Record<string, any> = {};
 
@@ -12,5 +12,5 @@ export function parseFormDataToJson(formData: FormData) {
     }
   });
 
-  return obj;
+  return obj as T;
 }

@@ -188,7 +188,7 @@ export const EditProductModal = ({
 
         <label>
           <input type="checkbox" {...register("active")} />
-          <span className="w-auto"> Activar categoría</span>
+          <span className="w-auto"> Activar Producto</span>
         </label>
         <div className="flex justify-between gap-2 w-full">
           <Button

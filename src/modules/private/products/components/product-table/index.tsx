@@ -17,6 +17,7 @@ import {
 } from "@radix-ui/react-dropdown-menu";
 import { DeleteProductModal } from "../delete-product-modal";
 import { EditProductModal } from "../edit-product-modal";
+import { ActiveLabel } from "@/modules/private/categories/components/active-label";
 
 interface IProps {
   products: IProductDTO[];
@@ -76,7 +77,9 @@ export const ProductTable = ({ products }: IProps) => {
                     <TableCell>{product.name}</TableCell>
                     <TableCell>{product.description}</TableCell>
                     <TableCell>{product.category.name}</TableCell>
-                    <TableCell>activo</TableCell>
+                    <TableCell>
+                      <ActiveLabel active={product.active} />
+                    </TableCell>
                     <TableCell>
                       <div className="flex justify-center">
                         <DropdownMenu>

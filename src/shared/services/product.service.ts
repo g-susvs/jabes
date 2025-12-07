@@ -37,12 +37,12 @@ export class ProductService {
 
     if (data.name) formData.append("name", data.name);
     if (data.description) formData.append("description", data.description);
-    if (data.active) formData.append("active", String(data.active));
     if (data.features)
       formData.append("features", JSON.stringify(data.features));
     if (data.categoryId) formData.append("categoryId", data.categoryId);
     if (image) formData.append("image", image);
-
+    formData.append("active", String(data.active));
+    
     const resp = await productsInstance.patch(`/${productId}`, formData, {
       headers: {
         "Content-Type": "multipart/form-data",

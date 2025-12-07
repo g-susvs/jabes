@@ -1,5 +1,5 @@
-import { dbConnect } from "@/libs/mongodb";
-import User from "@/models/user";
+import { dbConnect } from "@/api/datasource/mongo/mongodb";
+import User from "@/api/datasource/mongo/models/user";
 import { NextResponse } from "next/server";
 import bcrypt from "bcrypt";
 import { generateJWT } from "@/shared/helpers/generate-jwt";

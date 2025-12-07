@@ -1,20 +1,15 @@
-import { dbConnect } from "@/libs/mongodb";
-import Category from "@/models/category";
 import { NextResponse } from "next/server";
+import { ICreateCategoryDTO } from "@/shared/interfaces/category";
+import { CategoryAppService } from "@/api/infraestructure/services/category.service";
 
 export async function PATCH(
   request: Request,
   { params }: { params: { id: string } }
 ) {
-  await dbConnect();
   const { id: categoryId } = await params;
-  const body = await request.json();
+  const body = (await request.json()) as Partial<ICreateCategoryDTO>;
 
-  const category = await Category.findOneAndUpdate(
-    { categoryId: categoryId },
-    body,
-    { new: true,  }
-  );
+  const category = await CategoryAppService.updateById(categoryId, body);
   return NextResponse.json(category, { status: 201 });
 }
 
@@ -22,9 +17,8 @@ export async function DELETE(
   _request: Request,
   { params }: { params: { id: string } }
 ) {
-  await dbConnect();
   const { id: categoryId } = await params;
 
-  const category = await Category.deleteOne({ categoryId: categoryId });
+  const category = await CategoryAppService.deleteById(categoryId);
   return NextResponse.json(category, { status: 201 });
 }
