@@ -45,3 +45,14 @@ export const updateFileService = async (
     throw error;
   }
 };
+
+export const deleteFileService = async (folder: string, filename: string) => {
+  try {
+    const publicId = `${folder}/${filename}`;
+    const result = await cloudinary.uploader.destroy(publicId);
+    return result.result === "ok";
+  } catch (error) {
+    console.error("Error eliminando archivo de Cloudinary:", error);
+    throw error;
+  }
+};

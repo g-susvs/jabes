@@ -10,7 +10,7 @@ export class ProductRespository {
 
   static async findById(productId: string) {
     await dbConnect();
-    return await Product.findOne({ productId: productId });
+    return await Product.findOne({ productId: productId }) as IProduct;
   }
 
   static async create(data: IProduct) {

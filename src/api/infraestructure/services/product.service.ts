@@ -1,5 +1,8 @@
 import { v4 as uuid } from "uuid";
-import { updateFileService } from "@/shared/services/upload-file.service";
+import {
+  deleteFileService,
+  updateFileService,
+} from "@/shared/services/upload-file.service";
 import { ICreateProductDTO, IProduct } from "@/shared/interfaces/product";
 import { ProductRespository } from "../repositories/product.repository";
 import { CategoryRepository } from "../repositories/category.repository";
@@ -94,7 +97,14 @@ export class ProductAppService {
   }
 
   static async delete(productId: string) {
-    return ProductRespository.deleteById(productId);
+    const product = await ProductRespository.findById(productId);
+    const result = await ProductRespository.deleteById(productId);
+
+    const imagePathArr = product.imgUrl?.split("/") ?? [];
+    const imgPublicId = imagePathArr[imagePathArr?.length - 1].split(".")[0];
+    await deleteFileService("jabes/products", imgPublicId);
+    
+    return result;
   }
 
   //helpers
