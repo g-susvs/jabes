@@ -1,6 +1,4 @@
-import { CategoriesTable } from "../categories/components/categories-table";
 import { AdminPageLayout } from "../layouts/admin-page-layout";
-import { ProductTable } from "../products/components/product-table";
 
 export const DashboardPage = () => {
   return (
@@ -17,11 +15,6 @@ export const DashboardPage = () => {
               <span>Categorias</span>
             </div>
           </section>
-          {/* <CategoriesTable className="max-w-[70%]" /> */}
-        </section>
-        {/*  */}
-        <section>
-          {/* <ProductTable /> */}
         </section>
       </main>
     </AdminPageLayout>

@@ -4,6 +4,7 @@ import { SubmitHandler, useFieldArray, useForm } from "react-hook-form";
 import { PiPlus } from "react-icons/pi";
 import { useCreateProduct } from "../../hooks/useCreateProduct";
 import { useGetCategories } from "@/modules/private/categories/hooks/useGetCategories";
+import { toast } from "react-toastify";
 
 interface ICreateProductForm {
   name: string;
@@ -19,10 +20,9 @@ interface IProps {
   setIsModalOpen: (value: boolean) => void;
 }
 
-
 export const CreateProductModal = ({ isModalOpen, setIsModalOpen }: IProps) => {
   const { onCreateCategory } = useCreateProduct();
-  const {data: categories} = useGetCategories();
+  const { data: categories } = useGetCategories();
 
   const { register, handleSubmit, watch, control, reset } =
     useForm<ICreateProductForm>({
@@ -49,10 +49,12 @@ export const CreateProductModal = ({ isModalOpen, setIsModalOpen }: IProps) => {
         features: mappedFeatures,
       },
       image: file,
-    }).finally(() => {
-      reset();
-      setIsModalOpen(false);
-    });
+    })
+      .then(() => toast.success("Producto creado correctamente"))
+      .finally(() => {
+        reset();
+        setIsModalOpen(false);
+      });
   };
 
   return (
@@ -82,11 +84,12 @@ export const CreateProductModal = ({ isModalOpen, setIsModalOpen }: IProps) => {
             className="w-[180px] border px-2 py-1 text-md rounded-sm border-gray-500 "
             {...register("categoryId")}
           >
-            {categories && categories.map((category) => (
-              <option key={category.categoryId} value={category.categoryId}>
-                {category.name}
-              </option>
-            ))}
+            {categories &&
+              categories.map((category) => (
+                <option key={category.categoryId} value={category.categoryId}>
+                  {category.name}
+                </option>
+              ))}
           </select>
         </div>
 
