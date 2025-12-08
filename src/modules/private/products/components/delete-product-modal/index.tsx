@@ -1,6 +1,7 @@
 import { Button } from "@/shared/components/button";
 import { Modal } from "@/shared/components/modal";
 import { useDeleteProduct } from "../../hooks/useDeleteProduct";
+import { toast } from "react-toastify";
 
 interface IProps {
   isModalOpen: boolean;
@@ -16,9 +17,12 @@ export const DeleteProductModal = ({
   const { onDeleteProduct } = useDeleteProduct();
 
   const onSubmitDelete = () =>
-    onDeleteProduct(productId).finally(() => {
-      setIsModalOpen(false);
-    });
+    onDeleteProduct(productId)
+      .then(() => toast.success("Producto eliminado"))
+      .catch(() => toast.error("Error al eliminar el producto"))
+      .finally(() => {
+        setIsModalOpen(false);
+      });
 
   return (
     <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>

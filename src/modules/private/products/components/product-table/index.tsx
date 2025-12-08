@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { SlOptionsVertical } from "react-icons/sl";
 import {
   Table,
@@ -15,35 +14,19 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@radix-ui/react-dropdown-menu";
-import { DeleteProductModal } from "../delete-product-modal";
-import { EditProductModal } from "../edit-product-modal";
 import { ActiveLabel } from "@/modules/private/categories/components/active-label";
 
 interface IProps {
   products: IProductDTO[];
+  openEditModal: (product: IProductDTO) => void;
+  openDeleteModal: (product: IProductDTO) => void;
 }
 
-export const ProductTable = ({ products }: IProps) => {
-  const [selectedProductId, setSelectedProductId] = useState("");
-  const [selectedProduct, setSelectedProduct] = useState<IProductDTO | null>(
-    null
-  );
-
-  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
-  const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
-
-  const onOpenDeleteModal = (productId: string) => {
-    setSelectedProductId(productId);
-    setIsDeleteModalOpen(true);
-  };
-
-  const onOpenEditModal = (productId: string) => {
-    setIsEditModalOpen(true);
-    setSelectedProductId(productId);
-    const product = products.find((product) => product.productId === productId);
-    setSelectedProduct(product || null);
-  };
-
+export const ProductTable = ({
+  products,
+  openEditModal,
+  openDeleteModal,
+}: IProps) => {
   return (
     <>
       <div className="w-full">
@@ -91,15 +74,13 @@ export const ProductTable = ({ products }: IProps) => {
                             className="shadow text-zinc-600 bg-white boder-2 border-zinc-600 w-[100px]"
                           >
                             <DropdownMenuItem
-                              onClick={() => onOpenEditModal(product.productId)}
+                              onClick={() => openEditModal(product)}
                               className="p-2 hover:bg-zinc-50 cursor-pointer"
                             >
                               Editar
                             </DropdownMenuItem>
                             <DropdownMenuItem
-                              onClick={() =>
-                                onOpenDeleteModal(product.productId)
-                              }
+                              onClick={() => openDeleteModal(product)}
                               className="text-red-600 p-2 hover:bg-zinc-50 cursor-pointer"
                             >
                               Eliminar
@@ -115,16 +96,6 @@ export const ProductTable = ({ products }: IProps) => {
           </Table>
         </div>
       </div>
-      <DeleteProductModal
-        isModalOpen={isDeleteModalOpen}
-        setIsModalOpen={setIsDeleteModalOpen}
-        productId={selectedProductId}
-      />
-      <EditProductModal
-        isModalOpen={isEditModalOpen}
-        setIsModalOpen={setIsEditModalOpen}
-        product={selectedProduct}
-      />
     </>
   );
 };

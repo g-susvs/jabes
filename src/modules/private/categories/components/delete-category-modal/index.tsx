@@ -1,6 +1,7 @@
 import { Button } from "@/shared/components/button";
 import { Modal } from "@/shared/components/modal";
 import { useDeleteCategory } from "../../hooks/useDeleteCategory";
+import { toast } from "react-toastify";
 
 interface IProps {
   isModalOpen: boolean;
@@ -16,9 +17,12 @@ export const DeleteCategoryModal = ({
   const { onDeleteCategory } = useDeleteCategory();
 
   const onSubmitDelete = () =>
-    onDeleteCategory(selectedCategoryId).finally(() => {
-      setIsModalOpen(false);
-    });
+    onDeleteCategory(selectedCategoryId)
+      .then(() => toast.success("Categoría eliminada"))
+      .catch(() => toast.error("Error al eliminar la categoría"))
+      .finally(() => {
+        setIsModalOpen(false);
+      });
 
   return (
     <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>

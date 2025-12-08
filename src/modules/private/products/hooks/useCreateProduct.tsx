@@ -16,12 +16,12 @@ export const useCreateProduct = () => {
     },
   });
 
-  const onCreateCategory = async (data: ICreateProductParams) =>
+  const onCreateProduct = async (data: ICreateProductParams) =>
     await mutateAsync(data);
 
   return {
     isPending,
     isError,
-    onCreateCategory,
+    onCreateProduct,
   };
 };

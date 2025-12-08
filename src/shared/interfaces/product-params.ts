@@ -6,7 +6,7 @@ export interface ICreateProductParams {
     features: string[];
     categoryId: string;
   };
-  image: File;
+  image?: File;
 }
 
 export interface IEditProductParams {
@@ -18,5 +18,5 @@ export interface IEditProductParams {
     features?: string[];
     categoryId?: string;
   };
-  image: File;
+  image?: File;
 }
