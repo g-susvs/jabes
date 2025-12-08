@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
 
-export default function Admin() {
+export default function Auth() {
   return redirect("auth/login");
 }

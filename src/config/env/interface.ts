@@ -8,4 +8,7 @@ export interface IEnvironment {
       apiSecret: string;
     };
   };
+  jwt: {
+    secret: string;
+  }
 }

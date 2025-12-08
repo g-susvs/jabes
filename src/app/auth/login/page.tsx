@@ -1,5 +1,5 @@
 import { LoginPage } from "@/modules/auth/pages/LoginPage";
 
-export default async function Login() {
+export default function Login() {
   return <LoginPage />;
 }
