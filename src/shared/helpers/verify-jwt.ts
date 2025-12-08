@@ -10,10 +10,5 @@ export interface JwtPayload {
 }
 
 export const verifyToken = async (token: string) => {
-  return new Promise((resolve) => {
-      jwt.verify(token, SECRET_KEY, (err, decoded) => {
-        if (err) return resolve(null);
-        resolve(decoded);
-      });
-    });
+  return  jwt.verify(token, SECRET_KEY);
 };
