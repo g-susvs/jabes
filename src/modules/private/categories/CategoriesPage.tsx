@@ -6,7 +6,7 @@ import { AdminPageLayout } from "../layouts/admin-page-layout";
 import { CategoriesTable } from "./components/categories-table";
 import { LuPlus } from "react-icons/lu";
 import { useState } from "react";
-import { useGetCategories } from "./hooks/useGetCategories";
+import { useGetCategories } from "../../shared/hooks/useGetCategories";
 import { CreateCategoryModal } from "./components/create-category-modal";
 import { DeleteCategoryModal } from "./components/delete-category-modal";
 import { ICategory } from "@/shared/interfaces/category";

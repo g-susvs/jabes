@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "../../assets/styles/globals.css";
 import { NavbarAdmin } from "@/shared/components/navbar-admin";
 import { MenuList } from "@/shared/components/navbar-admin/menu-list";
-import { Providers } from "./providers";
+import { Providers } from "../providers";
 
 export const metadata: Metadata = {
   title: "Create Next App",

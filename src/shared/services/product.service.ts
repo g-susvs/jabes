@@ -5,10 +5,13 @@ import {
   IEditProductParams,
 } from "../interfaces/product-params";
 import { IProductDTO } from "../interfaces/product";
+import { IFindParams } from "../interfaces/find-params";
 
 export class ProductService {
-  static async getAll() {
-    const resp = await productsInstance.get("");
+  static async getAll(findParams?: IFindParams) {
+    const resp = await productsInstance.get("", {
+      params: findParams,
+    });
     return resp.data as IProductDTO[];
   }
 

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { SubmitHandler, useFieldArray, useForm } from "react-hook-form";
 import { PiPlus } from "react-icons/pi";
 import { Button } from "@/shared/components/button";
-import { useGetCategories } from "@/modules/private/categories/hooks/useGetCategories";
+import { useGetCategories } from "@/modules/shared/hooks/useGetCategories";
 
 export interface ICreateProductForm {
   name: string;

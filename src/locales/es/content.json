@@ -143,22 +143,6 @@
                 {
                     "label": "Todas las categorias",
                     "value": "all"
-                },
-                {
-                    "label": "Fertilizantes y Abonos",
-                    "value": "1"
-                },
-                {
-                    "label": "Tierras y Sustratos",
-                    "value": "2"
-                },
-                {
-                    "label": "Piedras decorativas",
-                    "value": "3"
-                },
-                {
-                    "label": "Plantas y Grass",
-                    "value": "4"
                 }
             ],
             "products": [

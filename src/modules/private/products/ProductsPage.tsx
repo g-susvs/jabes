@@ -6,10 +6,10 @@ import { ProductTable } from "./components/product-table";
 import { Button } from "@/shared/components/button";
 import { LuPlus } from "react-icons/lu";
 import { CreateProductModal } from "./components/create-product-modal";
-import { useGetProducts } from "./hooks/useGetProducts";
 import { DeleteProductModal } from "./components/delete-product-modal";
 import { EditProductModal } from "./components/edit-product-modal";
 import { IProductDTO } from "@/shared/interfaces/product";
+import { useGetProducts } from "@/modules/shared/hooks/useGetProducts";
 
 export const ProductsPage = () => {
   const { data } = useGetProducts();
