@@ -1,11 +1,22 @@
 import Category from "@/api/datasource/mongo/models/category";
 import { dbConnect } from "@/api/datasource/mongo/mongodb";
 import { ICategory } from "@/shared/interfaces/category";
+import { IFindParams } from "@/shared/interfaces/find-params";
 
 export class CategoryRepository {
-  static async getAll() {
+  static async getAll(findParams?: IFindParams) {
     await dbConnect();
-    return await Category.find<ICategory>().lean();
+
+    const query = Category.find<ICategory>().lean();
+
+    if (findParams?.page !== undefined && findParams?.size !== undefined) {
+      const page = Number(findParams.page);
+      const size = Number(findParams.size);
+
+      query.limit(size).skip((page - 1) * size);
+    }
+
+    return await query;
   }
 
   static async findById(categoryId: string) {

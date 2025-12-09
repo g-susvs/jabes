@@ -4,8 +4,14 @@ import { ProductAppService } from "@/api/infraestructure/services/product.servic
 import { parseFormDataToJson } from "@/shared/utils/parseFormData";
 import { ICreateProductDTO } from "@/shared/interfaces/product";
 
-export async function GET() {
-  const result = await ProductAppService.getAll();
+export async function GET(request: Request) {
+  const { searchParams } = new URL(request.url);
+  const page = Number(searchParams.get("page"));
+  const size = Number(searchParams.get("size"));
+  const result = await ProductAppService.getAll({
+    page,
+    size,
+  });
   return NextResponse.json(result, { status: 201 });
 }
 
