@@ -10,6 +10,7 @@ export const environment: IEnvironment = {
       apiSecret: process.env.CLOUDINARY_API_SECRET ?? "",
     },
   },
+  contactPhone:  process.env.NEXT_PUBLIC_CONTACT_PHONE ?? "",
   jwt: {
     secret: process.env.JWT_SECRET ?? "",
   },

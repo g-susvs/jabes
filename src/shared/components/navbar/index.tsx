@@ -10,6 +10,7 @@ import styles from "./navbar.module.css";
 import { clsx } from "@/libs/clsx";
 import { Container } from "../container";
 import { usePathname } from "next/navigation";
+import { environment } from "@/config/env/environment";
 
 interface IProps {
   className?: string;
@@ -44,7 +45,11 @@ export const Navbar = ({ className }: IProps) => {
                 {item.label}
               </NavItem>
             ))}
-            <Link href={""} className={styles.navbarContactButton}>
+            <Link
+              href={`https://wa.me/${environment.contactPhone}?text=Hola%20quiero%20más%20información`}
+              target="_blank"
+              className={styles.navbarContactButton}
+            >
               <Text>Contactar</Text>
             </Link>
           </div>

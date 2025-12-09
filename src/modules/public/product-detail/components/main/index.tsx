@@ -4,6 +4,7 @@ import { IDetailSection } from "../../interface/product-detail";
 import { FaCheck, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 import { IProductDTO } from "@/shared/interfaces/product";
+import { environment } from "@/config/env/environment";
 
 interface IProps {
   content: IDetailSection;
@@ -53,7 +54,8 @@ export const MainSection = ({ content, product }: IProps) => {
         </div>
         <div className="flex flex-col gap-4 w-full">
           <Link
-            href={""}
+            href={`https://wa.me/${environment.contactPhone}?text=Hola%20quiero%20más%20información`}
+            target="_blank"
             className="flex flex-row gap-4 items-center justify-center py-2 rounded-xl bg-[#08d273] hover:bg-[#07ad60] text-white transition-all"
           >
             <FaWhatsapp size={30} />
