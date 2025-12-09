@@ -7,10 +7,10 @@ import { ICreateProductDTO, IProduct } from "@/shared/interfaces/product";
 import { ProductRespository } from "../repositories/product.repository";
 import { CategoryRepository } from "../repositories/category.repository";
 import { ICategory } from "@/shared/interfaces/category";
-import { IFindParams } from "@/shared/interfaces/find-params";
+import { IProductFindParams } from "@/shared/interfaces/find-params";
 
 export class ProductAppService {
-  static async getAll(findParams?: IFindParams) {
+  static async getAll(findParams?: IProductFindParams) {
     const [products, categories] = await Promise.all([
       ProductRespository.getAll(findParams),
       CategoryRepository.getAll(),
@@ -24,6 +24,12 @@ export class ProductAppService {
       ...product,
       category: categoriesMap.get(product.categoryId) || null,
     }));
+
+    if (findParams?.categoryId) {
+      return result.filter(
+        (item) => item.category?.categoryId === findParams.categoryId
+      );
+    }
 
     return result;
   }

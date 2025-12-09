@@ -54,7 +54,7 @@ export const MainSection = ({ content, product }: IProps) => {
         <div className="flex flex-col gap-4 w-full">
           <Link
             href={""}
-            className="flex flex-row gap-4 items-center justify-center py-2 rounded-xl bg-[#08d273] hover:bg-[#07ad60] transition-all"
+            className="flex flex-row gap-4 items-center justify-center py-2 rounded-xl bg-[#08d273] hover:bg-[#07ad60] text-white transition-all"
           >
             <FaWhatsapp size={30} />
             <span className="paragraph-lg sm:heading-6 font-semibold">

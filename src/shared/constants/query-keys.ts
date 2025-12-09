@@ -10,4 +10,5 @@ export const enum EProductQueryKeys {
   CREATE = "create-product",
   EDIT = "edit-product",
   DELETE = "delete-product",
+  RELATED_PRODUCTS = "related-products",
 }

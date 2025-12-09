@@ -3,7 +3,7 @@ import { CategoryService } from "@/shared/services/category.service";
 import { useQuery } from "@tanstack/react-query";
 
 export const useGetCategories = (params?: { page: number; size: number }) => {
-  const { data, isPending, error } = useQuery({
+  const { data, isPending, error, isLoading } = useQuery({
     queryKey: [ECategoryQueryKeys.GET_ALL],
     queryFn: () => CategoryService.getAll(params),
   });
@@ -11,6 +11,7 @@ export const useGetCategories = (params?: { page: number; size: number }) => {
   return {
     data,
     isPending,
+    isLoading,
     error,
   };
 };

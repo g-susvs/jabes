@@ -20,7 +20,7 @@ export const NavbarAdmin = ({ className }: IProps) => {
     setOpenDrawer(false);
   }, [path]);
   return (
-    <nav className={clsx("relative", className)}>
+    <nav className={clsx("relative z-50", className)}>
       <Container className="flex flex-row justify-between items-center px-4 py-2">
         <button className="text-primary-600" onClick={handleToggleOpenDrawer}>
           {openDrawer ? <IoClose size={40} /> : <IoMenu size={40} />}
@@ -42,12 +42,14 @@ export const NavbarAdmin = ({ className }: IProps) => {
               openDrawer && "ml-[0%]"
             )}
           >
-            <button
-              className="text-primary-600"
-              onClick={handleToggleOpenDrawer}
-            >
-              {openDrawer ? <IoClose size={40} /> : <IoMenu size={40} />}
-            </button>
+            <div className="pl-4 pt-3">
+              <button
+                className="text-primary-600"
+                onClick={handleToggleOpenDrawer}
+              >
+                {openDrawer ? <IoClose size={40} /> : <IoMenu size={40} />}
+              </button>
+            </div>
             <section className="mt-4 border-t-2 border-zinc-300 p-4">
               <MenuList />
             </section>

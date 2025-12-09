@@ -8,9 +8,11 @@ export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const page = Number(searchParams.get("page"));
   const size = Number(searchParams.get("size"));
+  const categoryId = searchParams.get("categoryId") ?? "";
   const result = await ProductAppService.getAll({
     page,
     size,
+    categoryId,
   });
   return NextResponse.json(result, { status: 201 });
 }

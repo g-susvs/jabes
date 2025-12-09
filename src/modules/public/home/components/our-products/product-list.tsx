@@ -4,6 +4,7 @@
 import { useRouter } from "next/navigation";
 import { IOurProductsSection } from "../../interface/home";
 import { useGetProducts } from "@/modules/shared/hooks/useGetProducts";
+import { ProductsSkeletonLoader } from "./products-skeleton";
 
 interface IProps {
   content: IOurProductsSection;
@@ -11,13 +12,15 @@ interface IProps {
 
 export const ProductList = ({ content }: IProps) => {
   const router = useRouter();
-  const { data } = useGetProducts({ page: 1, size: 3 });
+  const { data, isLoading } = useGetProducts({ page: 1, size: 3 });
 
   const handleViewDetail = (slug: string) => router.push(`/products/${slug}`);
 
   return (
     <div className="flex flex-row gap-6 lg:justify-center overflow-x-auto pb-4 mt-6 w-full">
+      {isLoading && <ProductsSkeletonLoader />}
       {data &&
+        !isLoading &&
         data.map((product) => (
           <article
             key={product.productId}

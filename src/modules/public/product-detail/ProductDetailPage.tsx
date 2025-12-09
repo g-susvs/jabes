@@ -14,7 +14,12 @@ export const ProductDetailPage = ({ content, product }: IProps) => {
     <>
       <HeaderSection content={content.header} />
       {product && <MainSection content={content.detail} product={product} />}
-      <RelatedProductSection content={content.relatedProducts} />
+      {product && (
+        <RelatedProductSection
+          content={content.relatedProducts}
+          categoryId={product?.categoryId}
+        />
+      )}
     </>
   );
 };
