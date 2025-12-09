@@ -24,6 +24,11 @@ export class ProductRespository {
     return (await Product.findOne({ productId: productId })) as IProduct;
   }
 
+  static async findBySlug(productSlug: string) {
+    await dbConnect();
+    return (await Product.findOne({ slug: productSlug })) as IProduct;
+  }
+
   static async create(data: IProduct) {
     await dbConnect();
     return await Product.create(data);

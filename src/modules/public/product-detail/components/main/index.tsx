@@ -1,20 +1,20 @@
-import Image from "next/image";
+/* eslint-disable @next/next/no-img-element */
 import { Container } from "@/shared/components/container";
 import { IDetailSection } from "../../interface/product-detail";
 import { FaCheck, FaWhatsapp } from "react-icons/fa";
-import { IProduct } from "@/modules/public/products/interface/products";
 import Link from "next/link";
+import { IProductDTO } from "@/shared/interfaces/product";
 
 interface IProps {
   content: IDetailSection;
-  product: IProduct;
+  product: IProductDTO;
 }
 
 export const MainSection = ({ content, product }: IProps) => {
   return (
     <Container className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-[40px] px-4 w-full">
       <figure className=" md:max-w-[534px] h-full md:max-h-[500px] rounded-xl overflow-hidden">
-        <Image
+        <img
           width={300}
           height={300}
           alt="adfa"
@@ -39,15 +39,16 @@ export const MainSection = ({ content, product }: IProps) => {
             {content.subtitle}
           </h4>
           <ul className="flex flex-col gap-4 mt-2">
-            {product.features.map((feature) => (
-              <li
-                key={feature.id}
-                className="flex flex-row gap-4 text-zinc-600"
-              >
-                <FaCheck size={20} className="text-primary-500" />
-                <p>{feature.text}</p>
-              </li>
-            ))}
+            {product.features &&
+              product.features.map((feature) => (
+                <li
+                  key={feature.id}
+                  className="flex flex-row gap-4 text-zinc-600"
+                >
+                  <FaCheck size={20} className="text-primary-500" />
+                  <p>{feature.text}</p>
+                </li>
+              ))}
           </ul>
         </div>
         <div className="flex flex-col gap-4 w-full">

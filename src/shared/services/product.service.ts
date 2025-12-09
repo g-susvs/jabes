@@ -15,6 +15,11 @@ export class ProductService {
     return resp.data as IProductDTO[];
   }
 
+  static async getBySlug(productSlug: string) {
+    const resp = await productsInstance.get(`by-slug/${productSlug}`);
+    return resp.data as IProductDTO;
+  }
+
   static async create(params: ICreateProductParams) {
     const { data, image } = params;
     const formData = new FormData();

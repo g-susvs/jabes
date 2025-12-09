@@ -32,6 +32,10 @@ export class ProductAppService {
     return ProductRespository.findById(productId);
   }
 
+  static async findBySlug(productSlug: string) {
+    return ProductRespository.findBySlug(productSlug);
+  }
+
   static async create(params: { data: ICreateProductDTO; image?: File }) {
     const { data, image } = params;
     let imgUrl = "";
