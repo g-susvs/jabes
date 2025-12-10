@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { NextResponse } from "next/server";
-import { dbConnect } from "@/api/datasource/mongo/mongodb";
 import { parseFormDataToJson } from "@/shared/utils/parseFormData";
 import { editProductValidator } from "@/api/infraestructure/validators/product.validators";
 import { ProductAppService } from "@/api/infraestructure/services/product.service";
