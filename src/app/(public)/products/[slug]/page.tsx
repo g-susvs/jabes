@@ -3,10 +3,11 @@ import { getContent } from "@/libs/get-content";
 import { IProductDetailPageContent } from "@/modules/public/product-detail/interface/product-detail";
 import { ProductDetailPage } from "@/modules/public/product-detail/ProductDetailPage";
 
+export type paramsType = Promise<{ slug: string }>;
 export default async function ProductDetail({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: paramsType;
 }) {
   const { slug } = await params;
 

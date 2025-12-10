@@ -1,8 +1,8 @@
-import { dbConnect } from "@/api/datasource/mongo/mongodb";
 import { NextResponse } from "next/server";
 import { ProductAppService } from "@/api/infraestructure/services/product.service";
 import { parseFormDataToJson } from "@/shared/utils/parseFormData";
 import { ICreateProductDTO } from "@/shared/interfaces/product";
+import { verifyJWT } from "@/api/infraestructure/middlewares/verify-jwt";
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
@@ -18,15 +18,22 @@ export async function GET(request: Request) {
 }
 
 export async function POST(request: Request) {
-  await dbConnect();
+  try {
+    await verifyJWT(request);
 
-  const formData = await request.formData();
-  const data = parseFormDataToJson<ICreateProductDTO>(formData);
+    const formData = await request.formData();
+    const data = parseFormDataToJson<ICreateProductDTO>(formData);
 
-  const result = await ProductAppService.create({
-    data: data,
-    image: (formData.get("image") as File) ?? undefined,
-  });
+    const result = await ProductAppService.create({
+      data: data,
+      image: (formData.get("image") as File) ?? undefined,
+    });
 
-  return NextResponse.json(result, { status: 201 });
+    return NextResponse.json(result, { status: 201 });
+  } catch (error) {
+    return NextResponse.json(
+      { message: (error as Error).message },
+      { status: 401 }
+    );
+  }
 }

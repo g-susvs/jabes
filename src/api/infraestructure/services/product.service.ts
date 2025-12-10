@@ -22,7 +22,7 @@ export class ProductAppService {
 
     const result = products.map((product) => ({
       ...product,
-      category: categoriesMap.get(product.categoryId) || null,
+      category: categoriesMap.get(product.categoryId.toString()) || null,
     }));
 
     if (findParams?.categoryId) {

@@ -20,14 +20,16 @@ export const MenuItem = ({ href, icon, label, className, onClick }: IProps) => {
       <button
         onClick={onClick}
         className={clsx(
-          "flex flex-row items-center gap-2 px-4 py-2 rounded-lg hover:bg-primary-600 hover:text-white transition-all",
+          "group flex flex-row items-center gap-2 px-4 py-2 rounded-lg hover:bg-primary-600 transition-all",
           path !== href && "text-zinc-700",
           path === href && "bg-primary-600 text-white",
           className
         )}
       >
         <Icon iconName={icon} size={20} />
-        <span className="paragraph-lg">{label}</span>
+        <span className={clsx("paragraph-lg", "group-hover:texit-inherit")}>
+          {label}
+        </span>
       </button>
     );
   }
