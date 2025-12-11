@@ -1,8 +1,6 @@
 import { environment } from "@/config/env/environment";
 import jwt from "jsonwebtoken";
 
-const SECRET_KEY = environment.jwt.secret;
-
 export interface JwtPayload {
   userId: string;
   email: string;
@@ -10,5 +8,6 @@ export interface JwtPayload {
 }
 
 export const verifyToken = async (token: string) => {
+  const SECRET_KEY = environment.jwt.secret;
   return  jwt.verify(token, SECRET_KEY);
 };

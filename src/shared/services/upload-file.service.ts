@@ -1,4 +1,4 @@
-import cloudinary from "@/libs/cloudinary";
+import { getCloudinary } from "@/libs/cloudinary";
 import { v4 as uuid } from "uuid";
 
 export const updateFileService = async (
@@ -14,7 +14,7 @@ export const updateFileService = async (
       const filename = parts[parts.length - 1];
       const publicId = `${folder}/${filename.split(".")[0]}`;
 
-      await cloudinary.uploader.destroy(publicId);
+      await getCloudinary().uploader.destroy(publicId);
     }
 
     if (file) {
@@ -22,13 +22,14 @@ export const updateFileService = async (
       const buffer = Buffer.from(arrayBuffer);
 
       const uploadResponse = await new Promise<unknown>((resolve, reject) => {
-        cloudinary.uploader
+        getCloudinary().uploader
           .upload_stream(
             {
               folder,
               public_id: uuid(),
             },
-            (error, result) => {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            (error: any, result: unknown) => {
               if (error) return reject(error);
               resolve(result);
             }
@@ -49,7 +50,7 @@ export const updateFileService = async (
 export const deleteFileService = async (folder: string, filename: string) => {
   try {
     const publicId = `${folder}/${filename}`;
-    const result = await cloudinary.uploader.destroy(publicId);
+    const result = await getCloudinary().uploader.destroy(publicId);
     return result.result === "ok";
   } catch (error) {
     console.error("Error eliminando archivo de Cloudinary:", error);
