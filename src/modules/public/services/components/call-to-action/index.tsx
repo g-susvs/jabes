@@ -1,6 +1,7 @@
 import { Container } from "@/shared/components/container";
 import { ICallToActionSection } from "../../interface/services";
 import Link from "next/link";
+import { environment } from "@/config/env/environment";
 
 interface IProps {
   content: ICallToActionSection;
@@ -19,8 +20,9 @@ export const CallToActionSection = ({ content }: IProps) => {
           </p>
         </div>
         <Link
-          href={content.link.href}
+          href={`https://wa.me/${environment.contactPhone}?text=Hola,%20quiero%20más%20información`}
           className="bg-white px-4 py-3 text-primary-600 font-semibold rounded-lg hover:scale-[1.1] transition-all"
+          target="_blank"
         >
           {content.link.label}
         </Link>

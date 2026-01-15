@@ -46,7 +46,7 @@ export const Navbar = ({ className }: IProps) => {
               </NavItem>
             ))}
             <Link
-              href={`https://wa.me/${environment.contactPhone}?text=Hola%20quiero%20más%20información`}
+              href={`https://wa.me/${environment.contactPhone}?text=Hola,%20quiero%20más%20información`}
               target="_blank"
               className={styles.navbarContactButton}
             >
