@@ -3,7 +3,11 @@ import {
   deleteFileService,
   updateFileService,
 } from "@/shared/services/upload-file.service";
-import { ICreateProductDTO, IProduct } from "@/shared/interfaces/product";
+import {
+  ICreateProductDTO,
+  IProduct,
+  IProductDTO,
+} from "@/shared/interfaces/product";
 import { ProductRespository } from "../repositories/product.repository";
 import { CategoryRepository } from "../repositories/category.repository";
 import { ICategory } from "@/shared/interfaces/category";
@@ -17,7 +21,7 @@ export class ProductAppService {
     ]);
 
     const categoriesMap = ProductAppService.buildCategoriesMap(
-      categories as unknown as ICategory[]
+      categories as unknown as ICategory[],
     );
 
     const result = products.map((product) => ({
@@ -27,7 +31,7 @@ export class ProductAppService {
 
     if (findParams?.categoryId) {
       return result.filter(
-        (item) => item.category?.categoryId === findParams.categoryId
+        (item) => item.category?.categoryId === findParams.categoryId,
       );
     }
 
@@ -38,8 +42,23 @@ export class ProductAppService {
     return ProductRespository.findById(productId);
   }
 
-  static async findBySlug(productSlug: string) {
-    return ProductRespository.findBySlug(productSlug);
+  static async findBySlug(productSlug: string): Promise<IProductDTO | null> {
+    const product = await ProductRespository.findBySlug(productSlug);
+    if (!product) return null;
+
+    const category = await CategoryRepository.findById(product.categoryId);
+
+    const productDTO: IProductDTO = {
+      ...product,
+      category: category
+        ? {
+            name: category.name,
+            categoryId: category.categoryId,
+          }
+        : { name: "Sin categoría", categoryId: "" },
+    };
+
+    return productDTO;
   }
 
   static async create(params: { data: ICreateProductDTO; image?: File }) {
@@ -82,7 +101,7 @@ export class ProductAppService {
         (await updateFileService(
           imageFile,
           "jabes/products",
-          current?.imgUrl
+          current?.imgUrl,
         )) ?? "";
       dataToUpdate.imgUrl = url;
     }
@@ -102,7 +121,7 @@ export class ProductAppService {
 
     const updated = await ProductRespository.updateById(
       productId,
-      dataToUpdate
+      dataToUpdate,
     );
     return updated;
   }
@@ -111,9 +130,11 @@ export class ProductAppService {
     const product = await ProductRespository.findById(productId);
     const result = await ProductRespository.deleteById(productId);
 
-    const imagePathArr = product.imgUrl?.split("/") ?? [];
-    const imgPublicId = imagePathArr[imagePathArr?.length - 1].split(".")[0];
-    await deleteFileService("jabes/products", imgPublicId);
+    if (product && product.imgUrl) {
+      const imagePathArr = product.imgUrl.split("/");
+      const imgPublicId = imagePathArr[imagePathArr.length - 1].split(".")[0];
+      await deleteFileService("jabes/products", imgPublicId);
+    }
 
     return result;
   }

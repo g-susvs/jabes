@@ -25,9 +25,9 @@ export const ServiceCard = ({ service }: IProps) => {
           <div className="flex justify-center items-center p-2 rounded-full bg-primary-500">
             <Icon iconName={service.icon} size={20} className="text-white" />
           </div>
-          <span className="heading-6 sm:heading-5 text-zinc-800 font-bold">
+          <h3 className="heading-6 sm:heading-5 text-zinc-800 font-bold">
             {service.title}
-          </span>
+          </h3>
         </header>
         <p className="paragraph-lg text-zinc-500">{service.description}</p>
       </div>

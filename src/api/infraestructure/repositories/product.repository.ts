@@ -21,12 +21,12 @@ export class ProductRespository {
 
   static async findById(productId: string) {
     await dbConnect();
-    return (await Product.findOne({ productId: productId })) as IProduct;
+    return await Product.findOne({ productId: productId }).lean<IProduct>();
   }
 
   static async findBySlug(productSlug: string) {
     await dbConnect();
-    return (await Product.findOne({ slug: productSlug })) as IProduct;
+    return await Product.findOne({ slug: productSlug }).lean<IProduct>();
   }
 
   static async create(data: IProduct) {

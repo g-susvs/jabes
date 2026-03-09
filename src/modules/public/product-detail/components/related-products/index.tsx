@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { Container } from "@/shared/components/container";
@@ -6,6 +5,7 @@ import { IRelatedProductsSection } from "../../interface/product-detail";
 import { useRouter } from "next/navigation";
 import { useGetRelatedProducts } from "../hooks/useGetRelatedProducts";
 import { ReleatedProductsSkeleton } from "./releated-products-skeleton";
+import Image from "next/image";
 
 interface IProps {
   content: IRelatedProductsSection;
@@ -37,19 +37,17 @@ export const RelatedProductSection = ({ content, categoryId }: IProps) => {
               className="flex min-w-[280px] max-w-[320px] flex-col gap-2 w-full object-cover overflow-hidden"
             >
               <figure className="w-full h-[231px] object-cover rounded-2xl overflow-hidden">
-                <img
-                  width={300}
-                  height={300}
-                  alt={product.name}
-                  src={product.imgUrl}
+                <Image
+                  width={320}
+                  height={240}
+                  alt={`Sugerencia: ${product.name}`}
+                  src={product.imgUrl ?? ""}
                   className="w-full h-full object-cover"
                 />
               </figure>
               <div className="flex flex-col justify-between flex-grow gap-2">
                 <div>
-                  <span className="heading-5 text-zinc-800">
-                    {product.name}
-                  </span>
+                  <h3 className="heading-5 text-zinc-800">{product.name}</h3>
                   <p className="paragraph-lg text-start text-zinc-600">
                     {product.description}
                   </p>

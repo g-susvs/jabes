@@ -21,7 +21,7 @@ export class CategoryRepository {
 
   static async findById(categoryId: string) {
     await dbConnect();
-    return Category.findOne({ categoryId });
+    return Category.findOne({ categoryId }).lean<ICategory>();
   }
 
   static async create(data: ICategory) {

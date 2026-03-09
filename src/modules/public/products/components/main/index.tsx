@@ -18,7 +18,7 @@ export const MainSection = ({ content }: IProps) => {
   const [categories, setCategories] = useState<ICategoryItem[]>([]);
   const [selectedCategory, setSelectedCategory] = useState("");
   const [filteredProducts, setFilteredProducts] = useState<IProductDTO[] | []>(
-    []
+    [],
   );
   const { data: catgoriesData, isLoading: isLoadingCategories } =
     useGetCategories();
@@ -61,17 +61,17 @@ export const MainSection = ({ content }: IProps) => {
           {categories &&
             !isLoadingCategories &&
             categories.map((category, index) => (
-              <div
+              <button
                 key={index}
                 className={clsx(
                   "w-max text-nowrap paragraph-lg rounded-lg px-4 py-1 font-semibold border-1 border-primary-500 text-primary-500 hover:bg-primary-700 hover:text-white transition-all cursor-pointer",
                   selectedCategory === category.value &&
-                    "text-white bg-primary-500"
+                    "text-white bg-primary-500",
                 )}
                 onClick={() => setSelectedCategory(category.value)}
               >
                 {category.label}
-              </div>
+              </button>
             ))}
         </div>
       </section>

@@ -19,7 +19,7 @@ interface IProps {
 export const Navbar = ({ className }: IProps) => {
   const path = usePathname();
   const links = [
-    { label: "INICIO", link: "/" },
+    { label: "INICIO", link: "/home" },
     { label: "SERVICIOS", link: "/services" },
     { label: "PRODUCTOS", link: "/products" },
   ];
@@ -35,10 +35,17 @@ export const Navbar = ({ className }: IProps) => {
     <header className={className}>
       <Container>
         <nav className={styles.navbar}>
-          <button className={styles.drawer} onClick={handleToggleOpenDrawer}>
+          <button
+            className={styles.drawer}
+            onClick={handleToggleOpenDrawer}
+            aria-label={openDrawer ? "Cerrar menú" : "Abrir menú"}
+            aria-expanded={openDrawer}
+          >
             {openDrawer ? <IoClose size={40} /> : <IoMenu size={40} />}
           </button>
-          <span className={styles.logo}>JABES</span>
+          <Link href="/" className={styles.logo}>
+            JABES
+          </Link>
           <div className={clsx(styles.navMenu, !openDrawer && styles.none)}>
             {links.map((item, index) => (
               <NavItem key={index} href={item.link}>
@@ -48,6 +55,7 @@ export const Navbar = ({ className }: IProps) => {
             <Link
               href={`https://wa.me/${environment.contactPhone}?text=Hola,%20quiero%20más%20información`}
               target="_blank"
+              rel="noopener noreferrer"
               className={styles.navbarContactButton}
             >
               <Text>Contactar</Text>

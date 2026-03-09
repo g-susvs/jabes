@@ -23,6 +23,7 @@ export const CallToActionSection = ({ content }: IProps) => {
           href={`https://wa.me/${environment.contactPhone}?text=Hola,%20quiero%20más%20información`}
           className="bg-white px-4 py-3 text-primary-600 font-semibold rounded-lg hover:scale-[1.1] transition-all"
           target="_blank"
+          rel="noopener noreferrer"
         >
           {content.link.label}
         </Link>

@@ -1,10 +1,10 @@
-/* eslint-disable @next/next/no-img-element */
 import { Container } from "@/shared/components/container";
 import { IDetailSection } from "../../interface/product-detail";
 import { FaCheck, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 import { IProductDTO } from "@/shared/interfaces/product";
 import { environment } from "@/config/env/environment";
+import Image from "next/image";
 
 interface IProps {
   content: IDetailSection;
@@ -15,17 +15,18 @@ export const MainSection = ({ content, product }: IProps) => {
   return (
     <Container className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-[40px] px-4 w-full">
       <figure className=" md:max-w-[534px] h-full md:max-h-[500px] rounded-xl overflow-hidden">
-        <img
-          width={300}
-          height={300}
-          alt="adfa"
-          src={product.imgUrl}
+        <Image
+          width={600}
+          height={600}
+          alt={`Imagen detallada de ${product.name}`}
+          src={product.imgUrl ?? ""}
           className="w-full object-contain md:object-cover h-auto md:h-full"
+          priority
         />
       </figure>
       <section className="flex flex-col gap-6">
         <span className="rounded-xl bg-primary-600 w-max text-white px-4 py-[2px]">
-          {"Fertilizantes"}
+          {product.category.name}
         </span>
         <div>
           <h1 className="heading-5 sm:heading-4 md:heading-3 text-zinc-900 font-bold">
@@ -56,6 +57,7 @@ export const MainSection = ({ content, product }: IProps) => {
           <Link
             href={`https://wa.me/${environment.contactPhone}?text=Hola%20quiero%20más%20información`}
             target="_blank"
+            rel="noopener noreferrer"
             className="flex flex-row gap-4 items-center justify-center py-2 rounded-xl bg-[#08d273] hover:bg-[#07ad60] text-white transition-all"
           >
             <FaWhatsapp size={30} />

@@ -1,9 +1,9 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { IProductCardContent } from "../../interface/products";
 import { useRouter } from "next/navigation";
 import { IProductDTO } from "@/shared/interfaces/product";
+import Image from "next/image";
 
 interface IProps {
   product: IProductDTO;
@@ -21,11 +21,11 @@ export const ProductCard = ({ product, content }: IProps) => {
       className="overflow-hidden rounded-2xl shadow-xl flex flex-col"
     >
       <figure className="w-full h-[250px] overflow-hidden">
-        <img
-          width={200}
-          height={200}
-          src={product.imgUrl}
-          alt={product.name}
+        <Image
+          width={400}
+          height={300}
+          src={product.imgUrl ?? ""}
+          alt={`Imagen del producto ${product.name}`}
           className="w-full h-full object-cover hover:scale-[1.1] transition-all"
         />
       </figure>
@@ -35,9 +35,9 @@ export const ProductCard = ({ product, content }: IProps) => {
             {product.category.name}
           </span>
           <div className="">
-            <span className="heading-6 sm:heading-5 text-zinc-600">
+            <h3 className="heading-6 sm:heading-5 text-zinc-600">
               {product.name}
-            </span>
+            </h3>
             <p className="paragraph-lg text-zinc-600 line-clamp-2">
               {product.description}
             </p>
