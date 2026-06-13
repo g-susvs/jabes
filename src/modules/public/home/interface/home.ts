@@ -8,6 +8,7 @@ export interface IHeroSection {
   title: string;
   titleHighlight: string;
   subtitle: string;
+  imageUrl?: string;
 }
 
 export interface IOurServicesSection {
