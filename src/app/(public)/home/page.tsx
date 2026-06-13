@@ -1,10 +1,8 @@
-import { getContent } from "@/libs/get-content";
 import HomePage from "@/modules/public/home/HoomePage";
-import { IHomePageContent } from "@/modules/public/home/interface/home";
+import { getStrapiHomeContent } from "@/modules/public/home/services/get-strapi-home-content";
 
 export default async function Home() {
-
-  const content = await getContent("home") as IHomePageContent;
+  const content = await getStrapiHomeContent();
 
   return <HomePage content={content}/>;
 }
