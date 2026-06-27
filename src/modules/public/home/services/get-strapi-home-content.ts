@@ -1,7 +1,7 @@
-import { getContent } from "@/libs/get-content";
 import { IHomePageContent } from "../interface/home";
+import { environment } from "@/config/env/environment";
 
-const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_URL ?? "http://localhost:1337";
+const STRAPI_URL = environment.strapiHost;
 const HERO_PLACEHOLDER_IMAGE = "https://placehold.co/800x600?text=Jabes";
 const CARD_PLACEHOLDER_IMAGE = "https://placehold.co/600x400?text=Jabes";
 const HOME_PAGE_QUERY =
@@ -88,45 +88,34 @@ const getMediaUrl = (
   return withStrapiUrl(url, placeholder);
 };
 
-const getHomeFallback = async () => {
-  return (await getContent("home")) as IHomePageContent;
-};
-
-export const getStrapiHomeContent = async (): Promise<IHomePageContent> => {
-  const fallback = await getHomeFallback();
+export const getStrapiHomeContent = async (): Promise<IHomePageContent | null> => {
 
   try {
     const response = await fetch(`${STRAPI_URL}/api/home-page?${HOME_PAGE_QUERY}`, {
       cache: "no-store",
     });
 
-    if (!response.ok) return fallback;
+    if (!response.ok) return null;
 
     const json = (await response.json()) as IStrapiHomeResponse;
     const data = json.data;
 
-    if (!data) return fallback;
+    if (!data) return null;
 
     const services = data.featuredServices?.length
       ? data.featuredServices.map((service) => ({
           title: service.title ?? "",
           description: service.description ?? "",
           button: {
-            label: data.servicesButton?.label ?? fallback.ourServices.services[0]?.button.label ?? "Ver servicios",
-            link: data.servicesButton?.url ?? "/services",
+            label: data.servicesButton?.label ?? "",
+            link: data.servicesButton?.url ?? "",
           },
           img: {
             src: getMediaUrl(service.image),
             alt: service.image?.alternativeText ?? service.title ?? "Servicio de jardineria",
           },
         }))
-      : fallback.ourServices.services.map((service) => ({
-          ...service,
-          img: {
-            ...service.img,
-            src: service.img.src || CARD_PLACEHOLDER_IMAGE,
-          },
-        }));
+      : []
 
     const products = data.featuredProducts?.length
       ? data.featuredProducts.map((product) => ({
@@ -139,35 +128,32 @@ export const getStrapiHomeContent = async (): Promise<IHomePageContent> => {
             link: `/products/${product.slug ?? ""}`,
           },
         }))
-      : fallback.ourProducts.products.map((product) => ({
-          ...product,
-          imageUrl: product.imageUrl || CARD_PLACEHOLDER_IMAGE,
-        }));
+      : []
 
     return {
       hero: {
-        title: data.heroTitle ?? fallback.hero.title,
-        titleHighlight: data.heroTitleHighlight ?? fallback.hero.titleHighlight,
-        subtitle: data.heroSubtitle ?? fallback.hero.subtitle,
+        title: data.heroTitle ?? "",
+        titleHighlight: data.heroTitleHighlight ?? "",
+        subtitle: data.heroSubtitle ?? "",
         imageUrl: getMediaUrl(data.heroImage, HERO_PLACEHOLDER_IMAGE),
       },
       ourServices: {
-        title: data.servicesTitle ?? fallback.ourServices.title,
-        description: data.servicesDescription ?? fallback.ourServices.description,
+        title: data.servicesTitle ?? "",
+        description: data.servicesDescription ?? "",
         services,
       },
       ourProducts: {
-        title: data.productsTitle ?? fallback.ourProducts.title,
-        description: data.productsDescription ?? fallback.ourProducts.description,
-        actionCardLabel: data.productCardActionLabel ?? fallback.ourProducts.actionCardLabel,
+        title: data.productsTitle ?? "",
+        description: data.productsDescription ?? "",
+        actionCardLabel: data.productCardActionLabel ?? "",
         action: {
-          label: data.productsButton?.label ?? fallback.ourProducts.action.label,
-          link: data.productsButton?.url ?? fallback.ourProducts.action.link,
+          label: data.productsButton?.label ?? "",
+          link: data.productsButton?.url ?? "",
         },
         products,
       },
     };
   } catch {
-    return fallback;
+    return null;
   }
 };

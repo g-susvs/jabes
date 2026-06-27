@@ -8,7 +8,7 @@ interface IProps {
 }
 
 export const HeroSection = ({ content }: IProps) => {
-  const heroImage = content.imageUrl ?? "/images/home/hero.png";
+  const heroImage = content.imageUrl ?? "/";
 
   return (
     <Container>

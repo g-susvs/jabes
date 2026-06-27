@@ -1,8 +1,8 @@
+import { environment } from "@/config/env/environment";
 import { ICategory } from "@/shared/interfaces/category";
 import { IFindParams } from "@/shared/interfaces/find-params";
 
-const STRAPI_URL =
-  process.env.NEXT_PUBLIC_STRAPI_URL ?? "http://localhost:1337";
+const STRAPI_URL = environment.strapiHost
 
 // ── Strapi response types ──────────────────────────────
 

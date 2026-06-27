@@ -1,7 +1,7 @@
-import { getContent } from "@/libs/get-content";
+import { environment } from "@/config/env/environment";
 import { IServicesPageContent } from "../interface/services";
 
-const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_URL ?? "http://localhost:1337";
+const STRAPI_URL = environment.strapiHost;
 const PLACEHOLDER_IMAGE = "https://placehold.co/600x400?text=Servicio";
 
 const SERVICES_PAGE_QUERY =
@@ -81,13 +81,8 @@ const getMediaUrl = (
 
 // ── Main function ──────────────────────────────────────
 
-const getServicesFallback = async () => {
-  return (await getContent("services")) as IServicesPageContent;
-};
-
 export const getStrapiServicesContent =
-  async (): Promise<IServicesPageContent> => {
-    const fallback = await getServicesFallback();
+  async (): Promise<IServicesPageContent | null> => {
 
     try {
       const response = await fetch(
@@ -95,55 +90,53 @@ export const getStrapiServicesContent =
         { cache: "no-store" }
       );
 
-      if (!response.ok) return fallback;
+      if (!response.ok) return null;
 
       const json = (await response.json()) as IStrapiServicesPageResponse;
       const data = json.data;
 
-      if (!data) return fallback;
+      if (!data) return null;
 
       // Map services from Strapi to frontend interface
       const cards = data.services?.length
         ? data.services.map((service) => ({
-            title: service.title ?? "",
-            description: service.description ?? "",
-            img: {
-              alt:
-                service.image?.alternativeText ??
-                service.title ??
-                "Servicio de jardinería",
-              src: getMediaUrl(service.image),
-            },
-            icon: service.icon ?? "MdOutlineContentCut",
-          }))
-        : fallback.main.cards;
+          title: service.title ?? "",
+          description: service.description ?? "",
+          img: {
+            alt:
+              service.image?.alternativeText ??
+              service.title ??
+              "Servicio de jardinería",
+            src: getMediaUrl(service.image),
+          },
+          icon: service.icon ?? "MdOutlineContentCut",
+        }))
+        : [];
 
       // Map CTA from Strapi to frontend interface
-      const callToAction = data.cta
-        ? {
-            title: data.cta.title ?? fallback.callToAction.title,
-            description:
-              data.cta.description ?? fallback.callToAction.description,
-            link: {
-              label:
-                data.cta.button?.label ?? fallback.callToAction.link.label,
-              href: data.cta.button?.url ?? fallback.callToAction.link.href,
-            },
-          }
-        : fallback.callToAction;
+      const callToAction = {
+        title: data?.cta?.title ?? "",
+        description:
+          data?.cta?.description ?? "",
+        link: {
+          label:
+            data?.cta?.button?.label ?? "",
+          href: data?.cta?.button?.url ?? "",
+        },
+      }
 
       return {
         banner: {
-          title: data.bannerTitle ?? fallback.banner.title,
-          description: data.bannerDescription ?? fallback.banner.description,
+          title: data.bannerTitle ?? "",
+          description: data.bannerDescription ?? "",
         },
         main: {
-          title: data.mainTitle ?? fallback.main.title,
+          title: data.mainTitle ?? "",
           cards,
         },
         callToAction,
       };
     } catch {
-      return fallback;
+      return null;
     }
   };

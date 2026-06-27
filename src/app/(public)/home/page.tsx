@@ -3,6 +3,8 @@ import { getStrapiHomeContent } from "@/modules/public/home/services/get-strapi-
 
 export default async function Home() {
   const content = await getStrapiHomeContent();
+  
+  if(!content) return <div>Content not found</div>;
 
   return <HomePage content={content}/>;
 }

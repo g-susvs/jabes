@@ -13,10 +13,10 @@ export default async function ProductDetail({
 
   const product = await StrapiProductService.getBySlug(slug);
 
+  //TODO: Change this to get content from strapi when the content is available in strapi
   const content = (await getContent(
     "product-detail"
   )) as IProductDetailPageContent;
 
   return <ProductDetailPage content={content} product={product} />;
 }
-

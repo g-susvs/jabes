@@ -1,7 +1,7 @@
-import { getContent } from "@/libs/get-content";
+import { environment } from "@/config/env/environment";
 import { IProductsPageContent } from "../interface/products";
 
-const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_URL ?? "http://localhost:1337";
+const STRAPI_URL = environment.strapiHost;
 
 const PRODUCTS_PAGE_QUERY = "populate[seo]=true";
 
@@ -19,15 +19,8 @@ interface IStrapiProductsPageResponse {
   data?: IStrapiProductsPage | null;
 }
 
-// ── Main function ──────────────────────────────────────
-
-const getProductsFallback = async () => {
-  return (await getContent("products")) as IProductsPageContent;
-};
-
 export const getStrapiProductsContent =
-  async (): Promise<IProductsPageContent> => {
-    const fallback = await getProductsFallback();
+  async (): Promise<IProductsPageContent | null> => {
 
     try {
       const response = await fetch(
@@ -35,26 +28,27 @@ export const getStrapiProductsContent =
         { cache: "no-store" }
       );
 
-      if (!response.ok) return fallback;
+      if (!response.ok) return null;
 
       const json = (await response.json()) as IStrapiProductsPageResponse;
       const data = json.data;
 
-      if (!data) return fallback;
+      if (!data) return null;
 
       return {
         banner: {
-          title: data.bannerTitle ?? fallback.banner.title,
-          description: data.bannerDescription ?? fallback.banner.description,
+          title: data.bannerTitle ?? "",
+          description: data.bannerDescription ?? "",
         },
         main: {
-          title: data.filtersTitle ?? fallback.main.title,
-          categories: fallback.main.categories,
-          products: fallback.main.products,
-          cardContent: fallback.main.cardContent,
+          title: data.filtersTitle ?? "",
+          categories: [],
+          cardContent: {
+            label: data.emptyStateTitle ?? "",
+          },
         },
       };
     } catch {
-      return fallback;
+      return null;
     }
   };

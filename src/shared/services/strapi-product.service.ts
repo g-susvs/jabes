@@ -1,8 +1,8 @@
 import { IProductDTO } from "@/shared/interfaces/product";
 import { IProductFindParams } from "@/shared/interfaces/find-params";
+import { environment } from "@/config/env/environment";
 
-const STRAPI_URL =
-  process.env.NEXT_PUBLIC_STRAPI_URL ?? "http://localhost:1337";
+const STRAPI_URL = environment.strapiHost;
 const PLACEHOLDER_IMAGE = "https://placehold.co/600x400?text=Producto";
 
 // ── Strapi response types ──────────────────────────────
@@ -56,10 +56,6 @@ interface IStrapiCollectionResponse<T> {
       total?: number;
     };
   };
-}
-
-interface IStrapiSingleResponse<T> {
-  data?: T | null;
 }
 
 // ── Helpers ────────────────────────────────────────────
