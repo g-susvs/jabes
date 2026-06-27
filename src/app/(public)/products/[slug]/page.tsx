@@ -1,6 +1,5 @@
-import { getContent } from "@/libs/get-content";
-import { IProductDetailPageContent } from "@/modules/public/product-detail/interface/product-detail";
 import { ProductDetailPage } from "@/modules/public/product-detail/ProductDetailPage";
+import { getStrapiProductDetailContent } from "@/modules/public/product-detail/services/get-strapi-product-detail-content";
 import { StrapiProductService } from "@/shared/services/strapi-product.service";
 
 export type paramsType = Promise<{ slug: string }>;
@@ -13,10 +12,9 @@ export default async function ProductDetail({
 
   const product = await StrapiProductService.getBySlug(slug);
 
-  //TODO: Change this to get content from strapi when the content is available in strapi
-  const content = (await getContent(
-    "product-detail"
-  )) as IProductDetailPageContent;
+  const content = await getStrapiProductDetailContent();
+
+  if (!content) return <div>Content not found</div>;
 
   return <ProductDetailPage content={content} product={product} />;
 }
