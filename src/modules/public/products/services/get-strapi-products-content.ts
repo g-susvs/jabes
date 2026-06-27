@@ -13,6 +13,8 @@ interface IStrapiProductsPage {
   filtersTitle?: string | null;
   emptyStateTitle?: string | null;
   emptyStateDescription?: string | null;
+  allCategoriesLabel?: string | null;
+  productCardActionLabel?: string | null;
 }
 
 interface IStrapiProductsPageResponse {
@@ -42,9 +44,14 @@ export const getStrapiProductsContent =
         },
         main: {
           title: data.filtersTitle ?? "",
-          categories: [],
+          categories: [
+            {
+              label: data.allCategoriesLabel ?? "",
+              value: "all",
+            },
+          ],
           cardContent: {
-            label: data.emptyStateTitle ?? "",
+            label: data.productCardActionLabel ?? "",
           },
         },
       };
