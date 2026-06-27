@@ -1,8 +1,8 @@
 import { IEnvironment } from "./interface";
 
 export const environment: IEnvironment = {
-  mongoUri: process.env.MONGODB_URI ?? "",
   apiHost: process.env.NEXT_PUBLIC_API_URL ?? "",
+  strapiHost: process.env.NEXT_PUBLIC_STRAPI_URL ?? "",
   externalServices: {
     cloudinary: {
       name: process.env.CLOUDINARY_CLOUD_NAME ?? "",
@@ -11,7 +11,4 @@ export const environment: IEnvironment = {
     },
   },
   contactPhone:  process.env.NEXT_PUBLIC_CONTACT_PHONE ?? "",
-  jwt: {
-    secret: process.env.JWT_SECRET ?? "",
-  },
 };

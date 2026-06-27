@@ -8,12 +8,14 @@ interface IProps {
 }
 
 export const HeroSection = ({ content }: IProps) => {
+  const heroImage = content.imageUrl ?? "/";
+
   return (
     <Container>
       <section className="flex flex-col relative mt-[-80px] sm:m-0 py-[160px] sm:pt-[60px] sm:pb-[100px]">
         <div className="block absolute top-0 left-0 ring-0 w-full h-full sm:hidden">
           <Image
-            src={"/images/home/hero.png"}
+            src={heroImage}
             width={800}
             height={600}
             alt="Hero image"
@@ -46,7 +48,7 @@ export const HeroSection = ({ content }: IProps) => {
               )}
             ></div>
             <Image
-              src={"/images/home/hero.png"}
+              src={heroImage}
               width={800}
               height={600}
               alt="Hero image"

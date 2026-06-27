@@ -1,6 +1,6 @@
 export interface IEnvironment {
-  mongoUri: string;
   apiHost: string;
+  strapiHost: string;
   externalServices: {
     cloudinary: {
       name: string;
@@ -9,7 +9,4 @@ export interface IEnvironment {
     };
   };
   contactPhone: string;
-  jwt: {
-    secret: string;
-  }
 }
