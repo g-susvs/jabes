@@ -10,7 +10,8 @@ interface IProps {
 export const SevicesPage = ({ content }: IProps) => {
   return (
     <>
-      <Banner content={content.banner} />
+      {/* TODO: mover a CMS (eyebrow del banner) */}
+      <Banner content={content.banner} eyebrow="Jardinería profesional" />
       <MainSection content={content.main}/>
       <CallToActionSection content={content.callToAction}/>
     </>

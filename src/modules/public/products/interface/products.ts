@@ -12,6 +12,12 @@ export interface IMainSection {
   title: string;
   categories: ICategoryItem[];
   cardContent: IProductCardContent;
+  emptyState: IEmptyState;
+}
+
+export interface IEmptyState {
+  title: string;
+  description: string;
 }
 
 export interface IProductCardContent {

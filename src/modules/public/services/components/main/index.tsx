@@ -8,11 +8,11 @@ interface IProps {
 
 export const MainSection = ({ content }: IProps) => {
   return (
-    <Container className="flex flex-col gap-8 px-4 py-8 sm:py-[100px]">
-      <h2 className="heading-6 md:heading-5 font-semibold md:font-semibold text-center text-primary-800">
+    <Container className="flex flex-col gap-12 px-4 py-16 sm:py-24">
+      <h2 className="heading-2 text-center font-bold text-ink">
         {content.title}
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
         {content.cards.map((card, index) => (
           <ServiceCard key={index} service={card} />
         ))}

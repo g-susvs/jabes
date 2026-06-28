@@ -1,13 +1,16 @@
 export const ReleatedProductsSkeleton = () => {
   return (
     <>
-      {Array.from({ length: 3 }).map((_i, index) => (
-        <div key={index} className="flex flex-col animate-pulse gap-2">
-          <div className="min-w-[280px] w-full max-w-[320px] h-[231px] bg-gray-300 rounded-2xl"></div>
-          <div className="flex flex-col gap-2">
-            <div className="w-60 h-8 bg-gray-300 rounded-2xl"></div>
-            <div className="w-40 h-4 bg-gray-300 rounded-2xl"></div>
-            <div className="w-40 h-8 bg-gray-300 rounded-2xl"></div>
+      {Array.from({ length: 4 }).map((_i, index) => (
+        <div
+          key={index}
+          className="flex animate-pulse flex-col overflow-hidden rounded-2xl border border-line bg-card"
+        >
+          <div className="h-[200px] w-full bg-line/60"></div>
+          <div className="flex flex-col gap-3 p-5">
+            <div className="h-4 w-20 rounded-full bg-line/60"></div>
+            <div className="h-6 w-40 rounded bg-line/60"></div>
+            <div className="h-4 w-full rounded bg-line/60"></div>
           </div>
         </div>
       ))}

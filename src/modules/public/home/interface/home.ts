@@ -30,6 +30,7 @@ export interface IOurProductsSection {
     title: string;
     description: string;
     imageUrl: string;
+    category?: string;
     button: {
       label: string;
       link: string;

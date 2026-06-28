@@ -1,8 +1,9 @@
 import { Container } from "@/shared/components/container";
+import { Eyebrow } from "@/shared/components/eyebrow";
 import { IOurServicesSection } from "../../interface/home";
 import Image from "next/image";
 import Link from "next/link";
-import { IoArrowForward } from "react-icons/io5";
+import { LuLeaf } from "react-icons/lu";
 import { IMAGE_NOT_FOUND_URL } from "@/shared/constants";
 
 interface IProps {
@@ -10,54 +11,58 @@ interface IProps {
 }
 
 export const OurServicesSection = ({ content }: IProps) => {
-
   return (
-    <section className="bg-primary-100 py-[96px] px-4">
+    <section className="bg-accent-soft py-20 px-4 sm:py-24">
       <Container>
-        <div>
-          <h2 className="heading-4 sm:heading-3 md:heading-2 text-primary-800 font-bold text-center">
-            {content.title}
-          </h2>
-          <p className="paragraph-lg text-zinc-500 text-center">
-            {content.description}
-          </p>
+        <div className="flex flex-col items-center gap-3 text-center">
+          {/* TODO: mover a CMS (eyebrow) */}
+          <Eyebrow>Lo que hacemos</Eyebrow>
+          <h2 className="heading-2 font-bold text-ink">{content.title}</h2>
+          {content.description && (
+            <p className="paragraph-lg max-w-[620px] text-muted">
+              {content.description}
+            </p>
+          )}
         </div>
-        <div className="flex flex-wrap gap-6 mt-5 justify-center">
+
+        <div className="mt-12 flex flex-wrap justify-center gap-8">
           {content.services.map((service, index) => {
-            const serviceImage = service.img.src ? service.img.src : IMAGE_NOT_FOUND_URL;
+            const serviceImage = service.img.src || IMAGE_NOT_FOUND_URL;
             return (
-            <article
-              key={index}
-              className="bg-primary-50 flex-1 basis-[300px] max-w-full p-4 pb-8 rounded-2xl flex flex-col gap-2 box-border"
-            >
-              <figure className="w-full h-[231px] rounded-xl overflow-hidden">
-                <Image
-                  width={300}
-                  height={300}
-                  alt={service.img.alt}
-                  src={serviceImage}
-                  className="w-full h-full object-cover"
-                />
-              </figure>
-              <div className="flex flex-col gap-4 justify-between flex-grow">
-                <div className="flex flex-col gap-2 items-start">
-                  <span className="heading-4 font-normal text-zinc-800">
-                    {service.title}
-                  </span>
-                  <p className="paragraph-lg text-start text-zinc-600">
+              <article
+                key={index}
+                className="group flex w-full flex-col overflow-hidden rounded-2xl border border-line bg-card transition-shadow hover:shadow-lg sm:w-[340px]"
+              >
+                <figure className="h-[220px] w-full overflow-hidden">
+                  <Image
+                    width={400}
+                    height={300}
+                    alt={service.img.alt}
+                    src={serviceImage}
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </figure>
+                <div className="flex flex-1 flex-col gap-3 p-6">
+                  <div className="flex items-center gap-3">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent text-white">
+                      <LuLeaf size={20} />
+                    </span>
+                    <h3 className="heading-6 font-bold text-ink">
+                      {service.title}
+                    </h3>
+                  </div>
+                  <p className="paragraph-lg flex-1 text-muted">
                     {service.description}
                   </p>
+                  <Link
+                    href={service.button.link || "/services"}
+                    className="mt-1 inline-flex w-max items-center gap-1 font-semibold text-accent-dark transition-colors hover:text-accent-deep"
+                  >
+                    {service.button.label || "Más información"} →
+                  </Link>
                 </div>
-                <Link
-                  href={service.button.link}
-                  className="w-max py-1 px-2 rounded-lg flex flex-wrap items-center gap-2 text-primary-500 border-2 border-primary-500"
-                >
-                  <span>{service.button.label}</span>
-                  <IoArrowForward size={20} />
-                </Link>
-              </div>
-            </article>
-          )
+              </article>
+            );
           })}
         </div>
       </Container>

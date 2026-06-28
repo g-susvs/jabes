@@ -53,6 +53,12 @@ export const getStrapiProductsContent =
           cardContent: {
             label: data.productCardActionLabel ?? "",
           },
+          emptyState: {
+            title: data.emptyStateTitle ?? "No hay productos disponibles",
+            description:
+              data.emptyStateDescription ??
+              "Prueba con otra categoría o vuelve más tarde.",
+          },
         },
       };
     } catch {

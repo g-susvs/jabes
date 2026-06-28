@@ -1,9 +1,7 @@
-"use client";
-
-import { IProductCardContent } from "../../interface/products";
-import { useRouter } from "next/navigation";
-import { IProductDTO } from "@/shared/interfaces/product";
+import Link from "next/link";
 import Image from "next/image";
+import { IProductCardContent } from "../../interface/products";
+import { IProductDTO } from "@/shared/interfaces/product";
 import { IMAGE_NOT_FOUND_URL } from "@/shared/constants";
 
 interface IProps {
@@ -12,46 +10,33 @@ interface IProps {
 }
 
 export const ProductCard = ({ product, content }: IProps) => {
-  const router = useRouter();
-
-  const handleViewDetail = (slug: string) => router.push(`/products/${slug}`);
-
-  const productImage = product.imgUrl ? product.imgUrl : IMAGE_NOT_FOUND_URL;
+  const productImage = product.imgUrl || IMAGE_NOT_FOUND_URL;
 
   return (
-    <article
-      key={product.productId}
-      className="overflow-hidden rounded-2xl shadow-xl flex flex-col"
-    >
-      <figure className="w-full h-[250px] overflow-hidden">
+    <article className="group flex flex-col overflow-hidden rounded-2xl border border-line bg-card transition-shadow hover:shadow-lg">
+      <figure className="h-[230px] w-full overflow-hidden">
         <Image
           width={400}
           height={300}
           src={productImage}
           alt={`Imagen del producto ${product.name}`}
-          className="w-full h-full object-cover hover:scale-[1.1] transition-all"
+          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
         />
       </figure>
-      <div className="p-4 flex flex-col justify-between flex-grow font-medium">
-        <div className="flex flex-col gap-2 items-start">
-          <span className="rounded-xl bg-primary-600 text-white px-4 py-[2px]">
-            {product.category.name}
-          </span>
-          <div className="">
-            <h3 className="heading-6 sm:heading-5 text-zinc-600">
-              {product.name}
-            </h3>
-            <p className="paragraph-lg text-zinc-600 line-clamp-2">
-              {product.description}
-            </p>
-          </div>
-        </div>
-        <button
-          className="bg-zinc-800 hover:bg-zinc-950 transition-all text-white px-4 py-2 rounded-lg cursor-pointer mt-4"
-          onClick={() => handleViewDetail(product.slug)}
+      <div className="flex flex-1 flex-col gap-2 p-5">
+        <span className="w-max rounded-full bg-accent px-3 py-0.5 text-xs font-semibold text-ink">
+          {product.category.name}
+        </span>
+        <h3 className="heading-6 font-bold text-ink">{product.name}</h3>
+        <p className="paragraph-lg line-clamp-2 flex-1 text-muted">
+          {product.description}
+        </p>
+        <Link
+          href={`/products/${product.slug}`}
+          className="mt-1 inline-flex w-max items-center gap-1 font-semibold text-accent-dark transition-colors hover:text-accent-deep"
         >
-          {content.label}
-        </button>
+          {content.label || "Ver detalles"} →
+        </Link>
       </div>
     </article>
   );

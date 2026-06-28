@@ -9,7 +9,8 @@ interface IProps {
 export const ProductsPage = ({ content }: IProps) => {
   return (
     <>
-      <Banner content={content.banner} />
+      {/* TODO: mover a CMS (eyebrow del banner) */}
+      <Banner content={content.banner} eyebrow="Catálogo" />
       <MainSection content={content.main} />
     </>
   );

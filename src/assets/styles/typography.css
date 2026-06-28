@@ -1,32 +1,48 @@
+/* Títulos en serif de alto contraste (Playfair Display) */
 @utility heading-1 {
-  @apply text-[61px];
+  font-family: var(--font-serif);
+  @apply text-[44px] sm:text-[61px] leading-[1.08] tracking-[-0.5px];
 }
 
 @utility heading-2 {
-  @apply text-[48px]; /* letter-spacing: -1.6px */
+  font-family: var(--font-serif);
+  @apply text-[34px] sm:text-[48px] leading-[1.1] tracking-[-0.5px];
 }
 
 @utility heading-3 {
-  @apply text-[39px];
-}
-@utility heading-4 {
-  @apply text-[31.3px];
-}
-@utility heading-5 {
-  @apply text-[25px];
-}
-@utility heading-6 {
-  @apply text-[20px];
+  font-family: var(--font-serif);
+  @apply text-[28px] sm:text-[39px] leading-[1.15];
 }
 
+@utility heading-4 {
+  font-family: var(--font-serif);
+  @apply text-[24px] sm:text-[31.3px] leading-[1.2];
+}
+
+@utility heading-5 {
+  font-family: var(--font-serif);
+  @apply text-[21px] sm:text-[25px] leading-[1.25];
+}
+
+@utility heading-6 {
+  font-family: var(--font-serif);
+  @apply text-[18px] sm:text-[20px] leading-[1.3];
+}
+
+/* Cuerpo / UI en sans (Inter) */
 @utility paragraph-lg {
   @apply text-[16px] leading-[24px] font-normal;
 }
 
 @utility paragraph {
-  @apply text-[12.9px] leading-[22px] font-normal;
+  @apply text-[14px] leading-[22px] font-normal;
 }
 
 @utility paragraph-sm {
-  @apply text-[10.2px] leading-[26px] font-normal;
+  @apply text-[12px] leading-[18px] font-normal;
+}
+
+/* Eyebrow / label de sección: mayúsculas, tracking, verde */
+@utility eyebrow {
+  @apply text-[12px] font-semibold uppercase tracking-[0.18em] text-accent-dark;
 }

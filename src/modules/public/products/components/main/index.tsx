@@ -16,7 +16,7 @@ interface IProps {
 
 export const MainSection = ({ content }: IProps) => {
   const [categories, setCategories] = useState<ICategoryItem[]>([]);
-  const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("all");
   const [filteredProducts, setFilteredProducts] = useState<IProductDTO[] | []>(
     [],
   );
@@ -51,32 +51,55 @@ export const MainSection = ({ content }: IProps) => {
     }
   }, [catgoriesData, content.categories]);
 
-  return (
-    <Container className="py-6 md:py-8 px-4">
-      <section className="flex flex-col gap-2">
-        <h3 className="heading-5 text-zinc-700">{content.title}</h3>
+  const showEmptyState =
+    !isLoadingProducts && filteredProducts.length === 0;
 
-        <div className="flex gap-4 w-full overflow-x-auto pb-2">
+  return (
+    <Container className="px-4 py-12 sm:py-16">
+      <section className="flex flex-col items-center gap-6">
+        <h2 className="heading-3 text-center font-bold text-ink">
+          {content.title}
+        </h2>
+
+        <div className="flex w-full flex-wrap justify-center gap-3 overflow-x-auto pb-2">
           {isLoadingCategories && <CategorySkeletonLoader />}
           {categories &&
             !isLoadingCategories &&
-            categories.map((category, index) => (
-              <button
-                key={index}
-                className={clsx(
-                  "w-max text-nowrap paragraph-lg rounded-lg px-4 py-1 font-semibold border-1 border-primary-500 text-primary-500 hover:bg-primary-700 hover:text-white transition-all cursor-pointer",
-                  selectedCategory === category.value &&
-                    "text-white bg-primary-500",
-                )}
-                onClick={() => setSelectedCategory(category.value)}
-              >
-                {category.label}
-              </button>
-            ))}
+            categories.map((category, index) => {
+              const isActive = selectedCategory === category.value;
+              return (
+                <button
+                  key={index}
+                  className={clsx(
+                    "w-max text-nowrap rounded-full px-4 py-1.5 text-sm font-semibold transition-colors",
+                    isActive
+                      ? "bg-accent text-ink"
+                      : "border border-line text-muted hover:border-accent hover:text-accent-dark",
+                  )}
+                  onClick={() => setSelectedCategory(category.value)}
+                  aria-pressed={isActive}
+                >
+                  {category.label}
+                </button>
+              );
+            })}
         </div>
       </section>
+
       {isLoadingProducts && <ProductsSkeletonLoader />}
-      {!isLoadingProducts && (
+
+      {showEmptyState && (
+        <div className="mx-auto mt-16 max-w-[420px] text-center">
+          <h3 className="heading-5 font-bold text-ink">
+            {content.emptyState.title}
+          </h3>
+          <p className="paragraph-lg mt-2 text-muted">
+            {content.emptyState.description}
+          </p>
+        </div>
+      )}
+
+      {!isLoadingProducts && !showEmptyState && (
         <ProductList
           products={filteredProducts}
           content={content.cardContent}
