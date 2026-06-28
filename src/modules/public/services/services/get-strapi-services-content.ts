@@ -1,5 +1,7 @@
 import { environment } from "@/config/env/environment";
 import { IServicesPageContent } from "../interface/services";
+import { IStrapiMedia } from "@/libs/strapi/interfaces";
+import { getMediaUrl } from "@/libs/strapi";
 
 const STRAPI_URL = environment.strapiHost;
 
@@ -9,21 +11,6 @@ const SERVICES_PAGE_QUERY =
   "&populate[seo]=true";
 
 // ── Strapi response types ──────────────────────────────
-
-interface IStrapiMediaFormat {
-  url?: string | null;
-}
-
-interface IStrapiMedia {
-  url?: string | null;
-  alternativeText?: string | null;
-  formats?: {
-    thumbnail?: IStrapiMediaFormat | null;
-    small?: IStrapiMediaFormat | null;
-    medium?: IStrapiMediaFormat | null;
-    large?: IStrapiMediaFormat | null;
-  } | null;
-}
 
 interface IStrapiButtonLink {
   label?: string | null;
@@ -60,22 +47,6 @@ interface IStrapiServicesPage {
 interface IStrapiServicesPageResponse {
   data?: IStrapiServicesPage | null;
 }
-
-// ── Helpers ────────────────────────────────────────────
-
-const getMediaUrl = (
-  media?: IStrapiMedia | null,
-) => {
-  const url =
-    media?.formats?.medium?.url ??
-    media?.formats?.small?.url ??
-    media?.formats?.thumbnail?.url ??
-    media?.url;
-
-  if (!url) return "";
-  if (url.startsWith("http")) return url;
-  return `${STRAPI_URL}${url}`;
-};
 
 // ── Main function ──────────────────────────────────────
 

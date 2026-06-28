@@ -1,5 +1,7 @@
+import { IStrapiMedia } from "@/libs/strapi/interfaces";
 import { IHomePageContent } from "../interface/home";
 import { environment } from "@/config/env/environment";
+import { getMediaUrl } from "@/libs/strapi";
 
 const STRAPI_URL = environment.strapiHost;
 const HOME_PAGE_QUERY =
@@ -10,21 +12,6 @@ const HOME_PAGE_QUERY =
   "&populate[featuredServices][populate][0]=image" +
   "&populate[featuredProducts][populate][0]=image" +
   "&populate[featuredProducts][populate][1]=category";
-
-interface IStrapiMediaFormat {
-  url?: string | null;
-}
-
-interface IStrapiMedia {
-  url?: string | null;
-  alternativeText?: string | null;
-  formats?: {
-    thumbnail?: IStrapiMediaFormat | null;
-    small?: IStrapiMediaFormat | null;
-    medium?: IStrapiMediaFormat | null;
-    large?: IStrapiMediaFormat | null;
-  } | null;
-}
 
 interface IStrapiButton {
   label?: string | null;
@@ -67,24 +54,6 @@ interface IStrapiHomePage {
 interface IStrapiHomeResponse {
   data?: IStrapiHomePage | null;
 }
-
-const withStrapiUrl = (url?: string | null) => {
-  if (!url) return "";
-  if (url.startsWith("http")) return url;
-  return `${STRAPI_URL}${url}`;
-};
-
-const getMediaUrl = (
-  media?: IStrapiMedia | null,
-) => {
-  const url =
-    media?.formats?.medium?.url ??
-    media?.formats?.small?.url ??
-    media?.formats?.thumbnail?.url ??
-    media?.url;
-
-  return withStrapiUrl(url);
-};
 
 export const getStrapiHomeContent = async (): Promise<IHomePageContent | null> => {
 

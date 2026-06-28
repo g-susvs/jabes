@@ -1,25 +1,12 @@
 import { IProductDTO } from "@/shared/interfaces/product";
 import { IProductFindParams } from "@/shared/interfaces/find-params";
 import { environment } from "@/config/env/environment";
+import { getMediaUrl } from "@/libs/strapi";
+import { IStrapiMedia } from "@/libs/strapi/interfaces";
 
 const STRAPI_URL = environment.strapiHost;
 
 // ── Strapi response types ──────────────────────────────
-
-interface IStrapiMediaFormat {
-  url?: string | null;
-}
-
-interface IStrapiMedia {
-  url?: string | null;
-  alternativeText?: string | null;
-  formats?: {
-    thumbnail?: IStrapiMediaFormat | null;
-    small?: IStrapiMediaFormat | null;
-    medium?: IStrapiMediaFormat | null;
-    large?: IStrapiMediaFormat | null;
-  } | null;
-}
 
 interface IStrapiFeature {
   id?: number;
@@ -58,20 +45,6 @@ interface IStrapiCollectionResponse<T> {
 }
 
 // ── Helpers ────────────────────────────────────────────
-
-const getMediaUrl = (
-  media?: IStrapiMedia | null,
-) => {
-  const url =
-    media?.formats?.medium?.url ??
-    media?.formats?.small?.url ??
-    media?.formats?.thumbnail?.url ??
-    media?.url;
-
-  if (!url) return "";
-  if (url.startsWith("http")) return url;
-  return `${STRAPI_URL}${url}`;
-};
 
 const mapStrapiProduct = (product: IStrapiProduct): IProductDTO => ({
   productId: String(product.documentId ?? product.id ?? ""),
