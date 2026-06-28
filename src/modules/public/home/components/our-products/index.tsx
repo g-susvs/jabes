@@ -3,6 +3,7 @@ import { Eyebrow } from "@/shared/components/eyebrow";
 import { IOurProductsSection } from "../../interface/home";
 import { ProductList } from "./product-list";
 import Link from "next/link";
+import { IoArrowForward } from "react-icons/io5";
 
 interface IProps {
   content: IOurProductsSection;
@@ -30,7 +31,10 @@ export const OurProductsSection = ({ content }: IProps) => {
             href={content.action.link || "/products"}
             className="inline-flex items-center gap-2 rounded-full border border-accent-dark px-6 py-3 font-semibold text-accent-dark transition-colors hover:bg-accent-dark hover:text-white"
           >
-            {content.action.label || "Ver todo el catálogo"} →
+            <span>
+              {content.action.label}
+            </span>
+            <IoArrowForward />
           </Link>
         </div>
       </Container>

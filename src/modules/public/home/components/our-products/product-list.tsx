@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { IOurProductsSection } from "../../interface/home";
 import { IMAGE_NOT_FOUND_URL } from "@/shared/constants";
+import { IoArrowForward } from "react-icons/io5";
 
 interface IProps {
   content: IOurProductsSection;
@@ -31,7 +32,7 @@ export const ProductList = ({ content }: IProps) => {
             </figure>
             <div className="flex flex-1 flex-col gap-2 p-5">
               {product.category && (
-                <span className="w-max rounded-full bg-accent px-3 py-0.5 text-xs font-semibold text-ink">
+                <span className="w-max rounded-full bg-primary-200 px-3 py-0.5 text-xs font-semibold text-primary-700">
                   {product.category}
                 </span>
               )}
@@ -43,7 +44,10 @@ export const ProductList = ({ content }: IProps) => {
                 href={href}
                 className="mt-1 inline-flex w-max items-center gap-1 font-semibold text-accent-dark transition-colors hover:text-accent-deep"
               >
-                {content.actionCardLabel || "Ver detalles"} →
+                <span>
+                  {content.actionCardLabel}
+                </span>
+                <IoArrowForward />
               </Link>
             </div>
           </article>

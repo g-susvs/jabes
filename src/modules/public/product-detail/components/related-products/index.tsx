@@ -7,6 +7,7 @@ import { IRelatedProductsSection } from "../../interface/product-detail";
 import { useGetRelatedProducts } from "../hooks/useGetRelatedProducts";
 import { ReleatedProductsSkeleton } from "./releated-products-skeleton";
 import { IMAGE_NOT_FOUND_URL } from "@/shared/constants";
+import { IoArrowForward } from "react-icons/io5";
 
 interface IProps {
   content: IRelatedProductsSection;
@@ -26,9 +27,12 @@ export const RelatedProductSection = ({ content, categoryId }: IProps) => {
         <h2 className="heading-3 font-bold text-ink">{content.title}</h2>
         <Link
           href="/products"
-          className="shrink-0 font-semibold text-accent-dark transition-colors hover:text-accent-deep"
+          className="shrink-0 font-semibold text-accent-dark transition-colors hover:text-accent-deep flex flex-row items-center gap-2"
         >
-          Ver todos →
+          <span>
+            Ver todos
+          </span>
+          <IoArrowForward />
         </Link>
       </div>
 
@@ -54,7 +58,7 @@ export const RelatedProductSection = ({ content, categoryId }: IProps) => {
                 </figure>
                 <div className="flex flex-1 flex-col gap-2 p-5">
                   {product.category?.name && (
-                    <span className="w-max rounded-full bg-accent px-3 py-0.5 text-xs font-semibold text-ink">
+                    <span className="w-max rounded-full bg-primary-200 px-3 py-0.5 text-xs font-semibold text-primary-700">
                       {product.category.name}
                     </span>
                   )}
@@ -68,7 +72,10 @@ export const RelatedProductSection = ({ content, categoryId }: IProps) => {
                     href={`/products/${product.slug}`}
                     className="mt-1 inline-flex w-max items-center gap-1 font-semibold text-accent-dark transition-colors hover:text-accent-deep"
                   >
-                    Ver detalles →
+                    <span>
+                      Ver detalles
+                    </span>
+                    <IoArrowForward />
                   </Link>
                 </div>
               </article>

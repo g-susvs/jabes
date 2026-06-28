@@ -4,6 +4,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { Container } from "@/shared/components/container";
 import { IHeroSection } from "../../interface/home";
 import { buildWhatsappUrl } from "@/shared/constants";
+import { IoArrowForward } from "react-icons/io5";
 
 interface IProps {
   content: IHeroSection;
@@ -58,7 +59,10 @@ export const HeroSection = ({ content }: IProps) => {
               href="/products"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-white/40 px-6 py-3 font-semibold text-white transition-colors hover:bg-white hover:text-ink"
             >
-              Ver productos →
+              <span>
+                Ver productos
+              </span>
+              <IoArrowForward />
             </Link>
           </div>
         </div>

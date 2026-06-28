@@ -21,7 +21,7 @@ export const Logo = ({ href = "/", className, tone = "dark" }: IProps) => {
       </span>
       <span
         className={clsx(
-          "heading-6 font-bold tracking-wide",
+          "heading-6 font-bold tracking-wide text-primary-700",
           tone === "light" ? "text-white" : "text-ink",
         )}
       >

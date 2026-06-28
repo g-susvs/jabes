@@ -73,7 +73,7 @@ export const MainSection = ({ content }: IProps) => {
                   className={clsx(
                     "w-max text-nowrap rounded-full px-4 py-1.5 text-sm font-semibold transition-colors",
                     isActive
-                      ? "bg-accent text-ink"
+                      ? "bg-accent text-ink text-white"
                       : "border border-line text-muted hover:border-accent hover:text-accent-dark",
                   )}
                   onClick={() => setSelectedCategory(category.value)}

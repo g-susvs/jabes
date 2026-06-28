@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { LuLeaf } from "react-icons/lu";
 import { IMAGE_NOT_FOUND_URL } from "@/shared/constants";
+import { IoArrowForward } from "react-icons/io5";
 
 interface IProps {
   content: IOurServicesSection;
@@ -58,7 +59,10 @@ export const OurServicesSection = ({ content }: IProps) => {
                     href={service.button.link || "/services"}
                     className="mt-1 inline-flex w-max items-center gap-1 font-semibold text-accent-dark transition-colors hover:text-accent-deep"
                   >
-                    {service.button.label || "Más información"} →
+                    <span>
+                      {service.button.label}
+                    </span>
+                    <IoArrowForward />
                   </Link>
                 </div>
               </article>
