@@ -1,57 +1,58 @@
 /* eslint-disable @next/next/no-img-element */
-"use client";
-
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { IOurProductsSection } from "../../interface/home";
+import { IMAGE_NOT_FOUND_URL } from "@/shared/constants";
+import { IoArrowForward } from "react-icons/io5";
 
 interface IProps {
   content: IOurProductsSection;
 }
 
 export const ProductList = ({ content }: IProps) => {
-  const router = useRouter();
-
-  const handleViewDetail = (link: string) => {
-    if (!link || link === "#") {
-      router.push(content.action.link);
-      return;
-    }
-
-    router.push(link);
-  };
-
   return (
-    <div className="flex flex-row gap-6 lg:justify-center overflow-x-auto pb-4 mt-6 w-full">
-      {content.products.map((product) => (
-        <article
-          key={product.id}
-          className="flex min-w-[280px] max-w-[320px] flex-col gap-2 w-full object-cover overflow-hidden"
-        >
-          <figure className="w-full h-[231px] object-cover rounded-2xl overflow-hidden">
-            <img
-              src={product.imageUrl}
-              width={300}
-              height={300}
-              alt={product.title}
-              className="w-full h-full object-cover"
-            />
-          </figure>
-          <div className="flex flex-col justify-between flex-grow gap-2">
-            <div>
-              <span className="heading-5 text-zinc-800">{product.title}</span>
-              <p className="paragraph-lg text-start text-zinc-600">
+    <div className="mt-12 flex flex-wrap justify-center gap-8">
+      {content.products.map((product) => {
+        const productImage = product.imageUrl || IMAGE_NOT_FOUND_URL;
+        const href =
+          product.button.link && product.button.link !== "#"
+            ? product.button.link
+            : content.action.link || "/products";
+
+        return (
+          <article
+            key={product.id}
+            className="group flex w-full flex-col overflow-hidden rounded-2xl border border-line bg-card transition-shadow hover:shadow-lg sm:w-[270px]"
+          >
+            <figure className="h-[200px] w-full overflow-hidden">
+              <img
+                src={productImage}
+                alt={product.title}
+                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </figure>
+            <div className="flex flex-1 flex-col gap-2 p-5">
+              {product.category && (
+                <span className="w-max rounded-full bg-primary-200 px-3 py-0.5 text-xs font-semibold text-primary-700">
+                  {product.category}
+                </span>
+              )}
+              <h3 className="heading-6 font-bold text-ink">{product.title}</h3>
+              <p className="paragraph-lg line-clamp-2 flex-1 text-muted">
                 {product.description}
               </p>
+              <Link
+                href={href}
+                className="mt-1 inline-flex w-max items-center gap-1 font-semibold text-accent-dark transition-colors hover:text-accent-deep"
+              >
+                <span>
+                  {content.actionCardLabel}
+                </span>
+                <IoArrowForward />
+              </Link>
             </div>
-            <button
-              className="w-max py-1 px-2 rounded-lg text-primary-600 border-1 border-primary-600"
-              onClick={() => handleViewDetail(product.button.link)}
-            >
-              <span>{content.actionCardLabel}</span>
-            </button>
-          </div>
-        </article>
-      ))}
+          </article>
+        );
+      })}
     </div>
   );
 };

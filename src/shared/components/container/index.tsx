@@ -7,6 +7,6 @@ interface IProps {
 
 export const Container = ({ children, className }: IProps) => {
   return (
-    <div className={clsx("max-w-[1100px] mx-auto ", className)}>{children}</div>
+    <div className={clsx("max-w-[1200px] mx-auto", className)}>{children}</div>
   );
 };

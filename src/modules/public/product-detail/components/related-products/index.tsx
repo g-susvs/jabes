@@ -1,12 +1,13 @@
 "use client";
 
+import Link from "next/link";
+import Image from "next/image";
 import { Container } from "@/shared/components/container";
 import { IRelatedProductsSection } from "../../interface/product-detail";
-import { useRouter } from "next/navigation";
 import { useGetRelatedProducts } from "../hooks/useGetRelatedProducts";
 import { ReleatedProductsSkeleton } from "./releated-products-skeleton";
-import Image from "next/image";
 import { IMAGE_NOT_FOUND_URL } from "@/shared/constants";
+import { IoArrowForward } from "react-icons/io5";
 
 interface IProps {
   content: IRelatedProductsSection;
@@ -14,56 +15,71 @@ interface IProps {
 }
 
 export const RelatedProductSection = ({ content, categoryId }: IProps) => {
-  const router = useRouter();
   const { data, isLoading } = useGetRelatedProducts({
     page: 1,
     size: 10,
     categoryId,
   });
 
-  const handleViewDetail = (slug: string) => router.push(`/products/${slug}`);
-
   return (
-    <Container className="px-4 py-[100px]">
-      <h2 className="heading-5 sm:heading-4 md:heading-3 font-semibold text-zinc-800">
-        {content.title}
-      </h2>
-      <section className="flex flex-row gap-8 overflow-x-auto w-full mt-4 pb-4">
+    <Container className="px-4 py-20 sm:py-24">
+      <div className="flex items-end justify-between gap-4">
+        <h2 className="heading-3 font-bold text-ink">{content.title}</h2>
+        <Link
+          href="/products"
+          className="shrink-0 font-semibold text-accent-dark transition-colors hover:text-accent-deep flex flex-row items-center gap-2"
+        >
+          <span>
+            Ver todos
+          </span>
+          <IoArrowForward />
+        </Link>
+      </div>
+
+      <section className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
         {isLoading && <ReleatedProductsSkeleton />}
         {data &&
           !isLoading &&
           data.map((product) => {
-            const productImage = product.imgUrl ? product.imgUrl : IMAGE_NOT_FOUND_URL;
+            const productImage = product.imgUrl || IMAGE_NOT_FOUND_URL;
             return (
               <article
                 key={product.productId}
-                className="flex min-w-[280px] max-w-[320px] flex-col gap-2 w-full object-cover overflow-hidden"
+                className="group flex flex-col overflow-hidden rounded-2xl border border-line bg-card transition-shadow hover:shadow-lg"
               >
-                <figure className="w-full h-[231px] object-cover rounded-2xl overflow-hidden">
+                <figure className="h-[200px] w-full overflow-hidden">
                   <Image
                     width={320}
                     height={240}
-                    alt={`${product.name}`}
+                    alt={product.name}
                     src={productImage}
-                    className="w-full h-full object-cover"
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </figure>
-                <div className="flex flex-col justify-between flex-grow gap-2">
-                  <div>
-                    <h3 className="heading-5 text-zinc-800">{product.name}</h3>
-                    <p className="paragraph-lg text-start text-zinc-600">
-                      {product.description}
-                    </p>
-                  </div>
-                  <button
-                    className="w-max py-1 px-2 rounded-lg text-primary-600 border-1 border-primary-600"
-                    onClick={() => handleViewDetail(product.slug)}
+                <div className="flex flex-1 flex-col gap-2 p-5">
+                  {product.category?.name && (
+                    <span className="w-max rounded-full bg-primary-200 px-3 py-0.5 text-xs font-semibold text-primary-700">
+                      {product.category.name}
+                    </span>
+                  )}
+                  <h3 className="heading-6 font-bold text-ink">
+                    {product.name}
+                  </h3>
+                  <p className="paragraph-lg line-clamp-2 flex-1 text-muted">
+                    {product.description}
+                  </p>
+                  <Link
+                    href={`/products/${product.slug}`}
+                    className="mt-1 inline-flex w-max items-center gap-1 font-semibold text-accent-dark transition-colors hover:text-accent-deep"
                   >
-                    <span>Ver detalles</span>
-                  </button>
+                    <span>
+                      Ver detalles
+                    </span>
+                    <IoArrowForward />
+                  </Link>
                 </div>
               </article>
-            )
+            );
           })}
       </section>
     </Container>

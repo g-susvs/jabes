@@ -11,7 +11,7 @@ export const Button = ({ children, onClick, className, type, disabled }: IProps)
   return (
     <button
       className={clsx(
-        "bg-primary-600 text-white font-medium px-4 py-2 rounded-md hover:bg-primary-700 transition",
+        "bg-accent text-ink font-semibold px-5 py-2.5 rounded-full hover:bg-accent-dark hover:text-white transition-colors",
         className
       )}
       type={type}

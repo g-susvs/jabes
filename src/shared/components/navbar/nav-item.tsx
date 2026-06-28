@@ -1,9 +1,6 @@
 import { usePathname } from "next/navigation";
 import { clsx } from "@/libs/clsx";
 import Link from "next/link";
-import { Text } from "../text";
-
-import styles from "./navbar.module.css";
 
 interface IProps {
   children: React.ReactNode;
@@ -24,11 +21,15 @@ export const NavItem = ({
   return (
     <Link
       href={href}
-      className={clsx(styles.navMenuItem, isActive && styles.active, className)}
       onClick={onClick}
       aria-current={isActive ? "page" : undefined}
+      className={clsx(
+        "text-[13px] font-semibold uppercase tracking-[0.12em] transition-colors",
+        isActive ? "text-accent-dark" : "text-ink/70 hover:text-accent-dark",
+        className,
+      )}
     >
-      <Text>{children}</Text>
+      {children}
     </Link>
   );
 };

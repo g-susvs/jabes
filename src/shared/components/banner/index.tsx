@@ -5,18 +5,25 @@ interface IProps {
     title: string;
     description: string;
   };
+  /** Eyebrow opcional sobre el título. TODO: mover a CMS */
+  eyebrow?: string;
 }
 
-export const Banner = ({ content }: IProps) => {
+export const Banner = ({ content, eyebrow }: IProps) => {
   return (
-    <section className="bg-primary-200 px-4">
-      <Container className="flex flex-col gap-2 py-8">
-        <h1 className="heading-5 font-normal sm:heading-2 sm:font-normal text-center sm:text-start text-primary-800">
-          {content.title}
-        </h1>
-        <p className="hidden sm:block paragraph-lg text-zinc-800">
-          {content.description}
-        </p>
+    <section className="bg-accent px-4">
+      <Container className="flex flex-col items-center gap-3 py-14 text-center sm:py-20">
+        {eyebrow && (
+          <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-accent-deep">
+            {eyebrow}
+          </p>
+        )}
+        <h1 className="heading-2 font-bold text-ink">{content.title}</h1>
+        {content.description && (
+          <p className="paragraph-lg max-w-[640px] text-ink/75">
+            {content.description}
+          </p>
+        )}
       </Container>
     </section>
   );

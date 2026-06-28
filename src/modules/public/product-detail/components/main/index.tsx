@@ -1,11 +1,14 @@
+"use client";
+
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { FaCheck, FaWhatsapp } from "react-icons/fa";
 import { Container } from "@/shared/components/container";
 import { IDetailSection } from "../../interface/product-detail";
-import { FaCheck, FaWhatsapp } from "react-icons/fa";
-import Link from "next/link";
 import { IProductDTO } from "@/shared/interfaces/product";
-import { environment } from "@/config/env/environment";
-import Image from "next/image";
-import { IMAGE_NOT_FOUND_URL } from "@/shared/constants";
+import { buildWhatsappUrl, IMAGE_NOT_FOUND_URL } from "@/shared/constants";
+import { clsx } from "@/libs/clsx";
 
 interface IProps {
   content: IDetailSection;
@@ -13,63 +16,98 @@ interface IProps {
 }
 
 export const MainSection = ({ content, product }: IProps) => {
-  const productImage = product.imgUrl ? product.imgUrl : IMAGE_NOT_FOUND_URL;
+  const mainImage = product.imgUrl || IMAGE_NOT_FOUND_URL;
+
+  // TODO: mover a CMS (galería del producto: gallery[]). Hoy solo hay imagen principal.
+  const images = [mainImage];
+  const [activeImage, setActiveImage] = useState(mainImage);
+
   return (
-    <Container className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-[40px] px-4 w-full">
-      <figure className=" md:max-w-[534px] h-full md:max-h-[500px] rounded-xl overflow-hidden">
-        <Image
-          width={600}
-          height={600}
-          alt={`${product.name}`}
-          src={productImage}
-          className="w-full object-contain md:object-cover h-auto md:h-full"
-          priority
-        />
-      </figure>
-      <section className="flex flex-col gap-6">
-        <span className="rounded-xl bg-primary-600 w-max text-white px-4 py-[2px]">
+    <Container className="grid w-full grid-cols-1 gap-10 px-4 pt-8 md:grid-cols-2">
+      {/* Galería */}
+      <div className="flex flex-col gap-4">
+        <figure className="aspect-square w-full overflow-hidden rounded-2xl border border-line bg-card">
+          <Image
+            width={700}
+            height={700}
+            alt={product.name}
+            src={activeImage}
+            className="h-full w-full object-cover"
+            priority
+          />
+        </figure>
+
+        {images.length > 1 && (
+          <div className="flex gap-3">
+            {images.map((image, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveImage(image)}
+                className={clsx(
+                  "h-20 w-20 overflow-hidden rounded-xl border transition-colors",
+                  activeImage === image
+                    ? "border-accent"
+                    : "border-line hover:border-accent/60",
+                )}
+                aria-label={`Ver imagen ${index + 1}`}
+              >
+                <Image
+                  width={120}
+                  height={120}
+                  alt={`${product.name} ${index + 1}`}
+                  src={image}
+                  className="h-full w-full object-cover"
+                />
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* Detalle */}
+      <section className="flex flex-col gap-5">
+        <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-accent-dark">
           {product.category.name}
-        </span>
-        <div>
-          <h1 className="heading-5 sm:heading-4 md:heading-3 text-zinc-900 font-bold">
-            {product.name}
-          </h1>
-          <p className="paragraph-lg text-zinc-500 font-normal">
-            {product.description}
-          </p>
+        </p>
+        <div className="flex flex-col gap-3">
+          <h1 className="heading-2 font-bold text-ink">{product.name}</h1>
+          <p className="paragraph-lg text-muted">{product.description}</p>
         </div>
-        <div>
-          <h4 className="heading-6 sm:heading-5 text-zinc-700 font-semibold">
-            {content.subtitle}
-          </h4>
-          <ul className="flex flex-col gap-4 mt-2">
-            {product.features &&
-              product.features.map((feature) => (
+
+        {product.features && product.features.length > 0 && (
+          <div className="border-t border-line pt-5">
+            <h2 className="text-[12px] font-semibold uppercase tracking-[0.18em] text-muted">
+              {content.subtitle}
+            </h2>
+            <ul className="mt-4 flex flex-col gap-3">
+              {product.features.map((feature) => (
                 <li
                   key={feature.id}
-                  className="flex flex-row gap-4 text-zinc-600"
+                  className="flex items-center gap-3 text-ink/80"
                 >
-                  <FaCheck size={20} className="text-primary-500" />
-                  <p>{feature.text}</p>
+                  <FaCheck size={16} className="shrink-0 text-accent-dark" />
+                  <span className="paragraph-lg">{feature.text}</span>
                 </li>
               ))}
-          </ul>
-        </div>
-        <div className="flex flex-col gap-4 w-full">
+            </ul>
+          </div>
+        )}
+
+        <div className="flex flex-col gap-3 pt-2">
           <Link
-            href={`https://wa.me/${environment.contactPhone}?text=Hola%20quiero%20más%20información`}
+            href={buildWhatsappUrl(`Hola, quiero más información sobre ${product.name}`)}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-row gap-4 items-center justify-center py-2 rounded-xl bg-[#08d273] hover:bg-[#07ad60] text-white transition-all"
+            className="flex w-full items-center justify-center gap-3 rounded-full bg-whatsapp py-3.5 font-semibold text-white transition-colors hover:bg-accent-dark"
           >
-            <FaWhatsapp size={30} />
-            <span className="paragraph-lg sm:heading-6 font-semibold">
-              {content.action}
-            </span>
+            <FaWhatsapp size={22} />
+            <span>{content.action}</span>
           </Link>
-          <p className="paragraph-lg text-center text-zinc-500 max-w-[464px]">
-            {content.extraInfo}
-          </p>
+          {content.extraInfo && (
+            <p className="paragraph text-center text-muted">
+              {content.extraInfo}
+            </p>
+          )}
         </div>
       </section>
     </Container>
