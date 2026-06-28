@@ -5,6 +5,7 @@ import Link from "next/link";
 import { IProductDTO } from "@/shared/interfaces/product";
 import { environment } from "@/config/env/environment";
 import Image from "next/image";
+import { IMAGE_NOT_FOUND_URL } from "@/shared/constants";
 
 interface IProps {
   content: IDetailSection;
@@ -12,14 +13,15 @@ interface IProps {
 }
 
 export const MainSection = ({ content, product }: IProps) => {
+  const productImage = product.imgUrl ? product.imgUrl : IMAGE_NOT_FOUND_URL;
   return (
     <Container className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-[40px] px-4 w-full">
       <figure className=" md:max-w-[534px] h-full md:max-h-[500px] rounded-xl overflow-hidden">
         <Image
           width={600}
           height={600}
-          alt={`Imagen detallada de ${product.name}`}
-          src={product.imgUrl ?? ""}
+          alt={`${product.name}`}
+          src={productImage}
           className="w-full object-contain md:object-cover h-auto md:h-full"
           priority
         />

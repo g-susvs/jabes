@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { useGetRelatedProducts } from "../hooks/useGetRelatedProducts";
 import { ReleatedProductsSkeleton } from "./releated-products-skeleton";
 import Image from "next/image";
+import { IMAGE_NOT_FOUND_URL } from "@/shared/constants";
 
 interface IProps {
   content: IRelatedProductsSection;
@@ -31,36 +32,39 @@ export const RelatedProductSection = ({ content, categoryId }: IProps) => {
         {isLoading && <ReleatedProductsSkeleton />}
         {data &&
           !isLoading &&
-          data.map((product) => (
-            <article
-              key={product.productId}
-              className="flex min-w-[280px] max-w-[320px] flex-col gap-2 w-full object-cover overflow-hidden"
-            >
-              <figure className="w-full h-[231px] object-cover rounded-2xl overflow-hidden">
-                <Image
-                  width={320}
-                  height={240}
-                  alt={`Sugerencia: ${product.name}`}
-                  src={product.imgUrl ?? ""}
-                  className="w-full h-full object-cover"
-                />
-              </figure>
-              <div className="flex flex-col justify-between flex-grow gap-2">
-                <div>
-                  <h3 className="heading-5 text-zinc-800">{product.name}</h3>
-                  <p className="paragraph-lg text-start text-zinc-600">
-                    {product.description}
-                  </p>
+          data.map((product) => {
+            const productImage = product.imgUrl ? product.imgUrl : IMAGE_NOT_FOUND_URL;
+            return (
+              <article
+                key={product.productId}
+                className="flex min-w-[280px] max-w-[320px] flex-col gap-2 w-full object-cover overflow-hidden"
+              >
+                <figure className="w-full h-[231px] object-cover rounded-2xl overflow-hidden">
+                  <Image
+                    width={320}
+                    height={240}
+                    alt={`${product.name}`}
+                    src={productImage}
+                    className="w-full h-full object-cover"
+                  />
+                </figure>
+                <div className="flex flex-col justify-between flex-grow gap-2">
+                  <div>
+                    <h3 className="heading-5 text-zinc-800">{product.name}</h3>
+                    <p className="paragraph-lg text-start text-zinc-600">
+                      {product.description}
+                    </p>
+                  </div>
+                  <button
+                    className="w-max py-1 px-2 rounded-lg text-primary-600 border-1 border-primary-600"
+                    onClick={() => handleViewDetail(product.slug)}
+                  >
+                    <span>Ver detalles</span>
+                  </button>
                 </div>
-                <button
-                  className="w-max py-1 px-2 rounded-lg text-primary-600 border-1 border-primary-600"
-                  onClick={() => handleViewDetail(product.slug)}
-                >
-                  <span>Ver detalles</span>
-                </button>
-              </div>
-            </article>
-          ))}
+              </article>
+            )
+          })}
       </section>
     </Container>
   );

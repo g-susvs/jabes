@@ -1,4 +1,4 @@
-import HomePage from "@/modules/public/home/HoomePage";
+import HomePage from "@/modules/public/home/HomePage";
 import { getStrapiHomeContent } from "@/modules/public/home/services/get-strapi-home-content";
 
 export default async function Home() {

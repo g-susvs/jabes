@@ -2,8 +2,6 @@ import { IHomePageContent } from "../interface/home";
 import { environment } from "@/config/env/environment";
 
 const STRAPI_URL = environment.strapiHost;
-const HERO_PLACEHOLDER_IMAGE = "https://placehold.co/800x600?text=Jabes";
-const CARD_PLACEHOLDER_IMAGE = "https://placehold.co/600x400?text=Jabes";
 const HOME_PAGE_QUERY =
   "populate[heroImage]=true" +
   "&populate[servicesButton]=true" +
@@ -69,15 +67,14 @@ interface IStrapiHomeResponse {
   data?: IStrapiHomePage | null;
 }
 
-const withStrapiUrl = (url?: string | null, placeholder = CARD_PLACEHOLDER_IMAGE) => {
-  if (!url) return placeholder;
+const withStrapiUrl = (url?: string | null) => {
+  if (!url) return "";
   if (url.startsWith("http")) return url;
   return `${STRAPI_URL}${url}`;
 };
 
 const getMediaUrl = (
   media?: IStrapiMedia | null,
-  placeholder = CARD_PLACEHOLDER_IMAGE
 ) => {
   const url =
     media?.formats?.medium?.url ??
@@ -85,7 +82,7 @@ const getMediaUrl = (
     media?.formats?.thumbnail?.url ??
     media?.url;
 
-  return withStrapiUrl(url, placeholder);
+  return withStrapiUrl(url);
 };
 
 export const getStrapiHomeContent = async (): Promise<IHomePageContent | null> => {
@@ -135,7 +132,7 @@ export const getStrapiHomeContent = async (): Promise<IHomePageContent | null> =
         title: data.heroTitle ?? "",
         titleHighlight: data.heroTitleHighlight ?? "",
         subtitle: data.heroSubtitle ?? "",
-        imageUrl: getMediaUrl(data.heroImage, HERO_PLACEHOLDER_IMAGE),
+        imageUrl: getMediaUrl(data.heroImage),
       },
       ourServices: {
         title: data.servicesTitle ?? "",

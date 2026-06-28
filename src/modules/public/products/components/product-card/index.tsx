@@ -4,6 +4,7 @@ import { IProductCardContent } from "../../interface/products";
 import { useRouter } from "next/navigation";
 import { IProductDTO } from "@/shared/interfaces/product";
 import Image from "next/image";
+import { IMAGE_NOT_FOUND_URL } from "@/shared/constants";
 
 interface IProps {
   product: IProductDTO;
@@ -15,6 +16,8 @@ export const ProductCard = ({ product, content }: IProps) => {
 
   const handleViewDetail = (slug: string) => router.push(`/products/${slug}`);
 
+  const productImage = product.imgUrl ? product.imgUrl : IMAGE_NOT_FOUND_URL;
+
   return (
     <article
       key={product.productId}
@@ -24,7 +27,7 @@ export const ProductCard = ({ product, content }: IProps) => {
         <Image
           width={400}
           height={300}
-          src={product.imgUrl ?? ""}
+          src={productImage}
           alt={`Imagen del producto ${product.name}`}
           className="w-full h-full object-cover hover:scale-[1.1] transition-all"
         />

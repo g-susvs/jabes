@@ -3,12 +3,14 @@ import { IOurServicesSection } from "../../interface/home";
 import Image from "next/image";
 import Link from "next/link";
 import { IoArrowForward } from "react-icons/io5";
+import { IMAGE_NOT_FOUND_URL } from "@/shared/constants";
 
 interface IProps {
   content: IOurServicesSection;
 }
 
 export const OurServicesSection = ({ content }: IProps) => {
+
   return (
     <section className="bg-primary-100 py-[96px] px-4">
       <Container>
@@ -21,7 +23,9 @@ export const OurServicesSection = ({ content }: IProps) => {
           </p>
         </div>
         <div className="flex flex-wrap gap-6 mt-5 justify-center">
-          {content.services.map((service, index) => (
+          {content.services.map((service, index) => {
+            const serviceImage = service.img.src ? service.img.src : IMAGE_NOT_FOUND_URL;
+            return (
             <article
               key={index}
               className="bg-primary-50 flex-1 basis-[300px] max-w-full p-4 pb-8 rounded-2xl flex flex-col gap-2 box-border"
@@ -31,7 +35,7 @@ export const OurServicesSection = ({ content }: IProps) => {
                   width={300}
                   height={300}
                   alt={service.img.alt}
-                  src={service.img.src}
+                  src={serviceImage}
                   className="w-full h-full object-cover"
                 />
               </figure>
@@ -53,7 +57,8 @@ export const OurServicesSection = ({ content }: IProps) => {
                 </Link>
               </div>
             </article>
-          ))}
+          )
+          })}
         </div>
       </Container>
     </section>

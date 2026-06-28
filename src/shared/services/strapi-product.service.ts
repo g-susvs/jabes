@@ -3,7 +3,6 @@ import { IProductFindParams } from "@/shared/interfaces/find-params";
 import { environment } from "@/config/env/environment";
 
 const STRAPI_URL = environment.strapiHost;
-const PLACEHOLDER_IMAGE = "https://placehold.co/600x400?text=Producto";
 
 // ── Strapi response types ──────────────────────────────
 
@@ -62,7 +61,6 @@ interface IStrapiCollectionResponse<T> {
 
 const getMediaUrl = (
   media?: IStrapiMedia | null,
-  placeholder = PLACEHOLDER_IMAGE
 ) => {
   const url =
     media?.formats?.medium?.url ??
@@ -70,7 +68,7 @@ const getMediaUrl = (
     media?.formats?.thumbnail?.url ??
     media?.url;
 
-  if (!url) return placeholder;
+  if (!url) return "";
   if (url.startsWith("http")) return url;
   return `${STRAPI_URL}${url}`;
 };
