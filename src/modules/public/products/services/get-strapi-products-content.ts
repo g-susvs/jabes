@@ -1,9 +1,10 @@
 import { environment } from "@/config/env/environment";
 import { IProductsPageContent } from "../interface/products";
+import { IStrapiSeo } from "@/shared/seo/interfaces";
 
 const STRAPI_URL = environment.strapiHost;
 
-const PRODUCTS_PAGE_QUERY = "populate[seo]=true";
+const PRODUCTS_PAGE_QUERY = "populate[seo][populate]=shareImage";
 
 // ── Strapi response types ──────────────────────────────
 
@@ -15,6 +16,7 @@ interface IStrapiProductsPage {
   emptyStateDescription?: string | null;
   allCategoriesLabel?: string | null;
   productCardActionLabel?: string | null;
+  seo?: IStrapiSeo | null;
 }
 
 interface IStrapiProductsPageResponse {
@@ -60,6 +62,7 @@ export const getStrapiProductsContent =
               "Prueba con otra categoría o vuelve más tarde.",
           },
         },
+        seo: data.seo ?? null,
       };
     } catch {
       return null;

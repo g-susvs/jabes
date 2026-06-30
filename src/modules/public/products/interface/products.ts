@@ -1,6 +1,9 @@
+import { IStrapiSeo } from "@/shared/seo/interfaces";
+
 export interface IProductsPageContent {
   banner: IBannerSection;
   main: IMainSection;
+  seo?: IStrapiSeo | null;
 }
 
 export interface IBannerSection {

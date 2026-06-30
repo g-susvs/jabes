@@ -3,6 +3,7 @@ import { IProductFindParams } from "@/shared/interfaces/find-params";
 import { environment } from "@/config/env/environment";
 import { getMediaUrl } from "@/libs/strapi";
 import { IStrapiMedia } from "@/libs/strapi/interfaces";
+import { IStrapiSeo } from "@/shared/seo/interfaces";
 
 const STRAPI_URL = environment.strapiHost;
 
@@ -30,6 +31,7 @@ interface IStrapiProduct {
   image?: IStrapiMedia | null;
   features?: IStrapiFeature[] | null;
   category?: IStrapiCategory | null;
+  seo?: IStrapiSeo | null;
 }
 
 interface IStrapiCollectionResponse<T> {
@@ -64,12 +66,20 @@ const mapStrapiProduct = (product: IStrapiProduct): IProductDTO => ({
       product.category?.documentId ?? product.category?.id ?? ""
     ),
   },
+  seo: product.seo ?? null,
 });
 
 // ── Queries ────────────────────────────────────────────
 
 const PRODUCT_POPULATE =
   "populate[0]=image&populate[1]=category&populate[2]=features";
+// Detalle: sintaxis de objeto (consistente) para poder anidar seo.shareImage.
+// No se puede mezclar con populate[0]=... (array indexado) o Strapi v5 da 400.
+const PRODUCT_DETAIL_POPULATE =
+  "populate[image]=true" +
+  "&populate[category]=true" +
+  "&populate[features]=true" +
+  "&populate[seo][populate]=shareImage";
 const ACTIVE_FILTER = "filters[active][$eq]=true";
 
 // ── Public API ─────────────────────────────────────────
@@ -111,7 +121,7 @@ export class StrapiProductService {
     const qs = [
       `filters[slug][$eq]=${slug}`,
       ACTIVE_FILTER,
-      PRODUCT_POPULATE,
+      PRODUCT_DETAIL_POPULATE,
     ].join("&");
 
     const response = await fetch(`${STRAPI_URL}/api/products?${qs}`, {
