@@ -1,6 +1,7 @@
 import { environment } from "@/config/env/environment";
 import { IServicesPageContent } from "../interface/services";
 import { IStrapiMedia } from "@/libs/strapi/interfaces";
+import { IStrapiSeo } from "@/shared/seo/interfaces";
 import { getMediaUrl } from "@/libs/strapi";
 
 const STRAPI_URL = environment.strapiHost;
@@ -8,7 +9,7 @@ const STRAPI_URL = environment.strapiHost;
 const SERVICES_PAGE_QUERY =
   "populate[services][populate]=image" +
   "&populate[cta][populate]=button" +
-  "&populate[seo]=true";
+  "&populate[seo][populate]=shareImage";
 
 // ── Strapi response types ──────────────────────────────
 
@@ -42,6 +43,7 @@ interface IStrapiServicesPage {
   mainTitle?: string | null;
   services?: IStrapiService[] | null;
   cta?: IStrapiCta | null;
+  seo?: IStrapiSeo | null;
 }
 
 interface IStrapiServicesPageResponse {
@@ -104,6 +106,7 @@ export const getStrapiServicesContent =
           cards,
         },
         callToAction,
+        seo: data.seo ?? null,
       };
     } catch {
       return null;

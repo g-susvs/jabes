@@ -11,4 +11,5 @@ export const environment: IEnvironment = {
     },
   },
   contactPhone:  process.env.NEXT_PUBLIC_CONTACT_PHONE ?? "",
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "",
 };

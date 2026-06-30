@@ -1,5 +1,6 @@
 import { IStrapiMedia } from "@/libs/strapi/interfaces";
 import { IHomePageContent } from "../interface/home";
+import { IStrapiSeo } from "@/shared/seo/interfaces";
 import { environment } from "@/config/env/environment";
 import { getMediaUrl } from "@/libs/strapi";
 
@@ -8,7 +9,7 @@ const HOME_PAGE_QUERY =
   "populate[heroImage]=true" +
   "&populate[servicesButton]=true" +
   "&populate[productsButton]=true" +
-  "&populate[seo]=true" +
+  "&populate[seo][populate]=shareImage" +
   "&populate[featuredServices][populate][0]=image" +
   "&populate[featuredProducts][populate][0]=image" +
   "&populate[featuredProducts][populate][1]=category";
@@ -49,6 +50,7 @@ interface IStrapiHomePage {
   productCardActionLabel?: string | null;
   productsButton?: IStrapiButton | null;
   featuredProducts?: IStrapiProduct[] | null;
+  seo?: IStrapiSeo | null;
 }
 
 interface IStrapiHomeResponse {
@@ -120,6 +122,7 @@ export const getStrapiHomeContent = async (): Promise<IHomePageContent | null> =
         },
         products,
       },
+      seo: data.seo ?? null,
     };
   } catch {
     return null;

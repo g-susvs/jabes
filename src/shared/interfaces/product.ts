@@ -1,3 +1,5 @@
+import { IStrapiSeo } from "@/shared/seo/interfaces";
+
 export interface IProduct {
   productId: string;
   name: string;
@@ -30,4 +32,5 @@ export interface IProductDTO {
     name: string;
     categoryId: string;
   }
+  seo?: IStrapiSeo | null;
 }

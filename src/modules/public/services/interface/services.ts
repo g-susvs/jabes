@@ -1,7 +1,10 @@
+import { IStrapiSeo } from "@/shared/seo/interfaces";
+
 export interface IServicesPageContent {
   banner: IBannerSection;
   main: IMainSection;
   callToAction: ICallToActionSection;
+  seo?: IStrapiSeo | null;
 }
 
 export interface IBannerSection {

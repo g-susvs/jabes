@@ -1,7 +1,10 @@
+import { IStrapiSeo } from "@/shared/seo/interfaces";
+
 export interface IHomePageContent {
   hero: IHeroSection;
   ourServices: IOurServicesSection;
   ourProducts: IOurProductsSection;
+  seo?: IStrapiSeo | null;
 }
 
 export interface IHeroSection {

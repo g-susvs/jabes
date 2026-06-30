@@ -9,4 +9,5 @@ export interface IEnvironment {
     };
   };
   contactPhone: string;
+  siteUrl: string;
 }
