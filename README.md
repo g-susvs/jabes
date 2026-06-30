@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Jabes — Frontend (jabes-front)
 
-## Getting Started
+Sitio web del vivero y jardinería **Jabes**, construido con [Next.js 15](https://nextjs.org) (App Router) y React 19. El contenido público (inicio, productos, servicios y detalle de producto) **se obtiene desde el CMS de Strapi** (`jabes-back`), no de archivos locales.
 
-First, run the development server:
+## 🧱 Stack
+
+- **Next.js** `15.5` con App Router y Turbopack
+- **React** `19`
+- **TailwindCSS** `4`
+- **TanStack Query** (`@tanstack/react-query`) para datos del cliente
+- **Axios** para llamadas a la API
+- **React Hook Form**, **AJV**, **react-toastify**, **react-icons**
+
+## ✨ Cambios respecto al proyecto inicial
+
+- El contenido de las páginas públicas **ya no vive en archivos locales**: ahora se consume del **CMS de Strapi**. Los servicios en `src/modules/public/**/services/get-strapi-*.ts` consultan los endpoints de Strapi (`/api/home-page`, `/api/products`, etc.) y mapean la respuesta a las interfaces del front.
+- Las imágenes provienen de **Cloudinary** (servidas por Strapi). El helper [`src/libs/strapi/index.ts`](src/libs/strapi/index.ts) (`getMediaUrl`) resuelve las URLs de media: si ya son absolutas (Cloudinary) las usa tal cual, y si son relativas las antepone con el host de Strapi.
+
+## 🔌 Fuentes de datos
+
+- **CMS / Strapi** (`NEXT_PUBLIC_STRAPI_URL`): contenido público de las páginas, productos, servicios y media.
+- **API propia** (`NEXT_PUBLIC_API_URL`): instancias de Axios en [`src/libs/axios.ts`](src/libs/axios.ts) para `auth`, `categories` y `products` (zona autenticada; incluye interceptor de token y redirección a login ante 401/403).
+
+## 🔑 Variables de entorno
+
+Crea un archivo `.env` (o `.env.local`) con:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# CMS Strapi (contenido público y media)
+NEXT_PUBLIC_STRAPI_URL=http://localhost:1337
+
+# API propia (auth / categorías / productos)
+NEXT_PUBLIC_API_URL=http://localhost:1337/api
+
+# Teléfono de contacto mostrado en el sitio
+NEXT_PUBLIC_CONTACT_PHONE=
+
+# Cloudinary (subida directa desde el front, si aplica)
+CLOUDINARY_CLOUD_NAME=
+CLOUDINARY_API_KEY=
+CLOUDINARY_API_SECRET=
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Las variables se centralizan en [`src/config/env/environment.ts`](src/config/env/environment.ts).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Puesta en marcha
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Asegúrate de tener el CMS (`jabes-back`) corriendo y `NEXT_PUBLIC_STRAPI_URL` apuntando a él. Luego:
 
-## Learn More
+```bash
+npm install
+npm run dev   # http://localhost:3000
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Scripts disponibles
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Script | Descripción |
+| --- | --- |
+| `npm run dev` | Servidor de desarrollo (Turbopack) |
+| `npm run build` | Build de producción |
+| `npm run start` | Sirve el build de producción |
+| `npm run lint` | Ejecuta ESLint |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🗂️ Estructura
 
-## Deploy on Vercel
+```
+src/
+├─ app/                 # Rutas (App Router): (public)/home, products, services...
+├─ modules/public/      # Páginas y componentes por dominio
+│  └─ */services/       # Servicios que consumen el CMS de Strapi
+├─ libs/                # axios, strapi (getMediaUrl), cloudinary, query...
+├─ config/env/          # Variables de entorno tipadas
+└─ shared/              # Componentes, hooks, servicios e interfaces reutilizables
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📦 Despliegue
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Optimizado para [Vercel](https://vercel.com/new). Define las variables de entorno (`NEXT_PUBLIC_STRAPI_URL`, `NEXT_PUBLIC_API_URL`, etc.) en el panel del proyecto. Consulta la [documentación de despliegue de Next.js](https://nextjs.org/docs/app/building-your-application/deploying).
