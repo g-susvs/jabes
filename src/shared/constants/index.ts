@@ -22,3 +22,5 @@ export const CONTACT_INFO = {
     instagram: "https://instagram.com",
   },
 };
+
+export const PRODUCTS_PAGE_SIZE = 10;

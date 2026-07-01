@@ -1,58 +1,39 @@
-"use client";
+import Link from "next/link";
 import { Container } from "@/shared/components/container";
-import { ICategoryItem, IMainSection } from "../../interface/products";
 import { clsx } from "@/libs/clsx";
-import { useEffect, useState } from "react";
-import { ProductList } from "../product-list";
-import { useGetCategories } from "@/shared/hooks/useGetCategories";
-import { useGetProducts } from "@/shared/hooks/useGetProducts";
 import { IProductDTO } from "@/shared/interfaces/product";
-import { CategorySkeletonLoader } from "../category-skeleton-loader";
-import { ProductsSkeletonLoader } from "../product-skeleton-loader";
+import { ICategory } from "@/shared/interfaces/category";
+import { IPagination } from "@/shared/interfaces/pagination";
+import { IMainSection } from "../../interface/products";
+import { buildProductsHref } from "../../helpers";
+import { ProductList } from "../product-list";
+import { Paginator } from "../paginator";
 
 interface IProps {
   content: IMainSection;
+  products: IProductDTO[];
+  categories: ICategory[];
+  pagination: IPagination;
+  /** Slug de la categoría activa; vacío = "Todas". */
+  selectedCategory?: string;
 }
 
-export const MainSection = ({ content }: IProps) => {
-  const [categories, setCategories] = useState<ICategoryItem[]>([]);
-  const [selectedCategory, setSelectedCategory] = useState("all");
-  const [filteredProducts, setFilteredProducts] = useState<IProductDTO[] | []>(
-    [],
-  );
-  const { data: catgoriesData, isLoading: isLoadingCategories } =
-    useGetCategories();
-  const { data: productsData, isLoading: isLoadingProducts } = useGetProducts();
+export const MainSection = ({
+  content,
+  products,
+  categories,
+  pagination,
+  selectedCategory,
+}: IProps) => {
+  const allLabel =
+    content.categories.find((c) => c.value === "all")?.label ?? "Todas";
 
-  useEffect(() => {
-    if (!selectedCategory || (selectedCategory === "all" && productsData)) {
-      return setFilteredProducts(productsData ?? []);
-    }
-    const filteredProducts =
-      productsData?.filter((item) => item.categoryId === selectedCategory) ??
-      [];
+  const chips = [
+    { label: allLabel, value: "" },
+    ...categories.map((c) => ({ label: c.name, value: c.slug })),
+  ];
 
-    setFilteredProducts(filteredProducts);
-  }, [selectedCategory, productsData]);
-
-  useEffect(() => {
-    if (catgoriesData) {
-      const news = [
-        ...content.categories,
-        ...catgoriesData.map((item) => ({
-          label: item.name,
-          value: item.categoryId,
-        })),
-      ];
-
-      setCategories(news);
-    } else {
-      setCategories([...content.categories]);
-    }
-  }, [catgoriesData, content.categories]);
-
-  const showEmptyState =
-    !isLoadingProducts && filteredProducts.length === 0;
+  const showEmptyState = products.length === 0;
 
   return (
     <Container className="px-4 py-12 sm:py-16">
@@ -62,33 +43,28 @@ export const MainSection = ({ content }: IProps) => {
         </h2>
 
         <div className="flex w-full flex-wrap justify-center gap-3 overflow-x-auto pb-2">
-          {isLoadingCategories && <CategorySkeletonLoader />}
-          {categories &&
-            !isLoadingCategories &&
-            categories.map((category, index) => {
-              const isActive = selectedCategory === category.value;
-              return (
-                <button
-                  key={index}
-                  className={clsx(
-                    "w-max text-nowrap rounded-full px-4 py-1.5 text-sm font-semibold transition-colors",
-                    isActive
-                      ? "bg-accent text-ink text-white"
-                      : "border border-line text-muted hover:border-accent hover:text-accent-dark",
-                  )}
-                  onClick={() => setSelectedCategory(category.value)}
-                  aria-pressed={isActive}
-                >
-                  {category.label}
-                </button>
-              );
-            })}
+          {chips.map((chip) => {
+            const isActive = (selectedCategory ?? "") === chip.value;
+            return (
+              <Link
+                key={chip.value || "all"}
+                href={buildProductsHref(1, chip.value)}
+                aria-current={isActive ? "true" : undefined}
+                className={clsx(
+                  "w-max text-nowrap rounded-full px-4 py-1.5 text-sm font-semibold transition-colors",
+                  isActive
+                    ? "bg-accent text-white"
+                    : "border border-line text-muted hover:border-accent hover:text-accent-dark"
+                )}
+              >
+                {chip.label}
+              </Link>
+            );
+          })}
         </div>
       </section>
 
-      {isLoadingProducts && <ProductsSkeletonLoader />}
-
-      {showEmptyState && (
+      {showEmptyState ? (
         <div className="mx-auto mt-16 max-w-[420px] text-center">
           <h3 className="heading-5 font-bold text-ink">
             {content.emptyState.title}
@@ -97,13 +73,14 @@ export const MainSection = ({ content }: IProps) => {
             {content.emptyState.description}
           </p>
         </div>
-      )}
-
-      {!isLoadingProducts && !showEmptyState && (
-        <ProductList
-          products={filteredProducts}
-          content={content.cardContent}
-        />
+      ) : (
+        <>
+          <ProductList products={products} content={content.cardContent} />
+          <Paginator
+            pagination={pagination}
+            buildHref={(p) => buildProductsHref(p, selectedCategory)}
+          />
+        </>
       )}
     </Container>
   );

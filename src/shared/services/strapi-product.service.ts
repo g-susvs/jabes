@@ -1,9 +1,19 @@
 import { IProductDTO } from "@/shared/interfaces/product";
 import { IProductFindParams } from "@/shared/interfaces/find-params";
+import { IPaginated } from "@/shared/interfaces/pagination";
 import { environment } from "@/config/env/environment";
 import { getMediaUrl } from "@/libs/strapi";
 import { IStrapiMedia } from "@/libs/strapi/interfaces";
 import { IStrapiSeo } from "@/shared/seo/interfaces";
+import { PRODUCTS_PAGE_SIZE } from "../constants";
+
+/** Tamaño de página por defecto del catálogo público. */
+
+interface IGetPagedParams {
+  page?: number;
+  size?: number;
+  categorySlug?: string;
+}
 
 const STRAPI_URL = environment.strapiHost;
 
@@ -112,6 +122,56 @@ export class StrapiProductService {
       (await response.json()) as IStrapiCollectionResponse<IStrapiProduct>;
 
     return (json.data ?? []).map(mapStrapiProduct);
+  }
+
+  /**
+   * Get a page of active products (paginated server-side by Strapi),
+   * optionally filtered by category slug. Returns the items plus the
+   * pagination metadata needed by the paginator.
+   */
+  static async getPaged(
+    params?: IGetPagedParams
+  ): Promise<IPaginated<IProductDTO>> {
+    const page = Math.max(1, params?.page ?? 1);
+    const pageSize = params?.size ?? PRODUCTS_PAGE_SIZE;
+
+    const parts = [
+      ACTIVE_FILTER,
+      PRODUCT_POPULATE,
+      "sort=name:asc",
+      `pagination[page]=${page}`,
+      `pagination[pageSize]=${pageSize}`,
+    ];
+
+    if (params?.categorySlug) {
+      parts.push(`filters[category][slug][$eq]=${params.categorySlug}`);
+    }
+
+    const emptyResult: IPaginated<IProductDTO> = {
+      items: [],
+      pagination: { page, pageSize, pageCount: 0, total: 0 },
+    };
+
+    const response = await fetch(`${STRAPI_URL}/api/products?${parts.join("&")}`, {
+      cache: "no-store",
+    });
+
+    if (!response.ok) return emptyResult;
+
+    const json =
+      (await response.json()) as IStrapiCollectionResponse<IStrapiProduct>;
+
+    const meta = json.meta?.pagination;
+
+    return {
+      items: (json.data ?? []).map(mapStrapiProduct),
+      pagination: {
+        page: meta?.page ?? page,
+        pageSize: meta?.pageSize ?? pageSize,
+        pageCount: meta?.pageCount ?? 0,
+        total: meta?.total ?? 0,
+      },
+    };
   }
 
   /**

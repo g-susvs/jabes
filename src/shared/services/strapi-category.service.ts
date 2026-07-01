@@ -32,6 +32,7 @@ interface IStrapiCollectionResponse<T> {
 const mapStrapiCategory = (cat: IStrapiCategory): ICategory => ({
   categoryId: String(cat.documentId ?? cat.id ?? ""),
   name: cat.name ?? "",
+  slug: cat.slug ?? "",
   active: cat.active ?? true,
 });
 

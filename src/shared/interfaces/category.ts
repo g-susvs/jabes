@@ -1,7 +1,7 @@
 export interface ICategory {
   categoryId: string;
   name: string;
+  slug: string;
   active: boolean;
 }
 
-export type ICreateCategoryDTO = Omit<ICategory, "categoryId" >;
