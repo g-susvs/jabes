@@ -13,7 +13,7 @@ export const buildWhatsappUrl = (message = WHATSAPP_DEFAULT_MESSAGE) =>
 export const CONTACT_INFO = {
   address: "Av. Jardines 1234, Ciudad",
   phone: "+52 555 123 4567",
-  email: "info@jabes.com",
+  email: "contacto@jardineriajabes.com",
   schedule: "Lun–Sáb 8:00 – 18:00",
   tagline:
     "Tu vivero de confianza. Plantas, jardines y espacios verdes que transforman tu hogar.",

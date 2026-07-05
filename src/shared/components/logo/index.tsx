@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { LuLeaf } from "react-icons/lu";
 import { clsx } from "@/libs/clsx";
 import Image from "next/image";
 
@@ -18,7 +17,6 @@ export const Logo = ({ href = "/", className, tone = "dark" }: IProps) => {
       className={clsx("flex items-center", className)}
     >
       <span className="flex items-center justify-center text-accent">
-        {/* <LuLeaf size={26} strokeWidth={2.4} /> */}
         <Image
         src="/logo.png"
         alt="Jabes"
