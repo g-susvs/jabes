@@ -67,10 +67,10 @@ export const Footer = () => {
             <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-white/40">
               Contacto
             </h3>
-            <p className="flex items-start gap-2 paragraph-lg text-white/70">
+            {/* <p className="flex items-start gap-2 paragraph-lg text-white/70">
               <HiOutlineLocationMarker className="mt-0.5 shrink-0 text-accent" size={18} />
               <span>{CONTACT_INFO.address}</span>
-            </p>
+            </p> */}
             <a
               href={`tel:${CONTACT_INFO.phone.replace(/\s/g, "")}`}
               className="flex items-center gap-2 paragraph-lg text-white/70 transition-colors hover:text-accent"
@@ -101,7 +101,7 @@ export const Footer = () => {
 
         <div className="border-t border-white/10 py-6">
           <p className="paragraph text-center text-white/40">
-            © 2025 Jardinería Jabes. Todos los derechos reservados.
+            © 2026 Jardinería Jabes. Todos los derechos reservados.
           </p>
         </div>
       </Container>

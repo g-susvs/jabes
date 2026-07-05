@@ -12,7 +12,7 @@ export const buildWhatsappUrl = (message = WHATSAPP_DEFAULT_MESSAGE) =>
 // TODO: mover a CMS (Site Settings: dirección, teléfono, email, horario, redes)
 export const CONTACT_INFO = {
   address: "Av. Jardines 1234, Ciudad",
-  phone: "+52 555 123 4567",
+  phone: `+51 ${environment.contactPhone}`,
   email: "contacto@jardineriajabes.com",
   schedule: "Lun–Sáb 8:00 – 18:00",
   tagline:
