@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { IOurProductsSection } from "../../interface/home";
 import { IMAGE_NOT_FOUND_URL } from "@/shared/constants";
+import { formatPrice } from "@/libs/format-price";
 import { IoArrowForward } from "react-icons/io5";
 
 interface IProps {
@@ -13,6 +14,7 @@ export const ProductList = ({ content }: IProps) => {
     <div className="mt-12 flex flex-wrap justify-center gap-8">
       {content.products.map((product) => {
         const productImage = product.imageUrl || IMAGE_NOT_FOUND_URL;
+        const price = formatPrice(product.price);
         const href =
           product.button.link && product.button.link !== "#"
             ? product.button.link
@@ -40,6 +42,9 @@ export const ProductList = ({ content }: IProps) => {
               <p className="paragraph-lg line-clamp-2 flex-1 text-muted">
                 {product.description}
               </p>
+              {price && (
+                <p className="heading-6 font-bold text-accent-dark">{price}</p>
+              )}
               <Link
                 href={href}
                 className="mt-1 inline-flex w-max items-center gap-1 font-semibold text-accent-dark transition-colors hover:text-accent-deep"

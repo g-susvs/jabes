@@ -7,6 +7,7 @@ import { IRelatedProductsSection } from "../../interface/product-detail";
 import { useGetRelatedProducts } from "../hooks/useGetRelatedProducts";
 import { ReleatedProductsSkeleton } from "./releated-products-skeleton";
 import { IMAGE_NOT_FOUND_URL } from "@/shared/constants";
+import { formatPrice } from "@/libs/format-price";
 import { IoArrowForward } from "react-icons/io5";
 
 interface IProps {
@@ -42,6 +43,7 @@ export const RelatedProductSection = ({ content, categoryId }: IProps) => {
           !isLoading &&
           data.map((product) => {
             const productImage = product.imgUrl || IMAGE_NOT_FOUND_URL;
+            const price = formatPrice(product.price);
             return (
               <article
                 key={product.productId}
@@ -68,6 +70,11 @@ export const RelatedProductSection = ({ content, categoryId }: IProps) => {
                   <p className="paragraph-lg line-clamp-2 flex-1 text-muted">
                     {product.description}
                   </p>
+                  {price && (
+                    <p className="heading-6 font-bold text-accent-dark">
+                      {price}
+                    </p>
+                  )}
                   <Link
                     href={`/products/${product.slug}`}
                     className="mt-1 inline-flex w-max items-center gap-1 font-semibold text-accent-dark transition-colors hover:text-accent-deep"

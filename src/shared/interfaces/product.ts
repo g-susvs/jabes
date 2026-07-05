@@ -24,6 +24,7 @@ export interface IProductDTO {
   name: string;
   description?: string;
   imgUrl?: string;
+  price?: number | string | null;
   slug: string;
   features?: { id: string; text: string }[];
   active: boolean;

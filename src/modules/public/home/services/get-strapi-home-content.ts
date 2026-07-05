@@ -33,6 +33,7 @@ interface IStrapiProduct {
   slug?: string | null;
   description?: string | null;
   image?: IStrapiMedia | null;
+  price?: number | string | null;
   category?: { name?: string | null } | null;
 }
 
@@ -93,6 +94,7 @@ export const getStrapiHomeContent = async (): Promise<IHomePageContent | null> =
           description: product.description ?? "",
           imageUrl: getMediaUrl(product.image),
           category: product.category?.name ?? "",
+          price: product?.price ?? null,
           button: {
             label: data.productCardActionLabel ?? "Ver detalles",
             link: `/products/${product.slug ?? ""}`,

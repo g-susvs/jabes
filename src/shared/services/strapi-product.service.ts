@@ -38,6 +38,7 @@ interface IStrapiProduct {
   slug?: string | null;
   description?: string | null;
   active?: boolean | null;
+  price?: number | string | null;
   image?: IStrapiMedia | null;
   features?: IStrapiFeature[] | null;
   category?: IStrapiCategory | null;
@@ -63,6 +64,7 @@ const mapStrapiProduct = (product: IStrapiProduct): IProductDTO => ({
   name: product.name ?? "",
   description: product.description ?? "",
   imgUrl: getMediaUrl(product.image),
+  price: product.price ?? null,
   slug: product.slug ?? "",
   features: product.features?.map((f) => ({
     id: String(f.id ?? ""),

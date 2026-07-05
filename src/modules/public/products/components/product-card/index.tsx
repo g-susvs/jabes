@@ -3,6 +3,7 @@ import Image from "next/image";
 import { IProductCardContent } from "../../interface/products";
 import { IProductDTO } from "@/shared/interfaces/product";
 import { IMAGE_NOT_FOUND_URL } from "@/shared/constants";
+import { formatPrice } from "@/libs/format-price";
 import { IoArrowForward } from "react-icons/io5";
 
 interface IProps {
@@ -12,6 +13,7 @@ interface IProps {
 
 export const ProductCard = ({ product, content }: IProps) => {
   const productImage = product.imgUrl || IMAGE_NOT_FOUND_URL;
+  const price = formatPrice(product.price);
 
   return (
     <article className="group flex flex-col overflow-hidden rounded-2xl border border-line bg-card transition-shadow hover:shadow-lg">
@@ -32,6 +34,9 @@ export const ProductCard = ({ product, content }: IProps) => {
         <p className="paragraph-lg line-clamp-2 flex-1 text-muted">
           {product.description}
         </p>
+        {price && (
+          <p className="heading-6 font-bold text-accent-dark">{price}</p>
+        )}
         <Link
           href={`/products/${product.slug}`}
           className="mt-1 inline-flex w-max items-center gap-1 font-semibold text-accent-dark transition-colors hover:text-accent-deep"

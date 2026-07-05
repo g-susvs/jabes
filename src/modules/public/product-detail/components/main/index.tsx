@@ -8,6 +8,7 @@ import { Container } from "@/shared/components/container";
 import { IDetailSection } from "../../interface/product-detail";
 import { IProductDTO } from "@/shared/interfaces/product";
 import { buildWhatsappUrl, IMAGE_NOT_FOUND_URL } from "@/shared/constants";
+import { formatPrice } from "@/libs/format-price";
 import { clsx } from "@/libs/clsx";
 
 interface IProps {
@@ -17,6 +18,7 @@ interface IProps {
 
 export const MainSection = ({ content, product }: IProps) => {
   const mainImage = product.imgUrl || IMAGE_NOT_FOUND_URL;
+  const price = formatPrice(product.price);
 
   // TODO: mover a CMS (galería del producto: gallery[]). Hoy solo hay imagen principal.
   const images = [mainImage];
@@ -73,6 +75,10 @@ export const MainSection = ({ content, product }: IProps) => {
           <h1 className="heading-2 font-bold text-ink">{product.name}</h1>
           <p className="paragraph-lg text-muted">{product.description}</p>
         </div>
+
+        {price && (
+          <p className="heading-3 font-bold text-accent-dark">{price}</p>
+        )}
 
         {product.features && product.features.length > 0 && (
           <div className="border-t border-line pt-5">

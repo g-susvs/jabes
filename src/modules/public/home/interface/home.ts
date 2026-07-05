@@ -34,6 +34,7 @@ export interface IOurProductsSection {
     description: string;
     imageUrl: string;
     category?: string;
+    price?: number | string | null;
     button: {
       label: string;
       link: string;
