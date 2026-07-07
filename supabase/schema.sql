@@ -95,14 +95,19 @@ alter table categories enable row level security;
 alter table products enable row level security;
 alter table services enable row level security;
 
+-- using (active): solo se pueden leer las filas activas. Las inactivas
+-- (active=false) son invisibles para la key pública, aunque se consulte
+-- la API REST a mano. Escritura sigue denegada (no hay política de
+-- insert/update/delete → RLS lo bloquea todo salvo la service/secret key).
+
 drop policy if exists "public read categories" on categories;
 create policy "public read categories"
-  on categories for select to anon, authenticated using (true);
+  on categories for select to anon, authenticated using (active);
 
 drop policy if exists "public read products" on products;
 create policy "public read products"
-  on products for select to anon, authenticated using (true);
+  on products for select to anon, authenticated using (active);
 
 drop policy if exists "public read services" on services;
 create policy "public read services"
-  on services for select to anon, authenticated using (true);
+  on services for select to anon, authenticated using (active);
