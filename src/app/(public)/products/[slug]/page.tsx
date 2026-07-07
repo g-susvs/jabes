@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ProductDetailPage } from "@/modules/public/product-detail/ProductDetailPage";
 import { getStrapiProductDetailContent } from "@/modules/public/product-detail/services/get-strapi-product-detail-content";
-import { StrapiProductService } from "@/shared/services/strapi-product.service";
+import { ProductService } from "@/shared/services/product.service";
 import { buildMetadata } from "@/shared/seo/build-metadata";
 import {
   PRODUCT_NOT_FOUND_TITLE,
@@ -16,7 +16,7 @@ export async function generateMetadata({
   params: paramsType;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const product = await StrapiProductService.getBySlug(slug);
+  const product = await ProductService.getBySlug(slug);
 
   // Producto inexistente: título genérico, evitamos indexar una página vacía.
   if (!product) {
@@ -41,7 +41,7 @@ export default async function ProductDetail({
 }) {
   const { slug } = await params;
 
-  const product = await StrapiProductService.getBySlug(slug);
+  const product = await ProductService.getBySlug(slug);
 
   const content = await getStrapiProductDetailContent();
 

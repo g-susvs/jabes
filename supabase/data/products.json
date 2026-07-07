@@ -1,0 +1,2003 @@
+[
+  {
+    "id": 86,
+    "documentId": "xsvb486tlh95caqgo20vahsh",
+    "name": "Abono de vaca x 20kg",
+    "slug": "abono-de-vaca-x-20kg",
+    "description": "Abono orgánico que nutre el suelo y favorece el crecimiento sano de plantas y cultivos.",
+    "active": true,
+    "featured": true,
+    "createdAt": "2026-07-04T23:35:26.855Z",
+    "updatedAt": "2026-07-04T23:35:26.855Z",
+    "publishedAt": "2026-07-04T23:35:26.858Z",
+    "price": 14.5,
+    "image": {
+      "id": 49,
+      "documentId": "djscbcw1idwx2r26g0xyvd5x",
+      "name": "abonos.jpg",
+      "alternativeText": null,
+      "caption": null,
+      "focalPoint": null,
+      "width": 1408,
+      "height": 768,
+      "formats": {
+        "thumbnail": {
+          "ext": ".jpg",
+          "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208126/jabes/thumbnail_abonos_3e1dff96f7.jpg",
+          "hash": "thumbnail_abonos_3e1dff96f7",
+          "mime": "image/jpeg",
+          "name": "thumbnail_abonos.jpg",
+          "path": null,
+          "size": 5.65,
+          "width": 245,
+          "height": 134,
+          "sizeInBytes": 5654,
+          "provider_metadata": {
+            "public_id": "jabes/thumbnail_abonos_3e1dff96f7",
+            "resource_type": "image"
+          }
+        }
+      },
+      "hash": "abonos_3e1dff96f7",
+      "ext": ".jpg",
+      "mime": "image/jpeg",
+      "size": 93.52,
+      "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208126/jabes/abonos_3e1dff96f7.jpg",
+      "previewUrl": null,
+      "provider": "cloudinary",
+      "provider_metadata": {
+        "public_id": "jabes/abonos_3e1dff96f7",
+        "resource_type": "image"
+      },
+      "createdAt": "2026-07-04T23:35:26.832Z",
+      "updatedAt": "2026-07-04T23:35:26.832Z",
+      "publishedAt": "2026-07-04T23:35:26.832Z"
+    },
+    "gallery": null,
+    "category": {
+      "id": 50,
+      "documentId": "vldnh3rt1nsrtutoufr03pag",
+      "name": "Fertilizantes y Abonos",
+      "slug": "fertilizantes-y-abonos",
+      "active": true,
+      "description": null,
+      "order": 0,
+      "createdAt": "2026-06-13T23:19:41.325Z",
+      "updatedAt": "2026-06-13T23:19:41.325Z",
+      "publishedAt": "2026-06-13T23:19:41.345Z"
+    },
+    "features": [
+      {
+        "id": 221,
+        "text": "Rico en nutrientes"
+      },
+      {
+        "id": 222,
+        "text": "Ideal para huertos y jardines"
+      },
+      {
+        "id": 223,
+        "text": "Mejora la fertilidad del suelo"
+      },
+      {
+        "id": 224,
+        "text": "Favorece plantas más sanas"
+      }
+    ],
+    "seo": null
+  },
+  {
+    "id": 114,
+    "documentId": "sj0m8cubrrogtslkbxmwo9cj",
+    "name": "Buganvilia fucsia (Enredadera) x 1.50m",
+    "slug": "buganvilia-fucsia-enredadera-x-1-50m",
+    "description": "Arbusto trepador de intensas flores fucsia, ideal para cercos, pérgolas y jardines soleados.",
+    "active": true,
+    "featured": true,
+    "createdAt": "2026-07-04T23:35:38.523Z",
+    "updatedAt": "2026-07-04T23:35:38.523Z",
+    "publishedAt": "2026-07-04T23:35:38.527Z",
+    "price": 30,
+    "image": {
+      "id": 63,
+      "documentId": "j1b26hb7g5thmbvuhltc43v3",
+      "name": "buganvilia-fucsia.jpeg",
+      "alternativeText": null,
+      "caption": null,
+      "focalPoint": null,
+      "width": 720,
+      "height": 1280,
+      "formats": {
+        "thumbnail": {
+          "ext": ".jpeg",
+          "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208137/jabes/thumbnail_buganvilia_fucsia_bd4a3b3590.jpg",
+          "hash": "thumbnail_buganvilia_fucsia_bd4a3b3590",
+          "mime": "image/jpeg",
+          "name": "thumbnail_buganvilia-fucsia.jpeg",
+          "path": null,
+          "size": 5.47,
+          "width": 88,
+          "height": 156,
+          "sizeInBytes": 5474,
+          "provider_metadata": {
+            "public_id": "jabes/thumbnail_buganvilia_fucsia_bd4a3b3590",
+            "resource_type": "image"
+          }
+        }
+      },
+      "hash": "buganvilia_fucsia_bd4a3b3590",
+      "ext": ".jpeg",
+      "mime": "image/jpeg",
+      "size": 197.85,
+      "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208137/jabes/buganvilia_fucsia_bd4a3b3590.jpg",
+      "previewUrl": null,
+      "provider": "cloudinary",
+      "provider_metadata": {
+        "public_id": "jabes/buganvilia_fucsia_bd4a3b3590",
+        "resource_type": "image"
+      },
+      "createdAt": "2026-07-04T23:35:38.513Z",
+      "updatedAt": "2026-07-04T23:35:38.513Z",
+      "publishedAt": "2026-07-04T23:35:38.513Z"
+    },
+    "gallery": null,
+    "category": {
+      "id": 56,
+      "documentId": "yu7m362x6ymavazrr5rfr7hw",
+      "name": "Plantas y Grass",
+      "slug": "plantas-y-grass",
+      "active": true,
+      "description": null,
+      "order": 0,
+      "createdAt": "2026-06-13T23:20:53.887Z",
+      "updatedAt": "2026-06-13T23:20:53.887Z",
+      "publishedAt": "2026-06-13T23:20:53.895Z"
+    },
+    "features": [
+      {
+        "id": 333,
+        "text": "Flores fucsia intensas"
+      },
+      {
+        "id": 334,
+        "text": "Ideal para cercos y pérgolas"
+      },
+      {
+        "id": 335,
+        "text": "Resistente a climas cálidos"
+      },
+      {
+        "id": 336,
+        "text": "Floración abundante y prolongada"
+      }
+    ],
+    "seo": null
+  },
+  {
+    "id": 112,
+    "documentId": "eeblhvrckgo9tlj4k8va2kr2",
+    "name": "Buganvilia roja (Enredadera) x 1.50m",
+    "slug": "buganvilia-roja-enredadera-x-1-50m",
+    "description": "Arbusto trepador de vistosas flores rojas, resistente al sol y de floración abundante.",
+    "active": true,
+    "featured": true,
+    "createdAt": "2026-07-04T23:35:37.797Z",
+    "updatedAt": "2026-07-04T23:35:37.797Z",
+    "publishedAt": "2026-07-04T23:35:37.803Z",
+    "price": 30,
+    "image": {
+      "id": 62,
+      "documentId": "pmtjnq2xy80y7s29lr7ll9b0",
+      "name": "buganvilia-roja.jpeg",
+      "alternativeText": null,
+      "caption": null,
+      "focalPoint": null,
+      "width": 720,
+      "height": 1280,
+      "formats": {
+        "thumbnail": {
+          "ext": ".jpeg",
+          "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208137/jabes/thumbnail_buganvilia_roja_4f7484bdbc.jpg",
+          "hash": "thumbnail_buganvilia_roja_4f7484bdbc",
+          "mime": "image/jpeg",
+          "name": "thumbnail_buganvilia-roja.jpeg",
+          "path": null,
+          "size": 5.1,
+          "width": 88,
+          "height": 156,
+          "sizeInBytes": 5104,
+          "provider_metadata": {
+            "public_id": "jabes/thumbnail_buganvilia_roja_4f7484bdbc",
+            "resource_type": "image"
+          }
+        }
+      },
+      "hash": "buganvilia_roja_4f7484bdbc",
+      "ext": ".jpeg",
+      "mime": "image/jpeg",
+      "size": 152.95,
+      "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208136/jabes/buganvilia_roja_4f7484bdbc.jpg",
+      "previewUrl": null,
+      "provider": "cloudinary",
+      "provider_metadata": {
+        "public_id": "jabes/buganvilia_roja_4f7484bdbc",
+        "resource_type": "image"
+      },
+      "createdAt": "2026-07-04T23:35:37.779Z",
+      "updatedAt": "2026-07-04T23:35:37.779Z",
+      "publishedAt": "2026-07-04T23:35:37.779Z"
+    },
+    "gallery": null,
+    "category": {
+      "id": 56,
+      "documentId": "yu7m362x6ymavazrr5rfr7hw",
+      "name": "Plantas y Grass",
+      "slug": "plantas-y-grass",
+      "active": true,
+      "description": null,
+      "order": 0,
+      "createdAt": "2026-06-13T23:20:53.887Z",
+      "updatedAt": "2026-06-13T23:20:53.887Z",
+      "publishedAt": "2026-06-13T23:20:53.895Z"
+    },
+    "features": [
+      {
+        "id": 325,
+        "text": "Flores rojas vistosas"
+      },
+      {
+        "id": 326,
+        "text": "Floración abundante"
+      },
+      {
+        "id": 327,
+        "text": "Resistente al sol y la sequía"
+      },
+      {
+        "id": 328,
+        "text": "Ideal para cercos y pérgolas"
+      }
+    ],
+    "seo": null
+  },
+  {
+    "id": 116,
+    "documentId": "mik9sx4aj9wr4lj7r9ei1j2u",
+    "name": "Buganvilia rosada (Enredadera) x 1.50m",
+    "slug": "buganvilia-rosada-enredadera-x-1-50m",
+    "description": "Arbusto trepador de delicadas flores rosadas, de floración abundante y fácil cuidado.",
+    "active": true,
+    "featured": true,
+    "createdAt": "2026-07-04T23:35:39.244Z",
+    "updatedAt": "2026-07-04T23:35:39.244Z",
+    "publishedAt": "2026-07-04T23:35:39.247Z",
+    "price": 30,
+    "image": {
+      "id": 64,
+      "documentId": "dsrqxtrymngwz4579lzlwbev",
+      "name": "buganvilia-rosada.jpeg",
+      "alternativeText": null,
+      "caption": null,
+      "focalPoint": null,
+      "width": 963,
+      "height": 1280,
+      "formats": {
+        "thumbnail": {
+          "ext": ".jpeg",
+          "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208138/jabes/thumbnail_buganvilia_rosada_0241cbfe58.jpg",
+          "hash": "thumbnail_buganvilia_rosada_0241cbfe58",
+          "mime": "image/jpeg",
+          "name": "thumbnail_buganvilia-rosada.jpeg",
+          "path": null,
+          "size": 8.46,
+          "width": 117,
+          "height": 156,
+          "sizeInBytes": 8455,
+          "provider_metadata": {
+            "public_id": "jabes/thumbnail_buganvilia_rosada_0241cbfe58",
+            "resource_type": "image"
+          }
+        }
+      },
+      "hash": "buganvilia_rosada_0241cbfe58",
+      "ext": ".jpeg",
+      "mime": "image/jpeg",
+      "size": 213.68,
+      "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208138/jabes/buganvilia_rosada_0241cbfe58.jpg",
+      "previewUrl": null,
+      "provider": "cloudinary",
+      "provider_metadata": {
+        "public_id": "jabes/buganvilia_rosada_0241cbfe58",
+        "resource_type": "image"
+      },
+      "createdAt": "2026-07-04T23:35:39.226Z",
+      "updatedAt": "2026-07-04T23:35:39.226Z",
+      "publishedAt": "2026-07-04T23:35:39.226Z"
+    },
+    "gallery": null,
+    "category": {
+      "id": 56,
+      "documentId": "yu7m362x6ymavazrr5rfr7hw",
+      "name": "Plantas y Grass",
+      "slug": "plantas-y-grass",
+      "active": true,
+      "description": null,
+      "order": 0,
+      "createdAt": "2026-06-13T23:20:53.887Z",
+      "updatedAt": "2026-06-13T23:20:53.887Z",
+      "publishedAt": "2026-06-13T23:20:53.895Z"
+    },
+    "features": [
+      {
+        "id": 341,
+        "text": "Flores rosadas delicadas"
+      },
+      {
+        "id": 342,
+        "text": "Floración abundante"
+      },
+      {
+        "id": 343,
+        "text": "Fácil cuidado"
+      },
+      {
+        "id": 344,
+        "text": "Resistente al sol"
+      }
+    ],
+    "seo": null
+  },
+  {
+    "id": 106,
+    "documentId": "wkgy0xm6ewowd9kkiolfeev7",
+    "name": "Cactus (maceta pequeña)",
+    "slug": "cactus-maceta-pequena",
+    "description": "Planta ornamental de bajo mantenimiento y gran resistencia, ideal para interiores y exteriores.",
+    "active": true,
+    "featured": true,
+    "createdAt": "2026-07-04T23:35:35.478Z",
+    "updatedAt": "2026-07-04T23:35:35.478Z",
+    "publishedAt": "2026-07-04T23:35:35.483Z",
+    "price": 12,
+    "image": {
+      "id": 59,
+      "documentId": "a4uwclvjndv1tsevuhgrg8ji",
+      "name": "cactus.jpg",
+      "alternativeText": null,
+      "caption": null,
+      "focalPoint": null,
+      "width": 1408,
+      "height": 768,
+      "formats": {
+        "thumbnail": {
+          "ext": ".jpg",
+          "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208134/jabes/thumbnail_cactus_2fe6d55bea.jpg",
+          "hash": "thumbnail_cactus_2fe6d55bea",
+          "mime": "image/jpeg",
+          "name": "thumbnail_cactus.jpg",
+          "path": null,
+          "size": 4.16,
+          "width": 245,
+          "height": 134,
+          "sizeInBytes": 4158,
+          "provider_metadata": {
+            "public_id": "jabes/thumbnail_cactus_2fe6d55bea",
+            "resource_type": "image"
+          }
+        }
+      },
+      "hash": "cactus_2fe6d55bea",
+      "ext": ".jpg",
+      "mime": "image/jpeg",
+      "size": 80.58,
+      "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208134/jabes/cactus_2fe6d55bea.jpg",
+      "previewUrl": null,
+      "provider": "cloudinary",
+      "provider_metadata": {
+        "public_id": "jabes/cactus_2fe6d55bea",
+        "resource_type": "image"
+      },
+      "createdAt": "2026-07-04T23:35:35.465Z",
+      "updatedAt": "2026-07-04T23:35:35.465Z",
+      "publishedAt": "2026-07-04T23:35:35.465Z"
+    },
+    "gallery": null,
+    "category": {
+      "id": 56,
+      "documentId": "yu7m362x6ymavazrr5rfr7hw",
+      "name": "Plantas y Grass",
+      "slug": "plantas-y-grass",
+      "active": true,
+      "description": null,
+      "order": 0,
+      "createdAt": "2026-06-13T23:20:53.887Z",
+      "updatedAt": "2026-06-13T23:20:53.887Z",
+      "publishedAt": "2026-06-13T23:20:53.895Z"
+    },
+    "features": [
+      {
+        "id": 301,
+        "text": "Bajo mantenimiento"
+      },
+      {
+        "id": 302,
+        "text": "Resistente a la sequía"
+      },
+      {
+        "id": 303,
+        "text": "Ideal para interiores y exteriores"
+      },
+      {
+        "id": 304,
+        "text": "Gran variedad de formas y tamaños"
+      }
+    ],
+    "seo": null
+  },
+  {
+    "id": 122,
+    "documentId": "m7j27so749xxtsnsy76rqmio",
+    "name": "Ciprés Limón x 70cm",
+    "slug": "cipres-limon-x-70cm",
+    "description": "Árbol de follaje verde y forma columnar, ideal para cercos vivos y jardines elegantes.",
+    "active": true,
+    "featured": true,
+    "createdAt": "2026-07-04T23:35:41.501Z",
+    "updatedAt": "2026-07-04T23:35:41.501Z",
+    "publishedAt": "2026-07-04T23:35:41.505Z",
+    "price": 60,
+    "image": {
+      "id": 67,
+      "documentId": "fa3fxl6utj7ezyol8h9eqigj",
+      "name": "cipres.jpeg",
+      "alternativeText": null,
+      "caption": null,
+      "focalPoint": null,
+      "width": 963,
+      "height": 1280,
+      "formats": {
+        "thumbnail": {
+          "ext": ".jpeg",
+          "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208140/jabes/thumbnail_cipres_5c27bff393.jpg",
+          "hash": "thumbnail_cipres_5c27bff393",
+          "mime": "image/jpeg",
+          "name": "thumbnail_cipres.jpeg",
+          "path": null,
+          "size": 6.46,
+          "width": 117,
+          "height": 156,
+          "sizeInBytes": 6456,
+          "provider_metadata": {
+            "public_id": "jabes/thumbnail_cipres_5c27bff393",
+            "resource_type": "image"
+          }
+        }
+      },
+      "hash": "cipres_5c27bff393",
+      "ext": ".jpeg",
+      "mime": "image/jpeg",
+      "size": 372.21,
+      "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208140/jabes/cipres_5c27bff393.jpg",
+      "previewUrl": null,
+      "provider": "cloudinary",
+      "provider_metadata": {
+        "public_id": "jabes/cipres_5c27bff393",
+        "resource_type": "image"
+      },
+      "createdAt": "2026-07-04T23:35:41.481Z",
+      "updatedAt": "2026-07-04T23:35:41.481Z",
+      "publishedAt": "2026-07-04T23:35:41.481Z"
+    },
+    "gallery": null,
+    "category": {
+      "id": 56,
+      "documentId": "yu7m362x6ymavazrr5rfr7hw",
+      "name": "Plantas y Grass",
+      "slug": "plantas-y-grass",
+      "active": true,
+      "description": null,
+      "order": 0,
+      "createdAt": "2026-06-13T23:20:53.887Z",
+      "updatedAt": "2026-06-13T23:20:53.887Z",
+      "publishedAt": "2026-06-13T23:20:53.895Z"
+    },
+    "features": [
+      {
+        "id": 365,
+        "text": "Follaje verde y denso"
+      },
+      {
+        "id": 366,
+        "text": "Forma columnar elegante"
+      },
+      {
+        "id": 367,
+        "text": "Ideal para cercos vivos"
+      },
+      {
+        "id": 368,
+        "text": "Resistente y de fácil cuidado"
+      }
+    ],
+    "seo": null
+  },
+  {
+    "id": 92,
+    "documentId": "ckwu3lnz80hu9xccf8gkvka8",
+    "name": "Compost x 10kg",
+    "slug": "compost-x-10kg",
+    "description": "Compost orgánico rico en nutrientes que mejora la fertilidad y estructura del suelo.",
+    "active": true,
+    "featured": true,
+    "createdAt": "2026-07-04T23:35:29.188Z",
+    "updatedAt": "2026-07-04T23:35:29.188Z",
+    "publishedAt": "2026-07-04T23:35:29.200Z",
+    "price": 6.9,
+    "image": {
+      "id": 52,
+      "documentId": "s99xfwt5xv3zkpuq3wv9eew0",
+      "name": "compost.jpg",
+      "alternativeText": null,
+      "caption": null,
+      "focalPoint": null,
+      "width": 1408,
+      "height": 768,
+      "formats": {
+        "thumbnail": {
+          "ext": ".jpg",
+          "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208128/jabes/thumbnail_compost_182b6e373b.jpg",
+          "hash": "thumbnail_compost_182b6e373b",
+          "mime": "image/jpeg",
+          "name": "thumbnail_compost.jpg",
+          "path": null,
+          "size": 5.99,
+          "width": 245,
+          "height": 134,
+          "sizeInBytes": 5989,
+          "provider_metadata": {
+            "public_id": "jabes/thumbnail_compost_182b6e373b",
+            "resource_type": "image"
+          }
+        }
+      },
+      "hash": "compost_182b6e373b",
+      "ext": ".jpg",
+      "mime": "image/jpeg",
+      "size": 136.05,
+      "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208128/jabes/compost_182b6e373b.jpg",
+      "previewUrl": null,
+      "provider": "cloudinary",
+      "provider_metadata": {
+        "public_id": "jabes/compost_182b6e373b",
+        "resource_type": "image"
+      },
+      "createdAt": "2026-07-04T23:35:29.122Z",
+      "updatedAt": "2026-07-04T23:35:29.122Z",
+      "publishedAt": "2026-07-04T23:35:29.122Z"
+    },
+    "gallery": null,
+    "category": {
+      "id": 50,
+      "documentId": "vldnh3rt1nsrtutoufr03pag",
+      "name": "Fertilizantes y Abonos",
+      "slug": "fertilizantes-y-abonos",
+      "active": true,
+      "description": null,
+      "order": 0,
+      "createdAt": "2026-06-13T23:19:41.325Z",
+      "updatedAt": "2026-06-13T23:19:41.325Z",
+      "publishedAt": "2026-06-13T23:19:41.345Z"
+    },
+    "features": [
+      {
+        "id": 245,
+        "text": "Rico en nutrientes"
+      },
+      {
+        "id": 246,
+        "text": "Ideal para huertos y jardines"
+      },
+      {
+        "id": 247,
+        "text": "Incrementa la actividad microbiana"
+      },
+      {
+        "id": 248,
+        "text": "Libre de químicos"
+      }
+    ],
+    "seo": null
+  },
+  {
+    "id": 102,
+    "documentId": "q922z0zw5f9mdq7d1j6qltva",
+    "name": "Granalla negra x 40kg",
+    "slug": "granalla-negra-x-40kg",
+    "description": "Piedra decorativa de tamaño pequeño, ideal para cubrir macetas, jardines y senderos.",
+    "active": true,
+    "featured": true,
+    "createdAt": "2026-07-04T23:35:33.702Z",
+    "updatedAt": "2026-07-04T23:35:33.702Z",
+    "publishedAt": "2026-07-04T23:35:33.714Z",
+    "price": 45,
+    "image": {
+      "id": 57,
+      "documentId": "vby79yrwa73iasnvv660rbvn",
+      "name": "granalla.jpg",
+      "alternativeText": null,
+      "caption": null,
+      "focalPoint": null,
+      "width": 1408,
+      "height": 768,
+      "formats": {
+        "thumbnail": {
+          "ext": ".jpg",
+          "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208132/jabes/thumbnail_granalla_6eeaac30b7.jpg",
+          "hash": "thumbnail_granalla_6eeaac30b7",
+          "mime": "image/jpeg",
+          "name": "thumbnail_granalla.jpg",
+          "path": null,
+          "size": 5.62,
+          "width": 245,
+          "height": 134,
+          "sizeInBytes": 5615,
+          "provider_metadata": {
+            "public_id": "jabes/thumbnail_granalla_6eeaac30b7",
+            "resource_type": "image"
+          }
+        }
+      },
+      "hash": "granalla_6eeaac30b7",
+      "ext": ".jpg",
+      "mime": "image/jpeg",
+      "size": 113.59,
+      "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208132/jabes/granalla_6eeaac30b7.jpg",
+      "previewUrl": null,
+      "provider": "cloudinary",
+      "provider_metadata": {
+        "public_id": "jabes/granalla_6eeaac30b7",
+        "resource_type": "image"
+      },
+      "createdAt": "2026-07-04T23:35:33.628Z",
+      "updatedAt": "2026-07-04T23:35:33.628Z",
+      "publishedAt": "2026-07-04T23:35:33.628Z"
+    },
+    "gallery": null,
+    "category": {
+      "id": 54,
+      "documentId": "ymb0j2cb597ahc1vrd5kjoj5",
+      "name": "Piedras Decorativas",
+      "slug": "piedras-decorativas",
+      "active": true,
+      "description": null,
+      "order": 0,
+      "createdAt": "2026-06-13T23:20:28.377Z",
+      "updatedAt": "2026-06-13T23:20:28.377Z",
+      "publishedAt": "2026-06-13T23:20:28.389Z"
+    },
+    "features": [
+      {
+        "id": 285,
+        "text": "Piedra decorativa de grano pequeño"
+      },
+      {
+        "id": 286,
+        "text": "Ideal para macetas y senderos"
+      },
+      {
+        "id": 287,
+        "text": "Mejora el drenaje del suelo"
+      },
+      {
+        "id": 288,
+        "text": "Acabado ornamental y duradero"
+      }
+    ],
+    "seo": null
+  },
+  {
+    "id": 84,
+    "documentId": "v5e1zc0d3knv952gnbcbsbc4",
+    "name": "Grass Bermuda x 1 m2",
+    "slug": "grass-bermuda-x-1-m2",
+    "description": "Césped de hoja fina y gran resistencia, de rápida recuperación y bajo mantenimiento.",
+    "active": true,
+    "featured": true,
+    "createdAt": "2026-07-04T23:35:26.179Z",
+    "updatedAt": "2026-07-04T23:35:26.179Z",
+    "publishedAt": "2026-07-04T23:35:26.183Z",
+    "price": 17,
+    "image": {
+      "id": 48,
+      "documentId": "qespv6et7mhr3zffmy4f4juh",
+      "name": "grass-bermuda.jpg",
+      "alternativeText": null,
+      "caption": null,
+      "focalPoint": null,
+      "width": 1408,
+      "height": 768,
+      "formats": {
+        "thumbnail": {
+          "ext": ".jpg",
+          "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208125/jabes/thumbnail_grass_bermuda_357c327d5c.jpg",
+          "hash": "thumbnail_grass_bermuda_357c327d5c",
+          "mime": "image/jpeg",
+          "name": "thumbnail_grass-bermuda.jpg",
+          "path": null,
+          "size": 4.64,
+          "width": 245,
+          "height": 134,
+          "sizeInBytes": 4637,
+          "provider_metadata": {
+            "public_id": "jabes/thumbnail_grass_bermuda_357c327d5c",
+            "resource_type": "image"
+          }
+        }
+      },
+      "hash": "grass_bermuda_357c327d5c",
+      "ext": ".jpg",
+      "mime": "image/jpeg",
+      "size": 125.05,
+      "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208125/jabes/grass_bermuda_357c327d5c.jpg",
+      "previewUrl": null,
+      "provider": "cloudinary",
+      "provider_metadata": {
+        "public_id": "jabes/grass_bermuda_357c327d5c",
+        "resource_type": "image"
+      },
+      "createdAt": "2026-07-04T23:35:26.155Z",
+      "updatedAt": "2026-07-04T23:35:26.155Z",
+      "publishedAt": "2026-07-04T23:35:26.155Z"
+    },
+    "gallery": null,
+    "category": {
+      "id": 56,
+      "documentId": "yu7m362x6ymavazrr5rfr7hw",
+      "name": "Plantas y Grass",
+      "slug": "plantas-y-grass",
+      "active": true,
+      "description": null,
+      "order": 0,
+      "createdAt": "2026-06-13T23:20:53.887Z",
+      "updatedAt": "2026-06-13T23:20:53.887Z",
+      "publishedAt": "2026-06-13T23:20:53.895Z"
+    },
+    "features": [
+      {
+        "id": 213,
+        "text": "Hoja fina y densa"
+      },
+      {
+        "id": 214,
+        "text": "Rápida recuperación ante el desgaste"
+      },
+      {
+        "id": 215,
+        "text": "Alta resistencia al calor"
+      },
+      {
+        "id": 216,
+        "text": "Ideal para áreas deportivas y jardines"
+      }
+    ],
+    "seo": null
+  },
+  {
+    "id": 78,
+    "documentId": "e7w4lk5frr15fdq16d41jb1b",
+    "name": "Grass americano x 1 m2",
+    "slug": "grass-americano-x-1-m2",
+    "description": "Césped de hoja ancha, resistente y de rápido crecimiento, ideal para jardines y áreas de alto tránsito.",
+    "active": true,
+    "featured": true,
+    "createdAt": "2026-07-04T23:35:23.838Z",
+    "updatedAt": "2026-07-04T23:35:23.838Z",
+    "publishedAt": "2026-07-04T23:35:23.846Z",
+    "price": 14,
+    "image": {
+      "id": 45,
+      "documentId": "baom0as8obv1jzakrxqi4bfe",
+      "name": "grass-americano.jpg",
+      "alternativeText": null,
+      "caption": null,
+      "focalPoint": null,
+      "width": 1408,
+      "height": 768,
+      "formats": {
+        "thumbnail": {
+          "ext": ".jpg",
+          "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208123/jabes/thumbnail_grass_americano_2c6e5992cd.jpg",
+          "hash": "thumbnail_grass_americano_2c6e5992cd",
+          "mime": "image/jpeg",
+          "name": "thumbnail_grass-americano.jpg",
+          "path": null,
+          "size": 5.63,
+          "width": 245,
+          "height": 134,
+          "sizeInBytes": 5632,
+          "provider_metadata": {
+            "public_id": "jabes/thumbnail_grass_americano_2c6e5992cd",
+            "resource_type": "image"
+          }
+        }
+      },
+      "hash": "grass_americano_2c6e5992cd",
+      "ext": ".jpg",
+      "mime": "image/jpeg",
+      "size": 149.85,
+      "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208123/jabes/grass_americano_2c6e5992cd.jpg",
+      "previewUrl": null,
+      "provider": "cloudinary",
+      "provider_metadata": {
+        "public_id": "jabes/grass_americano_2c6e5992cd",
+        "resource_type": "image"
+      },
+      "createdAt": "2026-07-04T23:35:23.818Z",
+      "updatedAt": "2026-07-04T23:35:23.818Z",
+      "publishedAt": "2026-07-04T23:35:23.819Z"
+    },
+    "gallery": null,
+    "category": {
+      "id": 56,
+      "documentId": "yu7m362x6ymavazrr5rfr7hw",
+      "name": "Plantas y Grass",
+      "slug": "plantas-y-grass",
+      "active": true,
+      "description": null,
+      "order": 0,
+      "createdAt": "2026-06-13T23:20:53.887Z",
+      "updatedAt": "2026-06-13T23:20:53.887Z",
+      "publishedAt": "2026-06-13T23:20:53.895Z"
+    },
+    "features": [
+      {
+        "id": 189,
+        "text": "Hoja ancha y color verde intenso"
+      },
+      {
+        "id": 190,
+        "text": "Resistente al pisoteo y alto tránsito"
+      },
+      {
+        "id": 191,
+        "text": "Rápido crecimiento y cobertura"
+      },
+      {
+        "id": 192,
+        "text": "Ideal para jardines residenciales"
+      }
+    ],
+    "seo": null
+  },
+  {
+    "id": 80,
+    "documentId": "zg67tva69pczwe90lud5gsdv",
+    "name": "Grass chino x 1 m2",
+    "slug": "grass-chino-x-1-m2",
+    "description": "Césped de hoja fina y tupida que forma una alfombra densa y pareja, perfecta para jardines decorativos.",
+    "active": true,
+    "featured": true,
+    "createdAt": "2026-07-04T23:35:24.691Z",
+    "updatedAt": "2026-07-04T23:35:24.691Z",
+    "publishedAt": "2026-07-04T23:35:24.695Z",
+    "price": 25,
+    "image": {
+      "id": 46,
+      "documentId": "kpcdwlklap1j9r7oyssicqwl",
+      "name": "grass-chino.jpg",
+      "alternativeText": null,
+      "caption": null,
+      "focalPoint": null,
+      "width": 1408,
+      "height": 768,
+      "formats": {
+        "thumbnail": {
+          "ext": ".jpg",
+          "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208123/jabes/thumbnail_grass_chino_72ced8633d.jpg",
+          "hash": "thumbnail_grass_chino_72ced8633d",
+          "mime": "image/jpeg",
+          "name": "thumbnail_grass-chino.jpg",
+          "path": null,
+          "size": 5.43,
+          "width": 245,
+          "height": 134,
+          "sizeInBytes": 5429,
+          "provider_metadata": {
+            "public_id": "jabes/thumbnail_grass_chino_72ced8633d",
+            "resource_type": "image"
+          }
+        }
+      },
+      "hash": "grass_chino_72ced8633d",
+      "ext": ".jpg",
+      "mime": "image/jpeg",
+      "size": 153.67,
+      "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208124/jabes/grass_chino_72ced8633d.jpg",
+      "previewUrl": null,
+      "provider": "cloudinary",
+      "provider_metadata": {
+        "public_id": "jabes/grass_chino_72ced8633d",
+        "resource_type": "image"
+      },
+      "createdAt": "2026-07-04T23:35:24.660Z",
+      "updatedAt": "2026-07-04T23:35:24.660Z",
+      "publishedAt": "2026-07-04T23:35:24.661Z"
+    },
+    "gallery": null,
+    "category": {
+      "id": 56,
+      "documentId": "yu7m362x6ymavazrr5rfr7hw",
+      "name": "Plantas y Grass",
+      "slug": "plantas-y-grass",
+      "active": true,
+      "description": null,
+      "order": 0,
+      "createdAt": "2026-06-13T23:20:53.887Z",
+      "updatedAt": "2026-06-13T23:20:53.887Z",
+      "publishedAt": "2026-06-13T23:20:53.895Z"
+    },
+    "features": [
+      {
+        "id": 197,
+        "text": "Hoja fina y tupida"
+      },
+      {
+        "id": 198,
+        "text": "Textura densa tipo alfombra"
+      },
+      {
+        "id": 199,
+        "text": "Aspecto uniforme y decorativo"
+      },
+      {
+        "id": 200,
+        "text": "Bajo mantenimiento"
+      }
+    ],
+    "seo": null
+  },
+  {
+    "id": 82,
+    "documentId": "jkmnakglo7rl4ckx6ctfgdph",
+    "name": "Grass paspalum x 1 m2",
+    "slug": "grass-paspalum-x-1-m2",
+    "description": "Césped rústico y muy resistente a la sequía y al pisoteo, recomendado para climas cálidos.",
+    "active": true,
+    "featured": true,
+    "createdAt": "2026-07-04T23:35:25.429Z",
+    "updatedAt": "2026-07-04T23:35:25.429Z",
+    "publishedAt": "2026-07-04T23:35:25.433Z",
+    "price": 19,
+    "image": {
+      "id": 47,
+      "documentId": "y4inoaxsdmlx4a579ob36vsv",
+      "name": "grass-paspalo.jpg",
+      "alternativeText": null,
+      "caption": null,
+      "focalPoint": null,
+      "width": 1408,
+      "height": 768,
+      "formats": {
+        "thumbnail": {
+          "ext": ".jpg",
+          "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208124/jabes/thumbnail_grass_paspalo_ca4228a312.jpg",
+          "hash": "thumbnail_grass_paspalo_ca4228a312",
+          "mime": "image/jpeg",
+          "name": "thumbnail_grass-paspalo.jpg",
+          "path": null,
+          "size": 4.78,
+          "width": 245,
+          "height": 134,
+          "sizeInBytes": 4779,
+          "provider_metadata": {
+            "public_id": "jabes/thumbnail_grass_paspalo_ca4228a312",
+            "resource_type": "image"
+          }
+        }
+      },
+      "hash": "grass_paspalo_ca4228a312",
+      "ext": ".jpg",
+      "mime": "image/jpeg",
+      "size": 126.08,
+      "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208124/jabes/grass_paspalo_ca4228a312.jpg",
+      "previewUrl": null,
+      "provider": "cloudinary",
+      "provider_metadata": {
+        "public_id": "jabes/grass_paspalo_ca4228a312",
+        "resource_type": "image"
+      },
+      "createdAt": "2026-07-04T23:35:25.397Z",
+      "updatedAt": "2026-07-04T23:35:25.397Z",
+      "publishedAt": "2026-07-04T23:35:25.397Z"
+    },
+    "gallery": null,
+    "category": {
+      "id": 56,
+      "documentId": "yu7m362x6ymavazrr5rfr7hw",
+      "name": "Plantas y Grass",
+      "slug": "plantas-y-grass",
+      "active": true,
+      "description": null,
+      "order": 0,
+      "createdAt": "2026-06-13T23:20:53.887Z",
+      "updatedAt": "2026-06-13T23:20:53.887Z",
+      "publishedAt": "2026-06-13T23:20:53.895Z"
+    },
+    "features": [
+      {
+        "id": 205,
+        "text": "Muy resistente a la sequía"
+      },
+      {
+        "id": 206,
+        "text": "Tolera el pisoteo y el sol directo"
+      },
+      {
+        "id": 207,
+        "text": "Ideal para climas cálidos"
+      },
+      {
+        "id": 208,
+        "text": "Bajo requerimiento de riego"
+      }
+    ],
+    "seo": null
+  },
+  {
+    "id": 100,
+    "documentId": "y0xt8t97qr7pv0m4vlifrprc",
+    "name": "Guano de caballo x 20kg (aprox.)",
+    "slug": "guano-de-caballo-x-20kg-aprox",
+    "description": "Abono orgánico equino que aporta nutrientes y mejora la estructura de la tierra.",
+    "active": true,
+    "featured": true,
+    "createdAt": "2026-07-04T23:35:32.782Z",
+    "updatedAt": "2026-07-04T23:35:32.782Z",
+    "publishedAt": "2026-07-04T23:35:32.795Z",
+    "price": 16,
+    "image": {
+      "id": 56,
+      "documentId": "hhapbrsxnyb5d6w89lpajba8",
+      "name": "guano-caballo.jpg",
+      "alternativeText": null,
+      "caption": null,
+      "focalPoint": null,
+      "width": 1408,
+      "height": 768,
+      "formats": {
+        "thumbnail": {
+          "ext": ".jpg",
+          "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208131/jabes/thumbnail_guano_caballo_ec013db5e5.jpg",
+          "hash": "thumbnail_guano_caballo_ec013db5e5",
+          "mime": "image/jpeg",
+          "name": "thumbnail_guano-caballo.jpg",
+          "path": null,
+          "size": 5.8,
+          "width": 245,
+          "height": 134,
+          "sizeInBytes": 5797,
+          "provider_metadata": {
+            "public_id": "jabes/thumbnail_guano_caballo_ec013db5e5",
+            "resource_type": "image"
+          }
+        }
+      },
+      "hash": "guano_caballo_ec013db5e5",
+      "ext": ".jpg",
+      "mime": "image/jpeg",
+      "size": 136.27,
+      "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208131/jabes/guano_caballo_ec013db5e5.jpg",
+      "previewUrl": null,
+      "provider": "cloudinary",
+      "provider_metadata": {
+        "public_id": "jabes/guano_caballo_ec013db5e5",
+        "resource_type": "image"
+      },
+      "createdAt": "2026-07-04T23:35:32.743Z",
+      "updatedAt": "2026-07-04T23:35:32.743Z",
+      "publishedAt": "2026-07-04T23:35:32.743Z"
+    },
+    "gallery": null,
+    "category": {
+      "id": 50,
+      "documentId": "vldnh3rt1nsrtutoufr03pag",
+      "name": "Fertilizantes y Abonos",
+      "slug": "fertilizantes-y-abonos",
+      "active": true,
+      "description": null,
+      "order": 0,
+      "createdAt": "2026-06-13T23:19:41.325Z",
+      "updatedAt": "2026-06-13T23:19:41.325Z",
+      "publishedAt": "2026-06-13T23:19:41.345Z"
+    },
+    "features": [
+      {
+        "id": 277,
+        "text": "Abono orgánico equino"
+      },
+      {
+        "id": 278,
+        "text": "Aporta nutrientes al suelo"
+      },
+      {
+        "id": 279,
+        "text": "Mejora la estructura de la tierra"
+      },
+      {
+        "id": 280,
+        "text": "Ideal para preparar terrenos"
+      }
+    ],
+    "seo": null
+  },
+  {
+    "id": 96,
+    "documentId": "rovb0naxwwruitja96fkt2pt",
+    "name": "Guano de res (abono de vaca) x 20kg",
+    "slug": "guano-de-res-abono-de-vaca-x-20kg",
+    "description": "Abono natural de ganado vacuno, ideal para enriquecer el suelo antes de la siembra.",
+    "active": true,
+    "featured": true,
+    "createdAt": "2026-07-04T23:35:30.950Z",
+    "updatedAt": "2026-07-04T23:35:30.950Z",
+    "publishedAt": "2026-07-04T23:35:30.963Z",
+    "price": 14.5,
+    "image": {
+      "id": 54,
+      "documentId": "nirecnztgurdl4wrmmhwpwny",
+      "name": "guano-res.jpg",
+      "alternativeText": null,
+      "caption": null,
+      "focalPoint": null,
+      "width": 1408,
+      "height": 768,
+      "formats": {
+        "thumbnail": {
+          "ext": ".jpg",
+          "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208130/jabes/thumbnail_guano_res_09182ef0ab.jpg",
+          "hash": "thumbnail_guano_res_09182ef0ab",
+          "mime": "image/jpeg",
+          "name": "thumbnail_guano-res.jpg",
+          "path": null,
+          "size": 5.23,
+          "width": 245,
+          "height": 134,
+          "sizeInBytes": 5225,
+          "provider_metadata": {
+            "public_id": "jabes/thumbnail_guano_res_09182ef0ab",
+            "resource_type": "image"
+          }
+        }
+      },
+      "hash": "guano_res_09182ef0ab",
+      "ext": ".jpg",
+      "mime": "image/jpeg",
+      "size": 112.07,
+      "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208130/jabes/guano_res_09182ef0ab.jpg",
+      "previewUrl": null,
+      "provider": "cloudinary",
+      "provider_metadata": {
+        "public_id": "jabes/guano_res_09182ef0ab",
+        "resource_type": "image"
+      },
+      "createdAt": "2026-07-04T23:35:30.913Z",
+      "updatedAt": "2026-07-04T23:35:30.913Z",
+      "publishedAt": "2026-07-04T23:35:30.914Z"
+    },
+    "gallery": null,
+    "category": {
+      "id": 50,
+      "documentId": "vldnh3rt1nsrtutoufr03pag",
+      "name": "Fertilizantes y Abonos",
+      "slug": "fertilizantes-y-abonos",
+      "active": true,
+      "description": null,
+      "order": 0,
+      "createdAt": "2026-06-13T23:19:41.325Z",
+      "updatedAt": "2026-06-13T23:19:41.325Z",
+      "publishedAt": "2026-06-13T23:19:41.345Z"
+    },
+    "features": [
+      {
+        "id": 261,
+        "text": "Abono 100% natural"
+      },
+      {
+        "id": 262,
+        "text": "Enriquece el suelo antes de sembrar"
+      },
+      {
+        "id": 263,
+        "text": "Aporta materia orgánica"
+      },
+      {
+        "id": 264,
+        "text": "Ideal para huertos y cultivos"
+      }
+    ],
+    "seo": null
+  },
+  {
+    "id": 94,
+    "documentId": "yfkygcj29pj3qkhqfqkp4p4s",
+    "name": "Humus de lombriz x 30kg",
+    "slug": "humus-de-lombriz-x-30kg",
+    "description": "Humus de lombriz, fertilizante 100% orgánico que potencia el desarrollo de las plantas.",
+    "active": true,
+    "featured": true,
+    "createdAt": "2026-07-04T23:35:30.061Z",
+    "updatedAt": "2026-07-04T23:35:30.061Z",
+    "publishedAt": "2026-07-04T23:35:30.073Z",
+    "price": 21.9,
+    "image": {
+      "id": 53,
+      "documentId": "na0utd5i9wfvxkhryf3vzpaf",
+      "name": "humus.jpg",
+      "alternativeText": null,
+      "caption": null,
+      "focalPoint": null,
+      "width": 1408,
+      "height": 768,
+      "formats": {
+        "thumbnail": {
+          "ext": ".jpg",
+          "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208129/jabes/thumbnail_humus_cf20f3a668.jpg",
+          "hash": "thumbnail_humus_cf20f3a668",
+          "mime": "image/jpeg",
+          "name": "thumbnail_humus.jpg",
+          "path": null,
+          "size": 4.21,
+          "width": 245,
+          "height": 134,
+          "sizeInBytes": 4209,
+          "provider_metadata": {
+            "public_id": "jabes/thumbnail_humus_cf20f3a668",
+            "resource_type": "image"
+          }
+        }
+      },
+      "hash": "humus_cf20f3a668",
+      "ext": ".jpg",
+      "mime": "image/jpeg",
+      "size": 93.37,
+      "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208129/jabes/humus_cf20f3a668.jpg",
+      "previewUrl": null,
+      "provider": "cloudinary",
+      "provider_metadata": {
+        "public_id": "jabes/humus_cf20f3a668",
+        "resource_type": "image"
+      },
+      "createdAt": "2026-07-04T23:35:30.026Z",
+      "updatedAt": "2026-07-04T23:35:30.026Z",
+      "publishedAt": "2026-07-04T23:35:30.026Z"
+    },
+    "gallery": null,
+    "category": {
+      "id": 50,
+      "documentId": "vldnh3rt1nsrtutoufr03pag",
+      "name": "Fertilizantes y Abonos",
+      "slug": "fertilizantes-y-abonos",
+      "active": true,
+      "description": null,
+      "order": 0,
+      "createdAt": "2026-06-13T23:19:41.325Z",
+      "updatedAt": "2026-06-13T23:19:41.325Z",
+      "publishedAt": "2026-06-13T23:19:41.345Z"
+    },
+    "features": [
+      {
+        "id": 253,
+        "text": "100% orgánico"
+      },
+      {
+        "id": 254,
+        "text": "Humus de lombriz"
+      },
+      {
+        "id": 255,
+        "text": "Mejora la estructura del suelo"
+      },
+      {
+        "id": 256,
+        "text": "Estimula el crecimiento de raíces"
+      }
+    ],
+    "seo": null
+  },
+  {
+    "id": 90,
+    "documentId": "pfpef1x6f9jdshkd7n7qha8t",
+    "name": "Musgo x 4kg",
+    "slug": "musgo-x-4kg",
+    "description": "Musgo natural que retiene la humedad y decora macetas, terrarios y arreglos florales.",
+    "active": true,
+    "featured": true,
+    "createdAt": "2026-07-04T23:35:28.340Z",
+    "updatedAt": "2026-07-04T23:35:28.340Z",
+    "publishedAt": "2026-07-04T23:35:28.344Z",
+    "price": 8.5,
+    "image": {
+      "id": 51,
+      "documentId": "ivk888dpw3ousemlmoadkq4r",
+      "name": "musgo.jpg",
+      "alternativeText": null,
+      "caption": null,
+      "focalPoint": null,
+      "width": 1408,
+      "height": 768,
+      "formats": {
+        "thumbnail": {
+          "ext": ".jpg",
+          "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208127/jabes/thumbnail_musgo_8d8ae6b77d.jpg",
+          "hash": "thumbnail_musgo_8d8ae6b77d",
+          "mime": "image/jpeg",
+          "name": "thumbnail_musgo.jpg",
+          "path": null,
+          "size": 5.36,
+          "width": 245,
+          "height": 134,
+          "sizeInBytes": 5360,
+          "provider_metadata": {
+            "public_id": "jabes/thumbnail_musgo_8d8ae6b77d",
+            "resource_type": "image"
+          }
+        }
+      },
+      "hash": "musgo_8d8ae6b77d",
+      "ext": ".jpg",
+      "mime": "image/jpeg",
+      "size": 102.69,
+      "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208127/jabes/musgo_8d8ae6b77d.jpg",
+      "previewUrl": null,
+      "provider": "cloudinary",
+      "provider_metadata": {
+        "public_id": "jabes/musgo_8d8ae6b77d",
+        "resource_type": "image"
+      },
+      "createdAt": "2026-07-04T23:35:28.329Z",
+      "updatedAt": "2026-07-04T23:35:28.329Z",
+      "publishedAt": "2026-07-04T23:35:28.329Z"
+    },
+    "gallery": null,
+    "category": {
+      "id": 52,
+      "documentId": "un1zeptcmluwdz103206znvl",
+      "name": "Tierras y Sustratos",
+      "slug": "tierras-y-sustratos",
+      "active": true,
+      "description": null,
+      "order": 0,
+      "createdAt": "2026-06-13T23:20:05.229Z",
+      "updatedAt": "2026-06-13T23:20:05.229Z",
+      "publishedAt": "2026-06-13T23:20:05.242Z"
+    },
+    "features": [
+      {
+        "id": 237,
+        "text": "Retiene la humedad"
+      },
+      {
+        "id": 238,
+        "text": "Uso decorativo en macetas y terrarios"
+      },
+      {
+        "id": 239,
+        "text": "Natural y liviano"
+      },
+      {
+        "id": 240,
+        "text": "Ideal para arreglos florales"
+      }
+    ],
+    "seo": null
+  },
+  {
+    "id": 108,
+    "documentId": "vmlqk6asc2dd7fp730itruaf",
+    "name": "Orquídeas (planta en maceta)",
+    "slug": "orquideas-planta-en-maceta",
+    "description": "Planta ornamental de flores elegantes y duraderas, ideal para decorar espacios interiores.",
+    "active": true,
+    "featured": true,
+    "createdAt": "2026-07-04T23:35:36.273Z",
+    "updatedAt": "2026-07-04T23:35:36.273Z",
+    "publishedAt": "2026-07-04T23:35:36.277Z",
+    "price": 45,
+    "image": {
+      "id": 60,
+      "documentId": "c63cxfx8jhjhbdlzgxh7x1f0",
+      "name": "orquideas.jpg",
+      "alternativeText": null,
+      "caption": null,
+      "focalPoint": null,
+      "width": 1408,
+      "height": 768,
+      "formats": {
+        "thumbnail": {
+          "ext": ".jpg",
+          "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208135/jabes/thumbnail_orquideas_2d383f7988.jpg",
+          "hash": "thumbnail_orquideas_2d383f7988",
+          "mime": "image/jpeg",
+          "name": "thumbnail_orquideas.jpg",
+          "path": null,
+          "size": 3.55,
+          "width": 245,
+          "height": 134,
+          "sizeInBytes": 3553,
+          "provider_metadata": {
+            "public_id": "jabes/thumbnail_orquideas_2d383f7988",
+            "resource_type": "image"
+          }
+        }
+      },
+      "hash": "orquideas_2d383f7988",
+      "ext": ".jpg",
+      "mime": "image/jpeg",
+      "size": 54.37,
+      "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208135/jabes/orquideas_2d383f7988.jpg",
+      "previewUrl": null,
+      "provider": "cloudinary",
+      "provider_metadata": {
+        "public_id": "jabes/orquideas_2d383f7988",
+        "resource_type": "image"
+      },
+      "createdAt": "2026-07-04T23:35:36.257Z",
+      "updatedAt": "2026-07-04T23:35:36.257Z",
+      "publishedAt": "2026-07-04T23:35:36.258Z"
+    },
+    "gallery": null,
+    "category": {
+      "id": 56,
+      "documentId": "yu7m362x6ymavazrr5rfr7hw",
+      "name": "Plantas y Grass",
+      "slug": "plantas-y-grass",
+      "active": true,
+      "description": null,
+      "order": 0,
+      "createdAt": "2026-06-13T23:20:53.887Z",
+      "updatedAt": "2026-06-13T23:20:53.887Z",
+      "publishedAt": "2026-06-13T23:20:53.895Z"
+    },
+    "features": [
+      {
+        "id": 309,
+        "text": "Flores elegantes y duraderas"
+      },
+      {
+        "id": 310,
+        "text": "Ideal para decoración interior"
+      },
+      {
+        "id": 311,
+        "text": "Variedad de colores"
+      },
+      {
+        "id": 312,
+        "text": "Floración prolongada"
+      }
+    ],
+    "seo": null
+  },
+  {
+    "id": 120,
+    "documentId": "esm9w3zveb4gwhr75y2rzqpd",
+    "name": "Palmera botella (Beaucarnea)",
+    "slug": "palmera-botella-beaucarnea",
+    "description": "Palmera ornamental de tronco en forma de botella, perfecta como planta focal en jardines.",
+    "active": true,
+    "featured": true,
+    "createdAt": "2026-07-04T23:35:40.710Z",
+    "updatedAt": "2026-07-04T23:35:40.710Z",
+    "publishedAt": "2026-07-04T23:35:40.713Z",
+    "price": 90,
+    "image": {
+      "id": 66,
+      "documentId": "mvmf6itb7c0ut3rdsdjamemz",
+      "name": "palmera-botella.jpeg",
+      "alternativeText": null,
+      "caption": null,
+      "focalPoint": null,
+      "width": 963,
+      "height": 1280,
+      "formats": {
+        "thumbnail": {
+          "ext": ".jpeg",
+          "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208139/jabes/thumbnail_palmera_botella_6ff7dd1c3c.jpg",
+          "hash": "thumbnail_palmera_botella_6ff7dd1c3c",
+          "mime": "image/jpeg",
+          "name": "thumbnail_palmera-botella.jpeg",
+          "path": null,
+          "size": 5.26,
+          "width": 117,
+          "height": 156,
+          "sizeInBytes": 5260,
+          "provider_metadata": {
+            "public_id": "jabes/thumbnail_palmera_botella_6ff7dd1c3c",
+            "resource_type": "image"
+          }
+        }
+      },
+      "hash": "palmera_botella_6ff7dd1c3c",
+      "ext": ".jpeg",
+      "mime": "image/jpeg",
+      "size": 309.67,
+      "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208139/jabes/palmera_botella_6ff7dd1c3c.jpg",
+      "previewUrl": null,
+      "provider": "cloudinary",
+      "provider_metadata": {
+        "public_id": "jabes/palmera_botella_6ff7dd1c3c",
+        "resource_type": "image"
+      },
+      "createdAt": "2026-07-04T23:35:40.698Z",
+      "updatedAt": "2026-07-04T23:35:40.698Z",
+      "publishedAt": "2026-07-04T23:35:40.698Z"
+    },
+    "gallery": null,
+    "category": {
+      "id": 56,
+      "documentId": "yu7m362x6ymavazrr5rfr7hw",
+      "name": "Plantas y Grass",
+      "slug": "plantas-y-grass",
+      "active": true,
+      "description": null,
+      "order": 0,
+      "createdAt": "2026-06-13T23:20:53.887Z",
+      "updatedAt": "2026-06-13T23:20:53.887Z",
+      "publishedAt": "2026-06-13T23:20:53.895Z"
+    },
+    "features": [
+      {
+        "id": 357,
+        "text": "Tronco característico en forma de botella"
+      },
+      {
+        "id": 358,
+        "text": "Planta focal decorativa"
+      },
+      {
+        "id": 359,
+        "text": "Bajo mantenimiento"
+      },
+      {
+        "id": 360,
+        "text": "Ideal para exteriores"
+      }
+    ],
+    "seo": null
+  },
+  {
+    "id": 110,
+    "documentId": "s4pcsmml38aehfse5l8oh5bc",
+    "name": "Plantas ornamentales (variedad surtida)",
+    "slug": "plantas-ornamentales-variedad-surtida",
+    "description": "Variedad de plantas decorativas para embellecer jardines, patios y espacios interiores.",
+    "active": true,
+    "featured": true,
+    "createdAt": "2026-07-04T23:35:36.999Z",
+    "updatedAt": "2026-07-04T23:35:36.999Z",
+    "publishedAt": "2026-07-04T23:35:37.004Z",
+    "price": 25,
+    "image": {
+      "id": 61,
+      "documentId": "rme938zpvr38l6akvuvbp7yc",
+      "name": "plantas-ornamentales.jpeg",
+      "alternativeText": null,
+      "caption": null,
+      "focalPoint": null,
+      "width": 963,
+      "height": 1280,
+      "formats": {
+        "thumbnail": {
+          "ext": ".jpeg",
+          "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208136/jabes/thumbnail_plantas_ornamentales_644964ca67.jpg",
+          "hash": "thumbnail_plantas_ornamentales_644964ca67",
+          "mime": "image/jpeg",
+          "name": "thumbnail_plantas-ornamentales.jpeg",
+          "path": null,
+          "size": 6.23,
+          "width": 117,
+          "height": 156,
+          "sizeInBytes": 6225,
+          "provider_metadata": {
+            "public_id": "jabes/thumbnail_plantas_ornamentales_644964ca67",
+            "resource_type": "image"
+          }
+        }
+      },
+      "hash": "plantas_ornamentales_644964ca67",
+      "ext": ".jpeg",
+      "mime": "image/jpeg",
+      "size": 293.32,
+      "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208136/jabes/plantas_ornamentales_644964ca67.jpg",
+      "previewUrl": null,
+      "provider": "cloudinary",
+      "provider_metadata": {
+        "public_id": "jabes/plantas_ornamentales_644964ca67",
+        "resource_type": "image"
+      },
+      "createdAt": "2026-07-04T23:35:36.950Z",
+      "updatedAt": "2026-07-04T23:35:36.950Z",
+      "publishedAt": "2026-07-04T23:35:36.950Z"
+    },
+    "gallery": null,
+    "category": {
+      "id": 56,
+      "documentId": "yu7m362x6ymavazrr5rfr7hw",
+      "name": "Plantas y Grass",
+      "slug": "plantas-y-grass",
+      "active": true,
+      "description": null,
+      "order": 0,
+      "createdAt": "2026-06-13T23:20:53.887Z",
+      "updatedAt": "2026-06-13T23:20:53.887Z",
+      "publishedAt": "2026-06-13T23:20:53.895Z"
+    },
+    "features": [
+      {
+        "id": 317,
+        "text": "Gran variedad de especies"
+      },
+      {
+        "id": 318,
+        "text": "Ideales para jardines y patios"
+      },
+      {
+        "id": 319,
+        "text": "Aportan color y frescura"
+      },
+      {
+        "id": 320,
+        "text": "Opciones para interior y exterior"
+      }
+    ],
+    "seo": null
+  },
+  {
+    "id": 118,
+    "documentId": "q0vaw3t7j9yp3bnw5ldtss84",
+    "name": "Plumbago (arbusto)",
+    "slug": "plumbago-arbusto",
+    "description": "Arbusto ornamental de flores celestes, ideal para cercos y jardines de clima cálido.",
+    "active": true,
+    "featured": true,
+    "createdAt": "2026-07-04T23:35:39.960Z",
+    "updatedAt": "2026-07-04T23:35:39.960Z",
+    "publishedAt": "2026-07-04T23:35:39.963Z",
+    "price": 28,
+    "image": {
+      "id": 65,
+      "documentId": "pzrff4tflos2zcc4zjbgzq9d",
+      "name": "plumbago.jpeg",
+      "alternativeText": null,
+      "caption": null,
+      "focalPoint": null,
+      "width": 963,
+      "height": 1280,
+      "formats": {
+        "thumbnail": {
+          "ext": ".jpeg",
+          "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208139/jabes/thumbnail_plumbago_5805a0b328.jpg",
+          "hash": "thumbnail_plumbago_5805a0b328",
+          "mime": "image/jpeg",
+          "name": "thumbnail_plumbago.jpeg",
+          "path": null,
+          "size": 5.94,
+          "width": 117,
+          "height": 156,
+          "sizeInBytes": 5937,
+          "provider_metadata": {
+            "public_id": "jabes/thumbnail_plumbago_5805a0b328",
+            "resource_type": "image"
+          }
+        }
+      },
+      "hash": "plumbago_5805a0b328",
+      "ext": ".jpeg",
+      "mime": "image/jpeg",
+      "size": 375.88,
+      "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208139/jabes/plumbago_5805a0b328.jpg",
+      "previewUrl": null,
+      "provider": "cloudinary",
+      "provider_metadata": {
+        "public_id": "jabes/plumbago_5805a0b328",
+        "resource_type": "image"
+      },
+      "createdAt": "2026-07-04T23:35:39.947Z",
+      "updatedAt": "2026-07-04T23:35:39.947Z",
+      "publishedAt": "2026-07-04T23:35:39.948Z"
+    },
+    "gallery": null,
+    "category": {
+      "id": 56,
+      "documentId": "yu7m362x6ymavazrr5rfr7hw",
+      "name": "Plantas y Grass",
+      "slug": "plantas-y-grass",
+      "active": true,
+      "description": null,
+      "order": 0,
+      "createdAt": "2026-06-13T23:20:53.887Z",
+      "updatedAt": "2026-06-13T23:20:53.887Z",
+      "publishedAt": "2026-06-13T23:20:53.895Z"
+    },
+    "features": [
+      {
+        "id": 349,
+        "text": "Flores celestes llamativas"
+      },
+      {
+        "id": 350,
+        "text": "Ideal para cercos vivos"
+      },
+      {
+        "id": 351,
+        "text": "Resistente a climas cálidos"
+      },
+      {
+        "id": 352,
+        "text": "Floración prolongada"
+      }
+    ],
+    "seo": null
+  },
+  {
+    "id": 104,
+    "documentId": "puvs1bng19whbmkhsf81f2kt",
+    "name": "Tierra negra de musgo x 8kg",
+    "slug": "tierra-negra-de-musgo-x-8kg",
+    "description": "Tierra fértil y suelta, rica en materia orgánica, perfecta para sembrar y trasplantar.",
+    "active": true,
+    "featured": true,
+    "createdAt": "2026-07-04T23:35:34.622Z",
+    "updatedAt": "2026-07-04T23:35:34.622Z",
+    "publishedAt": "2026-07-04T23:35:34.636Z",
+    "price": 10.5,
+    "image": {
+      "id": 58,
+      "documentId": "mcp9yauze6hle2sjva0johua",
+      "name": "tierra-negra.jpg",
+      "alternativeText": null,
+      "caption": null,
+      "focalPoint": null,
+      "width": 1408,
+      "height": 768,
+      "formats": {
+        "thumbnail": {
+          "ext": ".jpg",
+          "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208133/jabes/thumbnail_tierra_negra_9023eb7898.jpg",
+          "hash": "thumbnail_tierra_negra_9023eb7898",
+          "mime": "image/jpeg",
+          "name": "thumbnail_tierra-negra.jpg",
+          "path": null,
+          "size": 3.77,
+          "width": 245,
+          "height": 134,
+          "sizeInBytes": 3767,
+          "provider_metadata": {
+            "public_id": "jabes/thumbnail_tierra_negra_9023eb7898",
+            "resource_type": "image"
+          }
+        }
+      },
+      "hash": "tierra_negra_9023eb7898",
+      "ext": ".jpg",
+      "mime": "image/jpeg",
+      "size": 88.83,
+      "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208133/jabes/tierra_negra_9023eb7898.jpg",
+      "previewUrl": null,
+      "provider": "cloudinary",
+      "provider_metadata": {
+        "public_id": "jabes/tierra_negra_9023eb7898",
+        "resource_type": "image"
+      },
+      "createdAt": "2026-07-04T23:35:34.592Z",
+      "updatedAt": "2026-07-04T23:35:34.592Z",
+      "publishedAt": "2026-07-04T23:35:34.593Z"
+    },
+    "gallery": null,
+    "category": {
+      "id": 52,
+      "documentId": "un1zeptcmluwdz103206znvl",
+      "name": "Tierras y Sustratos",
+      "slug": "tierras-y-sustratos",
+      "active": true,
+      "description": null,
+      "order": 0,
+      "createdAt": "2026-06-13T23:20:05.229Z",
+      "updatedAt": "2026-06-13T23:20:05.229Z",
+      "publishedAt": "2026-06-13T23:20:05.242Z"
+    },
+    "features": [
+      {
+        "id": 293,
+        "text": "Rica en materia orgánica"
+      },
+      {
+        "id": 294,
+        "text": "Suelta y fácil de trabajar"
+      },
+      {
+        "id": 295,
+        "text": "Buena retención de humedad"
+      },
+      {
+        "id": 296,
+        "text": "Ideal para sembrar y trasplantar"
+      }
+    ],
+    "seo": null
+  },
+  {
+    "id": 88,
+    "documentId": "dcdeqceuchuv6x5om4xtspri",
+    "name": "Tierra preparada x 25kg",
+    "slug": "tierra-preparada-x-25kg",
+    "description": "Mezcla lista para sembrar, con nutrientes balanceados para macetas y jardines.",
+    "active": true,
+    "featured": true,
+    "createdAt": "2026-07-04T23:35:27.550Z",
+    "updatedAt": "2026-07-04T23:35:27.550Z",
+    "publishedAt": "2026-07-04T23:35:27.554Z",
+    "price": 15,
+    "image": {
+      "id": 50,
+      "documentId": "ta3ihlzcefzvxr77d91l90k1",
+      "name": "tierra-preparada.jpg",
+      "alternativeText": null,
+      "caption": null,
+      "focalPoint": null,
+      "width": 1408,
+      "height": 768,
+      "formats": {
+        "thumbnail": {
+          "ext": ".jpg",
+          "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208126/jabes/thumbnail_tierra_preparada_35208b0739.jpg",
+          "hash": "thumbnail_tierra_preparada_35208b0739",
+          "mime": "image/jpeg",
+          "name": "thumbnail_tierra-preparada.jpg",
+          "path": null,
+          "size": 5.31,
+          "width": 245,
+          "height": 134,
+          "sizeInBytes": 5313,
+          "provider_metadata": {
+            "public_id": "jabes/thumbnail_tierra_preparada_35208b0739",
+            "resource_type": "image"
+          }
+        }
+      },
+      "hash": "tierra_preparada_35208b0739",
+      "ext": ".jpg",
+      "mime": "image/jpeg",
+      "size": 116.38,
+      "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208126/jabes/tierra_preparada_35208b0739.jpg",
+      "previewUrl": null,
+      "provider": "cloudinary",
+      "provider_metadata": {
+        "public_id": "jabes/tierra_preparada_35208b0739",
+        "resource_type": "image"
+      },
+      "createdAt": "2026-07-04T23:35:27.537Z",
+      "updatedAt": "2026-07-04T23:35:27.537Z",
+      "publishedAt": "2026-07-04T23:35:27.537Z"
+    },
+    "gallery": null,
+    "category": {
+      "id": 52,
+      "documentId": "un1zeptcmluwdz103206znvl",
+      "name": "Tierras y Sustratos",
+      "slug": "tierras-y-sustratos",
+      "active": true,
+      "description": null,
+      "order": 0,
+      "createdAt": "2026-06-13T23:20:05.229Z",
+      "updatedAt": "2026-06-13T23:20:05.229Z",
+      "publishedAt": "2026-06-13T23:20:05.242Z"
+    },
+    "features": [
+      {
+        "id": 229,
+        "text": "Lista para usar"
+      },
+      {
+        "id": 230,
+        "text": "Nutrientes balanceados"
+      },
+      {
+        "id": 231,
+        "text": "Buena retención de humedad"
+      },
+      {
+        "id": 232,
+        "text": "Ideal para macetas y trasplantes"
+      }
+    ],
+    "seo": null
+  },
+  {
+    "id": 98,
+    "documentId": "z4az2i7qyb9vtzgoax9ohhox",
+    "name": "Viruta blanca x 5kg",
+    "slug": "viruta-blanca-x-5kg",
+    "description": "Viruta de madera que sirve como cobertura, mejora la aireación y retiene la humedad del suelo.",
+    "active": true,
+    "featured": true,
+    "createdAt": "2026-07-04T23:35:31.822Z",
+    "updatedAt": "2026-07-04T23:35:31.822Z",
+    "publishedAt": "2026-07-04T23:35:31.834Z",
+    "price": 9,
+    "image": {
+      "id": 55,
+      "documentId": "xs0y9mrdhsrsytgdcpiztp5e",
+      "name": "viruta.jpg",
+      "alternativeText": null,
+      "caption": null,
+      "focalPoint": null,
+      "width": 1408,
+      "height": 768,
+      "formats": {
+        "thumbnail": {
+          "ext": ".jpg",
+          "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208131/jabes/thumbnail_viruta_6692fecd92.jpg",
+          "hash": "thumbnail_viruta_6692fecd92",
+          "mime": "image/jpeg",
+          "name": "thumbnail_viruta.jpg",
+          "path": null,
+          "size": 4.89,
+          "width": 245,
+          "height": 134,
+          "sizeInBytes": 4888,
+          "provider_metadata": {
+            "public_id": "jabes/thumbnail_viruta_6692fecd92",
+            "resource_type": "image"
+          }
+        }
+      },
+      "hash": "viruta_6692fecd92",
+      "ext": ".jpg",
+      "mime": "image/jpeg",
+      "size": 89.17,
+      "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208131/jabes/viruta_6692fecd92.jpg",
+      "previewUrl": null,
+      "provider": "cloudinary",
+      "provider_metadata": {
+        "public_id": "jabes/viruta_6692fecd92",
+        "resource_type": "image"
+      },
+      "createdAt": "2026-07-04T23:35:31.774Z",
+      "updatedAt": "2026-07-04T23:35:31.774Z",
+      "publishedAt": "2026-07-04T23:35:31.774Z"
+    },
+    "gallery": null,
+    "category": {
+      "id": 52,
+      "documentId": "un1zeptcmluwdz103206znvl",
+      "name": "Tierras y Sustratos",
+      "slug": "tierras-y-sustratos",
+      "active": true,
+      "description": null,
+      "order": 0,
+      "createdAt": "2026-06-13T23:20:05.229Z",
+      "updatedAt": "2026-06-13T23:20:05.229Z",
+      "publishedAt": "2026-06-13T23:20:05.242Z"
+    },
+    "features": [
+      {
+        "id": 269,
+        "text": "Cobertura protectora del suelo"
+      },
+      {
+        "id": 270,
+        "text": "Mejora la aireación"
+      },
+      {
+        "id": 271,
+        "text": "Retiene la humedad"
+      },
+      {
+        "id": 272,
+        "text": "Controla el crecimiento de malezas"
+      }
+    ],
+    "seo": null
+  }
+]

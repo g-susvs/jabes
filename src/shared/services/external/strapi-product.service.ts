@@ -9,7 +9,7 @@ import { IStrapiSeo } from "@/shared/seo/interfaces";
 import {
   PRODUCTS_PAGE_SIZE,
   REVALIDATE_CATALOG_SECONDS,
-} from "../constants";
+} from "../../constants";
 
 /** Tamaño de página por defecto del catálogo público. */
 

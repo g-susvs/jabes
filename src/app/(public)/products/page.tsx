@@ -3,8 +3,8 @@ import { getStrapiProductsContent } from "@/modules/public/products/services/get
 import { ProductsPage } from "@/modules/public/products/ProductsPage";
 import { buildMetadata } from "@/shared/seo/build-metadata";
 import { SEO_FALLBACK } from "@/shared/constants/seo-fallback";
-import { StrapiProductService } from "@/shared/services/strapi-product.service";
-import { StrapiCategoryService } from "@/shared/services/strapi-category.service";
+import { ProductService } from "@/shared/services/product.service";
+import { CategoryService } from "@/shared/services/category.service";
 import { buildProductsHref, parseSearchParams } from "@/modules/public/products/helpers";
 import { PRODUCTS_PAGE_SIZE } from "@/shared/constants";
 
@@ -34,8 +34,8 @@ export default async function Products({
 
   const [content, categories, paged] = await Promise.all([
     getStrapiProductsContent(),
-    StrapiCategoryService.getAll(),
-    StrapiProductService.getPaged({
+    CategoryService.getAll(),
+    ProductService.getPaged({
       page,
       size: PRODUCTS_PAGE_SIZE,
       categorySlug: category,

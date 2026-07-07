@@ -1,0 +1,50 @@
+[
+  {
+    "id": 50,
+    "documentId": "vldnh3rt1nsrtutoufr03pag",
+    "name": "Fertilizantes y Abonos",
+    "slug": "fertilizantes-y-abonos",
+    "active": true,
+    "description": null,
+    "order": 0,
+    "createdAt": "2026-06-13T23:19:41.325Z",
+    "updatedAt": "2026-06-13T23:19:41.325Z",
+    "publishedAt": "2026-06-13T23:19:41.345Z"
+  },
+  {
+    "id": 52,
+    "documentId": "un1zeptcmluwdz103206znvl",
+    "name": "Tierras y Sustratos",
+    "slug": "tierras-y-sustratos",
+    "active": true,
+    "description": null,
+    "order": 0,
+    "createdAt": "2026-06-13T23:20:05.229Z",
+    "updatedAt": "2026-06-13T23:20:05.229Z",
+    "publishedAt": "2026-06-13T23:20:05.242Z"
+  },
+  {
+    "id": 54,
+    "documentId": "ymb0j2cb597ahc1vrd5kjoj5",
+    "name": "Piedras Decorativas",
+    "slug": "piedras-decorativas",
+    "active": true,
+    "description": null,
+    "order": 0,
+    "createdAt": "2026-06-13T23:20:28.377Z",
+    "updatedAt": "2026-06-13T23:20:28.377Z",
+    "publishedAt": "2026-06-13T23:20:28.389Z"
+  },
+  {
+    "id": 56,
+    "documentId": "yu7m362x6ymavazrr5rfr7hw",
+    "name": "Plantas y Grass",
+    "slug": "plantas-y-grass",
+    "active": true,
+    "description": null,
+    "order": 0,
+    "createdAt": "2026-06-13T23:20:53.887Z",
+    "updatedAt": "2026-06-13T23:20:53.887Z",
+    "publishedAt": "2026-06-13T23:20:53.895Z"
+  }
+]
