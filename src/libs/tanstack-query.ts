@@ -4,9 +4,10 @@ function makeQueryClient() {
   return new QueryClient({
     defaultOptions: {
       queries: {
-        // With SSR, we usually want to set some default staleTime
-        // above 0 to avoid refetching immediately on the client
-        staleTime: 60 * 1000,
+        // 10 min: el catálogo cambia poco y cada refetch consume cuota de requests del CMS.
+        staleTime: 10 * 60 * 1000,
+        // Evita re-consultar el CMS cada vez que la pestaña recupera el foco.
+        refetchOnWindowFocus: false,
       },
     },
   });

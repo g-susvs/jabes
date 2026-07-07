@@ -1,3 +1,4 @@
+import { cache } from "react";
 import { IProductDTO } from "@/shared/interfaces/product";
 import { IProductFindParams } from "@/shared/interfaces/find-params";
 import { IPaginated } from "@/shared/interfaces/pagination";
@@ -5,7 +6,10 @@ import { environment } from "@/config/env/environment";
 import { getMediaUrl } from "@/libs/strapi";
 import { IStrapiMedia } from "@/libs/strapi/interfaces";
 import { IStrapiSeo } from "@/shared/seo/interfaces";
-import { PRODUCTS_PAGE_SIZE } from "../constants";
+import {
+  PRODUCTS_PAGE_SIZE,
+  REVALIDATE_CATALOG_SECONDS,
+} from "../constants";
 
 /** Tamaño de página por defecto del catálogo público. */
 
@@ -116,7 +120,9 @@ export class StrapiProductService {
     }
 
     const qs = parts.join("&");
-    const response = await fetch(`${STRAPI_URL}/api/products?${qs}`);
+    const response = await fetch(`${STRAPI_URL}/api/products?${qs}`, {
+      next: { revalidate: REVALIDATE_CATALOG_SECONDS },
+    });
 
     if (!response.ok) return [];
 
@@ -155,7 +161,7 @@ export class StrapiProductService {
     };
 
     const response = await fetch(`${STRAPI_URL}/api/products?${parts.join("&")}`, {
-      cache: "no-store",
+      next: { revalidate: REVALIDATE_CATALOG_SECONDS },
     });
 
     if (!response.ok) return emptyResult;
@@ -178,24 +184,28 @@ export class StrapiProductService {
 
   /**
    * Get a single product by its slug.
+   * Deduplicado por request con React cache(): la página de detalle lo
+   * llama en generateMetadata y en el componente, pero solo viaja 1 fetch.
    */
-  static async getBySlug(slug: string): Promise<IProductDTO | undefined> {
-    const qs = [
-      `filters[slug][$eq]=${slug}`,
-      ACTIVE_FILTER,
-      PRODUCT_DETAIL_POPULATE,
-    ].join("&");
+  static getBySlug = cache(
+    async (slug: string): Promise<IProductDTO | undefined> => {
+      const qs = [
+        `filters[slug][$eq]=${slug}`,
+        ACTIVE_FILTER,
+        PRODUCT_DETAIL_POPULATE,
+      ].join("&");
 
-    const response = await fetch(`${STRAPI_URL}/api/products?${qs}`, {
-      cache: "no-store",
-    });
+      const response = await fetch(`${STRAPI_URL}/api/products?${qs}`, {
+        next: { revalidate: REVALIDATE_CATALOG_SECONDS },
+      });
 
-    if (!response.ok) return undefined;
+      if (!response.ok) return undefined;
 
-    const json =
-      (await response.json()) as IStrapiCollectionResponse<IStrapiProduct>;
+      const json =
+        (await response.json()) as IStrapiCollectionResponse<IStrapiProduct>;
 
-    const first = json.data?.[0];
-    return first ? mapStrapiProduct(first) : undefined;
-  }
+      const first = json.data?.[0];
+      return first ? mapStrapiProduct(first) : undefined;
+    }
+  );
 }

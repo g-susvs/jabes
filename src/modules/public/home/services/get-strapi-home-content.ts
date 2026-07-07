@@ -1,8 +1,10 @@
+import { cache } from "react";
 import { IStrapiMedia } from "@/libs/strapi/interfaces";
 import { IHomePageContent } from "../interface/home";
 import { IStrapiSeo } from "@/shared/seo/interfaces";
 import { environment } from "@/config/env/environment";
 import { getMediaUrl } from "@/libs/strapi";
+import { REVALIDATE_CONTENT_SECONDS } from "@/shared/constants";
 
 const STRAPI_URL = environment.strapiHost;
 const HOME_PAGE_QUERY =
@@ -58,11 +60,13 @@ interface IStrapiHomeResponse {
   data?: IStrapiHomePage | null;
 }
 
-export const getStrapiHomeContent = async (): Promise<IHomePageContent | null> => {
+// cache() deduplica la doble llamada generateMetadata + componente en una
+// misma request; el fetch con revalidate cachea entre visitas (ISR).
+export const getStrapiHomeContent = cache(async (): Promise<IHomePageContent | null> => {
 
   try {
     const response = await fetch(`${STRAPI_URL}/api/home-page?${HOME_PAGE_QUERY}`, {
-      cache: "no-store",
+      next: { revalidate: REVALIDATE_CONTENT_SECONDS },
     });
 
     if (!response.ok) return null;
@@ -129,4 +133,4 @@ export const getStrapiHomeContent = async (): Promise<IHomePageContent | null> =
   } catch {
     return null;
   }
-};
+});

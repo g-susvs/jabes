@@ -1,6 +1,7 @@
 import { environment } from "@/config/env/environment";
 import { ICategory } from "@/shared/interfaces/category";
 import { IFindParams } from "@/shared/interfaces/find-params";
+import { REVALIDATE_CATALOG_SECONDS } from "@/shared/constants";
 
 const STRAPI_URL = environment.strapiHost
 
@@ -56,7 +57,9 @@ export class StrapiCategoryService {
     }
 
     const qs = parts.join("&");
-    const response = await fetch(`${STRAPI_URL}/api/categories?${qs}`);
+    const response = await fetch(`${STRAPI_URL}/api/categories?${qs}`, {
+      next: { revalidate: REVALIDATE_CATALOG_SECONDS },
+    });
 
     if (!response.ok) return [];
 

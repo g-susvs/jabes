@@ -1,8 +1,10 @@
+import { cache } from "react";
 import { environment } from "@/config/env/environment";
 import { IServicesPageContent } from "../interface/services";
 import { IStrapiMedia } from "@/libs/strapi/interfaces";
 import { IStrapiSeo } from "@/shared/seo/interfaces";
 import { getMediaUrl } from "@/libs/strapi";
+import { REVALIDATE_CONTENT_SECONDS } from "@/shared/constants";
 
 const STRAPI_URL = environment.strapiHost;
 
@@ -52,13 +54,15 @@ interface IStrapiServicesPageResponse {
 
 // ── Main function ──────────────────────────────────────
 
-export const getStrapiServicesContent =
+// cache() deduplica la doble llamada generateMetadata + componente en una
+// misma request; el fetch con revalidate cachea entre visitas (ISR).
+export const getStrapiServicesContent = cache(
   async (): Promise<IServicesPageContent | null> => {
 
     try {
       const response = await fetch(
         `${STRAPI_URL}/api/services-page?${SERVICES_PAGE_QUERY}`,
-        { cache: "no-store" }
+        { next: { revalidate: REVALIDATE_CONTENT_SECONDS } }
       );
 
       if (!response.ok) return null;
@@ -111,4 +115,5 @@ export const getStrapiServicesContent =
     } catch {
       return null;
     }
-  };
+  }
+);

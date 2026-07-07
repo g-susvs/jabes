@@ -24,3 +24,11 @@ export const CONTACT_INFO = {
 };
 
 export const PRODUCTS_PAGE_SIZE = 10;
+
+/**
+ * Tiempos de revalidación (ISR) para los fetch al CMS, en segundos.
+ * El contenido editorial (single types) cambia poco; el catálogo
+ * (productos/categorías) se refresca más seguido.
+ */
+export const REVALIDATE_CONTENT_SECONDS = 3600; // 1 hora
+export const REVALIDATE_CATALOG_SECONDS = 600; // 10 minutos

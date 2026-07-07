@@ -1,5 +1,7 @@
+import { cache } from "react";
 import { environment } from "@/config/env/environment";
 import { IProductDetailPageContent } from "../interface/product-detail";
+import { REVALIDATE_CONTENT_SECONDS } from "@/shared/constants";
 
 const STRAPI_URL = environment.strapiHost;
 
@@ -17,12 +19,14 @@ interface IStrapiProductDetailPageResponse {
   data?: IStrapiProductDetailPage | null;
 }
 
-export const getStrapiProductDetailContent =
+// cache() deduplica llamadas repetidas dentro de una misma request; el
+// fetch con revalidate cachea entre visitas (ISR).
+export const getStrapiProductDetailContent = cache(
   async (): Promise<IProductDetailPageContent | null> => {
     try {
       const response = await fetch(
         `${STRAPI_URL}/api/product-detail-page?${PRODUCT_DETAIL_PAGE_QUERY}`,
-        { cache: "no-store" }
+        { next: { revalidate: REVALIDATE_CONTENT_SECONDS } }
       );
 
       if (!response.ok) return null;
@@ -48,4 +52,5 @@ export const getStrapiProductDetailContent =
     } catch {
       return null;
     }
-  };
+  }
+);
