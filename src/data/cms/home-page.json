@@ -1,0 +1,397 @@
+{
+  "data": {
+    "id": 16,
+    "documentId": "y6billf5yy4h16rtbixgld89",
+    "heroTitle": "Tu jardín perfecto con",
+    "heroTitleHighlight": "Jardinería Jabes",
+    "heroSubtitle": "Especialistas en mantenimiento de jardines y venta de productos de jardinería. Transformamos tus espacios verdes con calidad y profesionalismo.",
+    "servicesTitle": "Nuestros Servicios",
+    "servicesDescription": "Ofrecemos servicios completos de jardinería y una amplia gama de productos para mantener tu jardín siempre perfecto",
+    "productsTitle": "Productos Destacados",
+    "productsDescription": "Algunos de nuestros productos más populares",
+    "productCardActionLabel": "Ver detalles",
+    "createdAt": "2026-06-13T05:03:07.257Z",
+    "updatedAt": "2026-07-04T23:42:48.874Z",
+    "publishedAt": "2026-07-04T23:42:48.911Z",
+    "heroImage": {
+      "id": 42,
+      "documentId": "amn77qz2ylzbvvs4nsgwm77l",
+      "name": "Hero Background.png",
+      "alternativeText": null,
+      "caption": null,
+      "focalPoint": null,
+      "width": 1440,
+      "height": 680,
+      "formats": {
+        "thumbnail": {
+          "ext": ".png",
+          "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1782688062/jabes/thumbnail_Hero_Background_2d9fa9f9cc.png",
+          "hash": "thumbnail_Hero_Background_2d9fa9f9cc",
+          "mime": "image/png",
+          "name": "thumbnail_Hero Background.png",
+          "path": null,
+          "size": 75.19,
+          "width": 245,
+          "height": 116,
+          "sizeInBytes": 75187,
+          "provider_metadata": {
+            "public_id": "jabes/thumbnail_Hero_Background_2d9fa9f9cc",
+            "resource_type": "image"
+          }
+        }
+      },
+      "hash": "Hero_Background_2d9fa9f9cc",
+      "ext": ".png",
+      "mime": "image/png",
+      "size": 412.28,
+      "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1782688062/jabes/Hero_Background_2d9fa9f9cc.png",
+      "previewUrl": null,
+      "provider": "cloudinary",
+      "provider_metadata": {
+        "public_id": "jabes/Hero_Background_2d9fa9f9cc",
+        "resource_type": "image"
+      },
+      "createdAt": "2026-06-28T23:07:43.375Z",
+      "updatedAt": "2026-06-28T23:07:43.375Z",
+      "publishedAt": "2026-06-28T23:07:43.376Z"
+    },
+    "servicesButton": {
+      "id": 39,
+      "label": "Ver servicios",
+      "url": "/services",
+      "isExternal": false
+    },
+    "productsButton": {
+      "id": 40,
+      "label": "Ver productos",
+      "url": "/products",
+      "isExternal": false
+    },
+    "seo": {
+      "id": 38,
+      "metaTitle": "Jardinería Jabes | Vivero, productos y servicios de jardinería",
+      "metaDescription": "Especialistas en mantenimiento de jardines y venta de productos de jardinería para transformar tus espacios verdes.",
+      "keywords": null,
+      "canonicalUrl": null,
+      "shareImage": null
+    },
+    "featuredServices": [
+      {
+        "id": 79,
+        "documentId": "wcjbkivvs6fs5sdqx5hbabqv",
+        "title": "Jardinería y Mantenimiento",
+        "slug": "jardineria-y-mantenimiento",
+        "description": "Servicios profesionales de mantenimiento integral para tu jardín, incluyendo corte de césped, podado, fumigación y cuidado especializado.",
+        "icon": null,
+        "active": false,
+        "order": 1,
+        "featured": true,
+        "createdAt": "2026-06-13T05:05:58.827Z",
+        "updatedAt": "2026-06-28T23:34:11.694Z",
+        "publishedAt": "2026-06-28T23:34:11.780Z",
+        "image": {
+          "id": 43,
+          "documentId": "ws5ui1c5zyw6doo0sxm5etko",
+          "name": "Svc Image Mantenimiento.png",
+          "alternativeText": null,
+          "caption": null,
+          "focalPoint": null,
+          "width": 411,
+          "height": 240,
+          "formats": {
+            "thumbnail": {
+              "ext": ".png",
+              "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1782689646/jabes/thumbnail_Svc_Image_Mantenimiento_7720930af1.png",
+              "hash": "thumbnail_Svc_Image_Mantenimiento_7720930af1",
+              "mime": "image/png",
+              "name": "thumbnail_Svc Image Mantenimiento.png",
+              "path": null,
+              "size": 68.32,
+              "width": 245,
+              "height": 143,
+              "sizeInBytes": 68319,
+              "provider_metadata": {
+                "public_id": "jabes/thumbnail_Svc_Image_Mantenimiento_7720930af1",
+                "resource_type": "image"
+              }
+            }
+          },
+          "hash": "Svc_Image_Mantenimiento_7720930af1",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": 56.89,
+          "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1782689646/jabes/Svc_Image_Mantenimiento_7720930af1.png",
+          "previewUrl": null,
+          "provider": "cloudinary",
+          "provider_metadata": {
+            "public_id": "jabes/Svc_Image_Mantenimiento_7720930af1",
+            "resource_type": "image"
+          },
+          "createdAt": "2026-06-28T23:34:07.708Z",
+          "updatedAt": "2026-06-28T23:34:07.708Z",
+          "publishedAt": "2026-06-28T23:34:07.709Z"
+        }
+      },
+      {
+        "id": 80,
+        "documentId": "fkjwj59iootvt5je3jbyfa0o",
+        "title": "Venta de Productos",
+        "slug": "venta-de-productos",
+        "description": "Amplio catálogo de productos para jardinería: fertilizantes, tierras, plantas, piedras decorativas y todo lo que necesitas para tu jardín.",
+        "icon": null,
+        "active": true,
+        "order": 2,
+        "featured": true,
+        "createdAt": "2026-06-13T05:07:19.618Z",
+        "updatedAt": "2026-06-28T23:34:35.709Z",
+        "publishedAt": "2026-06-28T23:34:35.730Z",
+        "image": {
+          "id": 44,
+          "documentId": "zoy1rcctr232tfce75ch4hvq",
+          "name": "Svc Image Paisajismo.png",
+          "alternativeText": null,
+          "caption": null,
+          "focalPoint": null,
+          "width": 411,
+          "height": 240,
+          "formats": {
+            "thumbnail": {
+              "ext": ".png",
+              "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1782689663/jabes/thumbnail_Svc_Image_Paisajismo_e5a75dfbaa.png",
+              "hash": "thumbnail_Svc_Image_Paisajismo_e5a75dfbaa",
+              "mime": "image/png",
+              "name": "thumbnail_Svc Image Paisajismo.png",
+              "path": null,
+              "size": 97.58,
+              "width": 245,
+              "height": 143,
+              "sizeInBytes": 97582,
+              "provider_metadata": {
+                "public_id": "jabes/thumbnail_Svc_Image_Paisajismo_e5a75dfbaa",
+                "resource_type": "image"
+              }
+            }
+          },
+          "hash": "Svc_Image_Paisajismo_e5a75dfbaa",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": 68.71,
+          "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1782689663/jabes/Svc_Image_Paisajismo_e5a75dfbaa.png",
+          "previewUrl": null,
+          "provider": "cloudinary",
+          "provider_metadata": {
+            "public_id": "jabes/Svc_Image_Paisajismo_e5a75dfbaa",
+            "resource_type": "image"
+          },
+          "createdAt": "2026-06-28T23:34:24.472Z",
+          "updatedAt": "2026-06-28T23:34:24.472Z",
+          "publishedAt": "2026-06-28T23:34:24.472Z"
+        }
+      }
+    ],
+    "featuredProducts": [
+      {
+        "id": 86,
+        "documentId": "xsvb486tlh95caqgo20vahsh",
+        "name": "Abono de vaca x 20kg",
+        "slug": "abono-de-vaca-x-20kg",
+        "description": "Abono orgánico que nutre el suelo y favorece el crecimiento sano de plantas y cultivos.",
+        "active": true,
+        "featured": true,
+        "createdAt": "2026-07-04T23:35:26.855Z",
+        "updatedAt": "2026-07-04T23:35:26.855Z",
+        "publishedAt": "2026-07-04T23:35:26.858Z",
+        "price": 14.5,
+        "image": {
+          "id": 49,
+          "documentId": "djscbcw1idwx2r26g0xyvd5x",
+          "name": "abonos.jpg",
+          "alternativeText": null,
+          "caption": null,
+          "focalPoint": null,
+          "width": 1408,
+          "height": 768,
+          "formats": {
+            "thumbnail": {
+              "ext": ".jpg",
+              "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208126/jabes/thumbnail_abonos_3e1dff96f7.jpg",
+              "hash": "thumbnail_abonos_3e1dff96f7",
+              "mime": "image/jpeg",
+              "name": "thumbnail_abonos.jpg",
+              "path": null,
+              "size": 5.65,
+              "width": 245,
+              "height": 134,
+              "sizeInBytes": 5654,
+              "provider_metadata": {
+                "public_id": "jabes/thumbnail_abonos_3e1dff96f7",
+                "resource_type": "image"
+              }
+            }
+          },
+          "hash": "abonos_3e1dff96f7",
+          "ext": ".jpg",
+          "mime": "image/jpeg",
+          "size": 93.52,
+          "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208126/jabes/abonos_3e1dff96f7.jpg",
+          "previewUrl": null,
+          "provider": "cloudinary",
+          "provider_metadata": {
+            "public_id": "jabes/abonos_3e1dff96f7",
+            "resource_type": "image"
+          },
+          "createdAt": "2026-07-04T23:35:26.832Z",
+          "updatedAt": "2026-07-04T23:35:26.832Z",
+          "publishedAt": "2026-07-04T23:35:26.832Z"
+        },
+        "category": {
+          "id": 50,
+          "documentId": "vldnh3rt1nsrtutoufr03pag",
+          "name": "Fertilizantes y Abonos",
+          "slug": "fertilizantes-y-abonos",
+          "active": true,
+          "description": null,
+          "order": 0,
+          "createdAt": "2026-06-13T23:19:41.325Z",
+          "updatedAt": "2026-06-13T23:19:41.325Z",
+          "publishedAt": "2026-06-13T23:19:41.345Z"
+        }
+      },
+      {
+        "id": 112,
+        "documentId": "eeblhvrckgo9tlj4k8va2kr2",
+        "name": "Buganvilia roja (Enredadera) x 1.50m",
+        "slug": "buganvilia-roja-enredadera-x-1-50m",
+        "description": "Arbusto trepador de vistosas flores rojas, resistente al sol y de floración abundante.",
+        "active": true,
+        "featured": true,
+        "createdAt": "2026-07-04T23:35:37.797Z",
+        "updatedAt": "2026-07-04T23:35:37.797Z",
+        "publishedAt": "2026-07-04T23:35:37.803Z",
+        "price": 30,
+        "image": {
+          "id": 62,
+          "documentId": "pmtjnq2xy80y7s29lr7ll9b0",
+          "name": "buganvilia-roja.jpeg",
+          "alternativeText": null,
+          "caption": null,
+          "focalPoint": null,
+          "width": 720,
+          "height": 1280,
+          "formats": {
+            "thumbnail": {
+              "ext": ".jpeg",
+              "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208137/jabes/thumbnail_buganvilia_roja_4f7484bdbc.jpg",
+              "hash": "thumbnail_buganvilia_roja_4f7484bdbc",
+              "mime": "image/jpeg",
+              "name": "thumbnail_buganvilia-roja.jpeg",
+              "path": null,
+              "size": 5.1,
+              "width": 88,
+              "height": 156,
+              "sizeInBytes": 5104,
+              "provider_metadata": {
+                "public_id": "jabes/thumbnail_buganvilia_roja_4f7484bdbc",
+                "resource_type": "image"
+              }
+            }
+          },
+          "hash": "buganvilia_roja_4f7484bdbc",
+          "ext": ".jpeg",
+          "mime": "image/jpeg",
+          "size": 152.95,
+          "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208136/jabes/buganvilia_roja_4f7484bdbc.jpg",
+          "previewUrl": null,
+          "provider": "cloudinary",
+          "provider_metadata": {
+            "public_id": "jabes/buganvilia_roja_4f7484bdbc",
+            "resource_type": "image"
+          },
+          "createdAt": "2026-07-04T23:35:37.779Z",
+          "updatedAt": "2026-07-04T23:35:37.779Z",
+          "publishedAt": "2026-07-04T23:35:37.779Z"
+        },
+        "category": {
+          "id": 56,
+          "documentId": "yu7m362x6ymavazrr5rfr7hw",
+          "name": "Plantas y Grass",
+          "slug": "plantas-y-grass",
+          "active": true,
+          "description": null,
+          "order": 0,
+          "createdAt": "2026-06-13T23:20:53.887Z",
+          "updatedAt": "2026-06-13T23:20:53.887Z",
+          "publishedAt": "2026-06-13T23:20:53.895Z"
+        }
+      },
+      {
+        "id": 122,
+        "documentId": "m7j27so749xxtsnsy76rqmio",
+        "name": "Ciprés Limón x 70cm",
+        "slug": "cipres-limon-x-70cm",
+        "description": "Árbol de follaje verde y forma columnar, ideal para cercos vivos y jardines elegantes.",
+        "active": true,
+        "featured": true,
+        "createdAt": "2026-07-04T23:35:41.501Z",
+        "updatedAt": "2026-07-04T23:35:41.501Z",
+        "publishedAt": "2026-07-04T23:35:41.505Z",
+        "price": 60,
+        "image": {
+          "id": 67,
+          "documentId": "fa3fxl6utj7ezyol8h9eqigj",
+          "name": "cipres.jpeg",
+          "alternativeText": null,
+          "caption": null,
+          "focalPoint": null,
+          "width": 963,
+          "height": 1280,
+          "formats": {
+            "thumbnail": {
+              "ext": ".jpeg",
+              "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208140/jabes/thumbnail_cipres_5c27bff393.jpg",
+              "hash": "thumbnail_cipres_5c27bff393",
+              "mime": "image/jpeg",
+              "name": "thumbnail_cipres.jpeg",
+              "path": null,
+              "size": 6.46,
+              "width": 117,
+              "height": 156,
+              "sizeInBytes": 6456,
+              "provider_metadata": {
+                "public_id": "jabes/thumbnail_cipres_5c27bff393",
+                "resource_type": "image"
+              }
+            }
+          },
+          "hash": "cipres_5c27bff393",
+          "ext": ".jpeg",
+          "mime": "image/jpeg",
+          "size": 372.21,
+          "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783208140/jabes/cipres_5c27bff393.jpg",
+          "previewUrl": null,
+          "provider": "cloudinary",
+          "provider_metadata": {
+            "public_id": "jabes/cipres_5c27bff393",
+            "resource_type": "image"
+          },
+          "createdAt": "2026-07-04T23:35:41.481Z",
+          "updatedAt": "2026-07-04T23:35:41.481Z",
+          "publishedAt": "2026-07-04T23:35:41.481Z"
+        },
+        "category": {
+          "id": 56,
+          "documentId": "yu7m362x6ymavazrr5rfr7hw",
+          "name": "Plantas y Grass",
+          "slug": "plantas-y-grass",
+          "active": true,
+          "description": null,
+          "order": 0,
+          "createdAt": "2026-06-13T23:20:53.887Z",
+          "updatedAt": "2026-06-13T23:20:53.887Z",
+          "publishedAt": "2026-06-13T23:20:53.895Z"
+        }
+      }
+    ]
+  },
+  "meta": {}
+}
