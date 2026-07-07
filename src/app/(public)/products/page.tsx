@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getStrapiProductsContent } from "@/modules/public/products/services/get-strapi-products-content";
+import { getProductsContent } from "@/shared/services/content/get-products-content";
 import { ProductsPage } from "@/modules/public/products/ProductsPage";
 import { buildMetadata } from "@/shared/seo/build-metadata";
 import { SEO_FALLBACK } from "@/shared/constants/seo-fallback";
@@ -16,7 +16,7 @@ export async function generateMetadata({
   searchParams: SearchParams;
 }): Promise<Metadata> {
   const { page, category } = parseSearchParams(await searchParams);
-  const content = await getStrapiProductsContent();
+  const content = await getProductsContent();
 
   return buildMetadata({
     seo: content?.seo,
@@ -33,7 +33,7 @@ export default async function Products({
   const { page, category } = parseSearchParams(await searchParams);
 
   const [content, categories, paged] = await Promise.all([
-    getStrapiProductsContent(),
+    getProductsContent(),
     CategoryService.getAll(),
     ProductService.getPaged({
       page,

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ProductDetailPage } from "@/modules/public/product-detail/ProductDetailPage";
-import { getStrapiProductDetailContent } from "@/modules/public/product-detail/services/get-strapi-product-detail-content";
+import { getProductDetailContent } from "@/shared/services/content/get-product-detail-content";
 import { ProductService } from "@/shared/services/product.service";
 import { buildMetadata } from "@/shared/seo/build-metadata";
 import {
@@ -43,7 +43,7 @@ export default async function ProductDetail({
 
   const product = await ProductService.getBySlug(slug);
 
-  const content = await getStrapiProductDetailContent();
+  const content = await getProductDetailContent();
 
   if (!content) return <div>Content not found</div>;
 

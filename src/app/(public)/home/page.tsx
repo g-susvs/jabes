@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import HomePage from "@/modules/public/home/HomePage";
-import { getStrapiHomeContent } from "@/modules/public/home/services/get-strapi-home-content";
+import { getHomeContent } from "@/shared/services/content/get-home-content";
 import { buildMetadata } from "@/shared/seo/build-metadata";
 import { SEO_FALLBACK } from "@/shared/constants/seo-fallback";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const content = await getStrapiHomeContent();
+  const content = await getHomeContent();
 
   return buildMetadata({
     seo: content?.seo,
@@ -15,7 +15,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function Home() {
-  const content = await getStrapiHomeContent();
+  const content = await getHomeContent();
 
   if(!content) return <div>Content not found</div>;
 
