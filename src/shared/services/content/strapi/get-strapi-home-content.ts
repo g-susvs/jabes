@@ -1,8 +1,8 @@
 import { cache } from "react";
-import { IHomePageContent } from "../interface/home";
+import { IHomePageContent } from "../../../../modules/public/home/interface/home";
 import { environment } from "@/config/env/environment";
 import { REVALIDATE_CONTENT_SECONDS } from "@/shared/constants";
-import { IStrapiHomeResponse, mapHomeContent } from "./map-home-content";
+import { IStrapiHomeResponse, mapHomeContent } from "../get-home-content";
 
 const STRAPI_URL = environment.strapiHost;
 const HOME_PAGE_QUERY =
