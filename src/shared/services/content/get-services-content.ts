@@ -5,8 +5,9 @@ import { getMediaUrl } from "@/libs/strapi";
 import { IServicesPageContent } from "@/modules/public/services/interface/services";
 
 /**
- * Fuente del contenido editorial de la página de servicios.
- * Cambiar a getStrapiServicesContent para volver a leer del CMS.
+ * Fuente del contenido de la página de servicios. Por defecto la local
+ * (JSON editorial + servicios de Supabase). Cambiar a getStrapiServicesContent
+ * para volver a leer todo del CMS.
  */
 export const getServicesContent = getJsonServicesContent;
 

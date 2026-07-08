@@ -100,6 +100,10 @@ export const mapHomeContent = (data: IStrapiHomePage): IHomePageContent => {
     ourServices: {
       title: data.servicesTitle ?? "",
       description: data.servicesDescription ?? "",
+      button: {
+        label: data.servicesButton?.label ?? "",
+        link: data.servicesButton?.url ?? "",
+      },
       services,
     },
     ourProducts: {

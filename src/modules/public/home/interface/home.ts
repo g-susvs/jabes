@@ -17,6 +17,10 @@ export interface IHeroSection {
 export interface IOurServicesSection {
   title: string;
   description: string;
+  button: {
+    label: string;
+    link: string;
+  };
   services: IService[];
 }
 

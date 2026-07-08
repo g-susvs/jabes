@@ -124,6 +124,27 @@ export class SupabaseProductService {
   }
 
   /**
+   * Productos para la sección destacada del home: "featured con respaldo".
+   * Ordena featured primero (featured.desc) y completa con el resto por
+   * nombre, tomando `limit`. Así nunca queda vacío aunque falten featured.
+   */
+  static async getHighlighted(limit: number): Promise<IProductDTO[]> {
+    const parts = [
+      PRODUCT_SELECT,
+      ACTIVE_FILTER,
+      "order=featured.desc,name.asc",
+      `limit=${limit}`,
+    ];
+
+    const { data } = await supabaseRest<ISupabaseProductRow[]>(
+      `products?${parts.join("&")}`,
+      // { revalidate: REVALIDATE_CATALOG_SECONDS }
+    );
+
+    return (data ?? []).map(mapProduct);
+  }
+
+  /**
    * Get a page of active products (paginated server-side by Supabase),
    * optionally filtered by category slug. Returns the items plus the
    * pagination metadata needed by the paginator.
