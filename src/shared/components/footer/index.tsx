@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Container } from "../container";
 import { Logo } from "../logo";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
-import { HiOutlineLocationMarker, HiOutlinePhone } from "react-icons/hi";
+import { HiOutlinePhone } from "react-icons/hi";
 import { HiOutlineEnvelope, HiOutlineClock } from "react-icons/hi2";
 import { CONTACT_INFO } from "@/shared/constants";
 

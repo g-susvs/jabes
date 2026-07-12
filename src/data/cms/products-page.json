@@ -1,0 +1,25 @@
+{
+  "data": {
+    "id": 14,
+    "documentId": "fmckec3ufx33a6ynwej8u6gu",
+    "bannerTitle": "Nuestros Productos",
+    "bannerDescription": "Todo lo que necesitas para mantener tu jardín perfecto",
+    "filtersTitle": "Explora por categoría",
+    "emptyStateTitle": null,
+    "emptyStateDescription": null,
+    "createdAt": "2026-06-13T23:24:22.866Z",
+    "updatedAt": "2026-06-30T22:58:35.282Z",
+    "publishedAt": "2026-06-30T22:58:35.328Z",
+    "allCategoriesLabel": "Todas las categorias",
+    "productCardActionLabel": "Ver detalles",
+    "seo": {
+      "id": 42,
+      "metaTitle": "Catálogo de plantas y productos",
+      "metaDescription": "Explora nuestro catálogo de plantas y productos de vivero en Perú. Consulta disponibilidad y precios por WhatsApp.",
+      "keywords": null,
+      "canonicalUrl": null,
+      "shareImage": null
+    }
+  },
+  "meta": {}
+}

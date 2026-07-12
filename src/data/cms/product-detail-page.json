@@ -1,0 +1,22 @@
+{
+  "data": {
+    "id": 10,
+    "documentId": "i5ozy503c4fbtdbn8ilvsnpf",
+    "headerAction": "Volver a los productos",
+    "detailSubtitle": "Características",
+    "detailAction": "Consultar por WhatsApp",
+    "detailExtraInfo": "Contáctanos para obtener información sobre precios, disponibilidad y opciones de entrega",
+    "relatedProductsTitle": "Productos relacionados",
+    "createdAt": "2026-06-27T03:07:53.951Z",
+    "updatedAt": "2026-06-30T22:59:13.804Z",
+    "publishedAt": "2026-06-30T22:59:13.828Z",
+    "seo": {
+      "id": 40,
+      "metaTitle": null,
+      "metaDescription": "Disponible en Jabes. Consulta precio y disponibilidad por WhatsApp.",
+      "keywords": null,
+      "canonicalUrl": null
+    }
+  },
+  "meta": {}
+}

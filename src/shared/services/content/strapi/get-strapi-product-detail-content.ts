@@ -1,23 +1,13 @@
 import { cache } from "react";
 import { environment } from "@/config/env/environment";
-import { IProductDetailPageContent } from "../interface/product-detail";
 import { REVALIDATE_CONTENT_SECONDS } from "@/shared/constants";
+import { IProductDetailPageContent } from "@/modules/public/product-detail/interface/product-detail";
+import { IStrapiProductDetailPageResponse, mapProductDetailContent } from "../get-product-detail-content";
+
 
 const STRAPI_URL = environment.strapiHost;
 
 const PRODUCT_DETAIL_PAGE_QUERY = "populate[seo]=true";
-
-interface IStrapiProductDetailPage {
-  headerAction?: string | null;
-  detailSubtitle?: string | null;
-  detailAction?: string | null;
-  detailExtraInfo?: string | null;
-  relatedProductsTitle?: string | null;
-}
-
-interface IStrapiProductDetailPageResponse {
-  data?: IStrapiProductDetailPage | null;
-}
 
 // cache() deduplica llamadas repetidas dentro de una misma request; el
 // fetch con revalidate cachea entre visitas (ISR).
@@ -32,23 +22,8 @@ export const getStrapiProductDetailContent = cache(
       if (!response.ok) return null;
 
       const json = (await response.json()) as IStrapiProductDetailPageResponse;
-      const data = json.data;
 
-      if (!data) return null;
-
-      return {
-        header: {
-          action: data.headerAction ?? "",
-        },
-        detail: {
-          subtitle: data.detailSubtitle ?? "",
-          action: data.detailAction ?? "",
-          extraInfo: data.detailExtraInfo ?? "",
-        },
-        relatedProducts: {
-          title: data.relatedProductsTitle ?? "",
-        },
-      };
+      return json.data ? mapProductDetailContent(json.data) : null;
     } catch {
       return null;
     }

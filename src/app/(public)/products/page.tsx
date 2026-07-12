@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { getStrapiProductsContent } from "@/modules/public/products/services/get-strapi-products-content";
+import { getProductsContent } from "@/shared/services/content/get-products-content";
 import { ProductsPage } from "@/modules/public/products/ProductsPage";
 import { buildMetadata } from "@/shared/seo/build-metadata";
 import { SEO_FALLBACK } from "@/shared/constants/seo-fallback";
-import { StrapiProductService } from "@/shared/services/strapi-product.service";
-import { StrapiCategoryService } from "@/shared/services/strapi-category.service";
+import { ProductService } from "@/shared/services/product.service";
+import { CategoryService } from "@/shared/services/category.service";
 import { buildProductsHref, parseSearchParams } from "@/modules/public/products/helpers";
 import { PRODUCTS_PAGE_SIZE } from "@/shared/constants";
 
@@ -16,7 +16,7 @@ export async function generateMetadata({
   searchParams: SearchParams;
 }): Promise<Metadata> {
   const { page, category } = parseSearchParams(await searchParams);
-  const content = await getStrapiProductsContent();
+  const content = await getProductsContent();
 
   return buildMetadata({
     seo: content?.seo,
@@ -33,9 +33,9 @@ export default async function Products({
   const { page, category } = parseSearchParams(await searchParams);
 
   const [content, categories, paged] = await Promise.all([
-    getStrapiProductsContent(),
-    StrapiCategoryService.getAll(),
-    StrapiProductService.getPaged({
+    getProductsContent(),
+    CategoryService.getAll(),
+    ProductService.getPaged({
       page,
       size: PRODUCTS_PAGE_SIZE,
       categorySlug: category,

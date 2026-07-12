@@ -3,4 +3,6 @@ export interface IEnvironment {
   strapiHost: string;
   contactPhone: string;
   siteUrl: string;
+  supabaseUrl: string;
+  supabaseAnonKey: string;
 }

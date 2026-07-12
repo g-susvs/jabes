@@ -6,7 +6,10 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cms:export": "node scripts/export-strapi-content.mjs",
+    "cms:export:collections": "node scripts/export-strapi-collections.mjs",
+    "supabase:seed": "node scripts/seed-supabase.mjs"
   },
   "dependencies": {
     "@radix-ui/react-dropdown-menu": "^2.1.16",

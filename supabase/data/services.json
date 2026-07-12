@@ -1,0 +1,344 @@
+[
+  {
+    "id": 82,
+    "documentId": "h74x84xduoqojxz9yz0bxpvb",
+    "title": "Mantenimiento Integral",
+    "slug": "mntenimiento-integral",
+    "description": "Servicio profesional de corte y mantenimiento de jardines",
+    "icon": "MdOutlineWaterDrop",
+    "active": true,
+    "order": 0,
+    "featured": false,
+    "createdAt": "2026-06-13T20:32:40.532Z",
+    "updatedAt": "2026-07-05T00:14:07.918Z",
+    "publishedAt": "2026-07-05T00:14:07.932Z",
+    "image": {
+      "id": 69,
+      "documentId": "izuhe5k04ssi1utxrnz0h1wg",
+      "name": "Img Mantenimiento.jpg",
+      "alternativeText": null,
+      "caption": null,
+      "focalPoint": null,
+      "width": 1884,
+      "height": 780,
+      "formats": {
+        "thumbnail": {
+          "ext": ".jpg",
+          "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783210443/jabes/thumbnail_Img_Mantenimiento_a393c89d3e.jpg",
+          "hash": "thumbnail_Img_Mantenimiento_a393c89d3e",
+          "mime": "image/jpeg",
+          "name": "thumbnail_Img Mantenimiento.jpg",
+          "path": null,
+          "size": 7.35,
+          "width": 245,
+          "height": 101,
+          "sizeInBytes": 7353,
+          "provider_metadata": {
+            "public_id": "jabes/thumbnail_Img_Mantenimiento_a393c89d3e",
+            "resource_type": "image"
+          }
+        }
+      },
+      "hash": "Img_Mantenimiento_a393c89d3e",
+      "ext": ".jpg",
+      "mime": "image/jpeg",
+      "size": 192.34,
+      "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783210444/jabes/Img_Mantenimiento_a393c89d3e.jpg",
+      "previewUrl": null,
+      "provider": "cloudinary",
+      "provider_metadata": {
+        "public_id": "jabes/Img_Mantenimiento_a393c89d3e",
+        "resource_type": "image"
+      },
+      "createdAt": "2026-07-05T00:14:04.718Z",
+      "updatedAt": "2026-07-05T00:14:04.718Z",
+      "publishedAt": "2026-07-05T00:14:04.718Z"
+    },
+    "seo": null
+  },
+  {
+    "id": 84,
+    "documentId": "hl8v43zco44xkp77lpa9mnuj",
+    "title": "Fumigación y control de plagas",
+    "slug": "fumigacion-y-control-de-plagas",
+    "description": "Servicio profesional de fumigación y control de plagas en jardines",
+    "icon": "LuBug",
+    "active": true,
+    "order": 0,
+    "featured": false,
+    "createdAt": "2026-06-13T20:33:50.878Z",
+    "updatedAt": "2026-07-05T00:16:30.164Z",
+    "publishedAt": "2026-07-05T00:16:30.191Z",
+    "image": {
+      "id": 71,
+      "documentId": "j5vpedbnctsm2bbm0may1rqy",
+      "name": "Img Instalación de Riego.jpg",
+      "alternativeText": null,
+      "caption": null,
+      "focalPoint": null,
+      "width": 1884,
+      "height": 780,
+      "formats": {
+        "thumbnail": {
+          "ext": ".jpg",
+          "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783210585/jabes/thumbnail_Img_Instalacion_de_Riego_5cc0ff9b35.jpg",
+          "hash": "thumbnail_Img_Instalacion_de_Riego_5cc0ff9b35",
+          "mime": "image/jpeg",
+          "name": "thumbnail_Img Instalación de Riego.jpg",
+          "path": null,
+          "size": 7.15,
+          "width": 245,
+          "height": 101,
+          "sizeInBytes": 7149,
+          "provider_metadata": {
+            "public_id": "jabes/thumbnail_Img_Instalacion_de_Riego_5cc0ff9b35",
+            "resource_type": "image"
+          }
+        }
+      },
+      "hash": "Img_Instalacion_de_Riego_5cc0ff9b35",
+      "ext": ".jpg",
+      "mime": "image/jpeg",
+      "size": 151.94,
+      "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783210586/jabes/Img_Instalacion_de_Riego_5cc0ff9b35.jpg",
+      "previewUrl": null,
+      "provider": "cloudinary",
+      "provider_metadata": {
+        "public_id": "jabes/Img_Instalacion_de_Riego_5cc0ff9b35",
+        "resource_type": "image"
+      },
+      "createdAt": "2026-07-05T00:16:26.819Z",
+      "updatedAt": "2026-07-05T00:16:26.819Z",
+      "publishedAt": "2026-07-05T00:16:26.820Z"
+    },
+    "seo": null
+  },
+  {
+    "id": 79,
+    "documentId": "wcjbkivvs6fs5sdqx5hbabqv",
+    "title": "Jardinería y Mantenimiento",
+    "slug": "jardineria-y-mantenimiento",
+    "description": "Servicios profesionales de mantenimiento integral para tu jardín, incluyendo corte de césped, podado, fumigación y cuidado especializado.",
+    "icon": null,
+    "active": false,
+    "order": 1,
+    "featured": true,
+    "createdAt": "2026-06-13T05:05:58.827Z",
+    "updatedAt": "2026-06-28T23:34:11.694Z",
+    "publishedAt": "2026-06-28T23:34:11.780Z",
+    "image": {
+      "id": 43,
+      "documentId": "ws5ui1c5zyw6doo0sxm5etko",
+      "name": "Svc Image Mantenimiento.png",
+      "alternativeText": null,
+      "caption": null,
+      "focalPoint": null,
+      "width": 411,
+      "height": 240,
+      "formats": {
+        "thumbnail": {
+          "ext": ".png",
+          "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1782689646/jabes/thumbnail_Svc_Image_Mantenimiento_7720930af1.png",
+          "hash": "thumbnail_Svc_Image_Mantenimiento_7720930af1",
+          "mime": "image/png",
+          "name": "thumbnail_Svc Image Mantenimiento.png",
+          "path": null,
+          "size": 68.32,
+          "width": 245,
+          "height": 143,
+          "sizeInBytes": 68319,
+          "provider_metadata": {
+            "public_id": "jabes/thumbnail_Svc_Image_Mantenimiento_7720930af1",
+            "resource_type": "image"
+          }
+        }
+      },
+      "hash": "Svc_Image_Mantenimiento_7720930af1",
+      "ext": ".png",
+      "mime": "image/png",
+      "size": 56.89,
+      "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1782689646/jabes/Svc_Image_Mantenimiento_7720930af1.png",
+      "previewUrl": null,
+      "provider": "cloudinary",
+      "provider_metadata": {
+        "public_id": "jabes/Svc_Image_Mantenimiento_7720930af1",
+        "resource_type": "image"
+      },
+      "createdAt": "2026-06-28T23:34:07.708Z",
+      "updatedAt": "2026-06-28T23:34:07.708Z",
+      "publishedAt": "2026-06-28T23:34:07.709Z"
+    },
+    "seo": null
+  },
+  {
+    "id": 80,
+    "documentId": "fkjwj59iootvt5je3jbyfa0o",
+    "title": "Venta de Productos",
+    "slug": "venta-de-productos",
+    "description": "Amplio catálogo de productos para jardinería: fertilizantes, tierras, plantas, piedras decorativas y todo lo que necesitas para tu jardín.",
+    "icon": null,
+    "active": true,
+    "order": 2,
+    "featured": true,
+    "createdAt": "2026-06-13T05:07:19.618Z",
+    "updatedAt": "2026-06-28T23:34:35.709Z",
+    "publishedAt": "2026-06-28T23:34:35.730Z",
+    "image": {
+      "id": 44,
+      "documentId": "zoy1rcctr232tfce75ch4hvq",
+      "name": "Svc Image Paisajismo.png",
+      "alternativeText": null,
+      "caption": null,
+      "focalPoint": null,
+      "width": 411,
+      "height": 240,
+      "formats": {
+        "thumbnail": {
+          "ext": ".png",
+          "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1782689663/jabes/thumbnail_Svc_Image_Paisajismo_e5a75dfbaa.png",
+          "hash": "thumbnail_Svc_Image_Paisajismo_e5a75dfbaa",
+          "mime": "image/png",
+          "name": "thumbnail_Svc Image Paisajismo.png",
+          "path": null,
+          "size": 97.58,
+          "width": 245,
+          "height": 143,
+          "sizeInBytes": 97582,
+          "provider_metadata": {
+            "public_id": "jabes/thumbnail_Svc_Image_Paisajismo_e5a75dfbaa",
+            "resource_type": "image"
+          }
+        }
+      },
+      "hash": "Svc_Image_Paisajismo_e5a75dfbaa",
+      "ext": ".png",
+      "mime": "image/png",
+      "size": 68.71,
+      "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1782689663/jabes/Svc_Image_Paisajismo_e5a75dfbaa.png",
+      "previewUrl": null,
+      "provider": "cloudinary",
+      "provider_metadata": {
+        "public_id": "jabes/Svc_Image_Paisajismo_e5a75dfbaa",
+        "resource_type": "image"
+      },
+      "createdAt": "2026-06-28T23:34:24.472Z",
+      "updatedAt": "2026-06-28T23:34:24.472Z",
+      "publishedAt": "2026-06-28T23:34:24.472Z"
+    },
+    "seo": null
+  },
+  {
+    "id": 81,
+    "documentId": "rfp0bmebuaz959mh0qwehjql",
+    "title": "Corte de césped",
+    "slug": "corte-de-cesped",
+    "description": "Servicio profesional de corte y mantenimiento de césped",
+    "icon": "MdOutlineContentCut",
+    "active": true,
+    "order": 4,
+    "featured": false,
+    "createdAt": "2026-06-13T20:31:08.995Z",
+    "updatedAt": "2026-07-05T00:13:45.870Z",
+    "publishedAt": "2026-07-05T00:13:45.897Z",
+    "image": {
+      "id": 68,
+      "documentId": "imjn2op7gk80c4rp2ntxopxm",
+      "name": "Img Poda y Limpieza.jpg",
+      "alternativeText": null,
+      "caption": null,
+      "focalPoint": null,
+      "width": 1884,
+      "height": 780,
+      "formats": {
+        "thumbnail": {
+          "ext": ".jpg",
+          "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783210421/jabes/thumbnail_Img_Poda_y_Limpieza_eb3d7e50c7.jpg",
+          "hash": "thumbnail_Img_Poda_y_Limpieza_eb3d7e50c7",
+          "mime": "image/jpeg",
+          "name": "thumbnail_Img Poda y Limpieza.jpg",
+          "path": null,
+          "size": 6.39,
+          "width": 245,
+          "height": 101,
+          "sizeInBytes": 6391,
+          "provider_metadata": {
+            "public_id": "jabes/thumbnail_Img_Poda_y_Limpieza_eb3d7e50c7",
+            "resource_type": "image"
+          }
+        }
+      },
+      "hash": "Img_Poda_y_Limpieza_eb3d7e50c7",
+      "ext": ".jpg",
+      "mime": "image/jpeg",
+      "size": 113.93,
+      "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783210421/jabes/Img_Poda_y_Limpieza_eb3d7e50c7.jpg",
+      "previewUrl": null,
+      "provider": "cloudinary",
+      "provider_metadata": {
+        "public_id": "jabes/Img_Poda_y_Limpieza_eb3d7e50c7",
+        "resource_type": "image"
+      },
+      "createdAt": "2026-07-05T00:13:42.804Z",
+      "updatedAt": "2026-07-05T00:13:42.804Z",
+      "publishedAt": "2026-07-05T00:13:42.805Z"
+    },
+    "seo": null
+  },
+  {
+    "id": 83,
+    "documentId": "p9ym3ml3sn201h8hdh99i1zr",
+    "title": "Podado de árboles",
+    "slug": "podado-de-arboles",
+    "description": "Servicio profesional de poda y mantenimiento de árboles",
+    "icon": "SiGumtree",
+    "active": true,
+    "order": 6,
+    "featured": false,
+    "createdAt": "2026-06-13T20:31:53.327Z",
+    "updatedAt": "2026-07-05T00:14:43.736Z",
+    "publishedAt": "2026-07-05T00:14:43.748Z",
+    "image": {
+      "id": 70,
+      "documentId": "pzo2yapk3pbdfp9z5crx9msu",
+      "name": "Img Paisajismo.jpg",
+      "alternativeText": null,
+      "caption": null,
+      "focalPoint": null,
+      "width": 1884,
+      "height": 780,
+      "formats": {
+        "thumbnail": {
+          "ext": ".jpg",
+          "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783210479/jabes/thumbnail_Img_Paisajismo_008e3bd918.jpg",
+          "hash": "thumbnail_Img_Paisajismo_008e3bd918",
+          "mime": "image/jpeg",
+          "name": "thumbnail_Img Paisajismo.jpg",
+          "path": null,
+          "size": 7.13,
+          "width": 245,
+          "height": 101,
+          "sizeInBytes": 7132,
+          "provider_metadata": {
+            "public_id": "jabes/thumbnail_Img_Paisajismo_008e3bd918",
+            "resource_type": "image"
+          }
+        }
+      },
+      "hash": "Img_Paisajismo_008e3bd918",
+      "ext": ".jpg",
+      "mime": "image/jpeg",
+      "size": 175.21,
+      "url": "https://res.cloudinary.com/gsus-projects/image/upload/v1783210479/jabes/Img_Paisajismo_008e3bd918.jpg",
+      "previewUrl": null,
+      "provider": "cloudinary",
+      "provider_metadata": {
+        "public_id": "jabes/Img_Paisajismo_008e3bd918",
+        "resource_type": "image"
+      },
+      "createdAt": "2026-07-05T00:14:40.332Z",
+      "updatedAt": "2026-07-05T00:14:40.332Z",
+      "publishedAt": "2026-07-05T00:14:40.333Z"
+    },
+    "seo": null
+  }
+]
