@@ -24,7 +24,7 @@ export const Footer = () => {
               {CONTACT_INFO.tagline}
             </p>
             {/* Redes — TODO: mover a CMS (socialLinks) */}
-            <div className="flex items-center gap-3 pt-1">
+            {/* <div className="flex items-center gap-3 pt-1">
               <Link
                 href={CONTACT_INFO.social.facebook}
                 target="_blank"
@@ -43,7 +43,7 @@ export const Footer = () => {
               >
                 <FaInstagram size={15} />
               </Link>
-            </div>
+            </div> */}
           </div>
 
           {/* Navegación */}
