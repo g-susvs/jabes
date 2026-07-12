@@ -1,5 +1,12 @@
 import { environment } from "@/config/env/environment";
 
+/**
+ * Timeout de las peticiones a Supabase. Evita que una petición lenta (p. ej.
+ * un proyecto free "despertando") cuelgue la generación estática en el build
+ * o una request en runtime. Al abortar, la petición cae al respaldo (JSON).
+ */
+const SUPABASE_TIMEOUT_MS = 15000;
+
 interface ISupabaseFetchOptions {
   /** Segundos de caché ISR (solo aplica en server; el navegador lo ignora). */
   revalidate?: number;
@@ -32,6 +39,7 @@ export const supabaseRest = async <T>(
           Authorization: `Bearer ${environment.supabaseAnonKey}`,
           ...(count ? { Prefer: "count=exact" } : {}),
         },
+        signal: AbortSignal.timeout(SUPABASE_TIMEOUT_MS),
         ...(revalidate !== undefined ? { next: { revalidate } } : {}),
       }
     );

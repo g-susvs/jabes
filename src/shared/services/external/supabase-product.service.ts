@@ -138,7 +138,7 @@ export class SupabaseProductService {
 
     const { data } = await supabaseRest<ISupabaseProductRow[]>(
       `products?${parts.join("&")}`,
-      // { revalidate: REVALIDATE_CATALOG_SECONDS }
+      { revalidate: REVALIDATE_CATALOG_SECONDS }
     );
 
     return (data ?? []).map(mapProduct);

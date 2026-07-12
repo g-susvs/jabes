@@ -100,7 +100,7 @@ export class SupabaseServiceService {
 
     const { data } = await supabaseRest<ISupabaseServiceRow[]>(
       `services?${parts.join("&")}`,
-      // { revalidate: REVALIDATE_CATALOG_SECONDS }
+      { revalidate: REVALIDATE_CATALOG_SECONDS }
     );
 
     return (data ?? []).map(mapService);
