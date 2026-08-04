@@ -8,6 +8,7 @@ import { Container } from "@/shared/components/container";
 import { IDetailSection } from "../../interface/product-detail";
 import { IProductDTO } from "@/shared/interfaces/product";
 import { buildWhatsappUrl, IMAGE_NOT_FOUND_URL } from "@/shared/constants";
+import { environment } from "@/config/env/environment";
 import { formatPrice } from "@/libs/format-price";
 import { clsx } from "@/libs/clsx";
 
@@ -101,7 +102,9 @@ export const MainSection = ({ content, product }: IProps) => {
 
         <div className="flex flex-col gap-3 pt-2">
           <Link
-            href={buildWhatsappUrl(`Hola, quiero más información sobre ${product.name}`)}
+            href={buildWhatsappUrl(
+              `Hola, quiero comprar este producto...\n\n*${product.name}*\n*Precio:* ${price ?? "Consultar"}\n*URL:* ${environment.siteUrl}/products/${product.slug}\n\n¡Gracias!`,
+            )}
             target="_blank"
             rel="noopener noreferrer"
             className="flex w-full items-center justify-center gap-3 rounded-full bg-whatsapp py-3.5 font-semibold text-white transition-colors hover:bg-accent-dark"
