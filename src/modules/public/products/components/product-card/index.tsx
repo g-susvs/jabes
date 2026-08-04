@@ -4,7 +4,6 @@ import { IProductCardContent } from "../../interface/products";
 import { IProductDTO } from "@/shared/interfaces/product";
 import { IMAGE_NOT_FOUND_URL } from "@/shared/constants";
 import { formatPrice } from "@/libs/format-price";
-import { IoArrowForward } from "react-icons/io5";
 
 interface IProps {
   product: IProductDTO;
@@ -16,7 +15,10 @@ export const ProductCard = ({ product, content }: IProps) => {
   const price = formatPrice(product.price);
 
   return (
-    <article className="group flex flex-col overflow-hidden rounded-2xl border border-line bg-card transition-shadow hover:shadow-lg">
+    <Link
+      href={`/products/${product.slug}`}
+      className="group flex flex-col overflow-hidden rounded-2xl border border-line bg-card transition-shadow hover:shadow-lg"
+    >
       <figure className="h-[230px] w-full overflow-hidden">
         <Image
           width={400}
@@ -26,27 +28,22 @@ export const ProductCard = ({ product, content }: IProps) => {
           className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
         />
       </figure>
-      <div className="flex flex-1 flex-col gap-2 p-5">
+      <div className="flex flex-1 flex-col gap-2 py-4 px-2 xs:p-5">
         <span className="w-max rounded-full bg-primary-200 px-3 py-0.5 text-xs font-semibold text-primary-700">
           {product.category.name}
         </span>
-        <h3 className="heading-6 font-bold text-ink">{product.name}</h3>
-        <p className="paragraph-lg line-clamp-2 flex-1 text-muted">
-          {product.description}
-        </p>
-        {price && (
-          <p className="heading-6 font-bold text-accent-dark">{price}</p>
-        )}
-        <Link
-          href={`/products/${product.slug}`}
-          className="mt-1 inline-flex w-max items-center gap-1 font-semibold text-accent-dark transition-colors hover:text-accent-deep"
-        >
-          <span>
-            {content.label} 
-          </span>
-          <IoArrowForward />
-        </Link>
+        <div className="px-2 xs:px-0">
+          <h3 className="line-clamp-2 font-bold text-ink text-sm sm:text-lg">
+            {product.name}
+          </h3>
+          <p className="paragraph-lg hidden line-clamp-2 flex-1 text-muted md:block">
+            {product.description}
+          </p>
+          {price && (
+            <p className="heading-6 font-bold text-accent-dark">{price}</p>
+          )}
+        </div>
       </div>
-    </article>
+    </Link>
   );
 };
