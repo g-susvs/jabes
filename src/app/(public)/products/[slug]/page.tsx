@@ -26,12 +26,19 @@ export async function generateMetadata({
     };
   }
 
-  // Prioridad: SEO propio del producto (CMS) → datos del propio producto.
-  return buildMetadata({
+  const metadata = buildMetadata({
     seo: product.seo,
     path: `/products/${product.slug}`,
     fallback: buildProductDetailFallback(product.name, product.description),
   });
+
+  if (product.imgUrl && metadata) {
+    const ogImage = { url: product.imgUrl, alt: product.name };
+    
+    if(metadata.openGraph) metadata.openGraph.images = [ogImage];
+  }
+
+  return metadata;
 }
 
 export default async function ProductDetail({
