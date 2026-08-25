@@ -391,7 +391,38 @@
           "publishedAt": "2026-06-13T23:20:53.895Z"
         }
       }
-    ]
+    ],
+    "faqTitle": "Preguntas Frecuentes",
+    "faqDescription": "Resolvemos las dudas más comunes sobre nuestros servicios y productos.",
+    "faqItems": [
+      {
+        "question": "¿Cuánto tarda el diseño e instalación de un jardín?",
+        "answer": "Depende del tamaño y complejidad del proyecto. Un jardín residencial pequeño puede tomar 1-2 semanas, mientras que proyectos más grandes pueden llevar 3-4 semanas. Siempre te damos un cronograma claro antes de iniciar."
+      },
+      {
+        "question": "¿Ofrecen garantía en las plantas?",
+        "answer": "Sí, todas nuestras plantas tienen garantía de 30 días contra defectos de salud. Si la planta muestra problemas de salud dentro de ese periodo, la reemplazamos sin costo. Recuerda que las plantas requieren cuidados específicos de riego y luz."
+      },
+      {
+        "question": "¿Zona de cobertura para servicios de jardinería?",
+        "answer": "Brindamos servicios de mantenimiento y diseño en toda el área metropolitana. Para zonas fuera de la ciudad principal, consultanos por disponibilidad y costos de traslado."
+      },
+      {
+        "question": "¿Puedo comprar plantas en línea y recogerlas en el vivero?",
+        "answer": "Sí, puedes realizar tu pedido por WhatsApp y coordinar la fecha y hora de recolección en nuestro vivero. De esta forma garantizamos que tu producto esté listo cuando llegues."
+      },
+      {
+        "question": "¿Qué incluye el servicio de mantenimiento?",
+        "answer": "El mantenimiento incluye corte de césped, podado de arbustos, control de malezas, fumigación preventiva y limpieza general. Puede contratarse de forma semanal, quincenal o mensual según tus necesidades."
+      },
+      {
+        "question": "¿Cómo puedo pagar?",
+        "answer": "Aceptamos efectivo, transferencias bancarias y pagos con billeteras digitales como Yape y Plin. Para servicios de diseño, solicitamos un anticipo del 50% al iniciar el proyecto."
+      }
+    ],
+    "ctaTitle": "¿Listo para transformar tu jardín?",
+    "ctaDescription": "Escribinos por WhatsApp y te asesoramos sin compromiso. ¡Hagamos realidad tu jardín ideal!",
+    "ctaWhatsappMessage": "Hola, quiero información para transformar mi jardín"
   },
   "meta": {}
 }

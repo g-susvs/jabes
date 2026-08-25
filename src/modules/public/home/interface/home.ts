@@ -4,6 +4,8 @@ export interface IHomePageContent {
   hero: IHeroSection;
   ourServices: IOurServicesSection;
   ourProducts: IOurProductsSection;
+  faq: IFaqSection;
+  cta: ICtaSection;
   seo?: IStrapiSeo | null;
 }
 
@@ -57,4 +59,19 @@ interface IService {
     src: string;
     alt: string;
   };
+}
+
+export interface IFaqSection {
+  title: string;
+  description?: string;
+  items: {
+    question: string;
+    answer: string;
+  }[];
+}
+
+export interface ICtaSection {
+  title: string;
+  description?: string;
+  whatsappMessage?: string;
 }

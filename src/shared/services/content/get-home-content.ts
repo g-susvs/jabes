@@ -50,6 +50,12 @@ export interface IStrapiHomePage {
   productCardActionLabel?: string | null;
   productsButton?: IStrapiButton | null;
   featuredProducts?: IStrapiHomeProduct[] | null;
+  faqTitle?: string | null;
+  faqDescription?: string | null;
+  faqItems?: { question?: string | null; answer?: string | null }[] | null;
+  ctaTitle?: string | null;
+  ctaDescription?: string | null;
+  ctaWhatsappMessage?: string | null;
   seo?: IStrapiSeo | null;
 }
 
@@ -115,6 +121,21 @@ export const mapHomeContent = (data: IStrapiHomePage): IHomePageContent => {
         link: data.productsButton?.url ?? "",
       },
       products,
+    },
+    faq: {
+      title: data.faqTitle ?? "Preguntas Frecuentes",
+      description: data.faqDescription ?? undefined,
+      items: data.faqItems?.length
+        ? data.faqItems.map((item) => ({
+            question: item.question ?? "",
+            answer: item.answer ?? "",
+          }))
+        : [],
+    },
+    cta: {
+      title: data.ctaTitle ?? "¿Listo para transformar tu jardín?",
+      description: data.ctaDescription ?? undefined,
+      whatsappMessage: data.ctaWhatsappMessage ?? undefined,
     },
     seo: data.seo ?? null,
   };
