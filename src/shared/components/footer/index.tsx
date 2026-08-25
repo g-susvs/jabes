@@ -12,6 +12,12 @@ const navLinks = [
   { label: "Productos", href: "/products" },
 ];
 
+const legalLinks = [
+  { label: "Política de Privacidad", href: "/legal/privacy" },
+  { label: "Términos y Condiciones", href: "/legal/terms" },
+  { label: "Deslinde de Responsabilidad", href: "/legal/disclaimer" },
+];
+
 export const Footer = () => {
   return (
     <footer className="bg-ink text-white/70">
@@ -52,6 +58,22 @@ export const Footer = () => {
               Navegación
             </h3>
             {navLinks.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="paragraph-lg w-max text-white/70 transition-colors hover:text-accent"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+
+          {/* Legal */}
+          <nav className="flex flex-col gap-3">
+            <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-white/40">
+              Legal
+            </h3>
+            {legalLinks.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
