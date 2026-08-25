@@ -8,6 +8,7 @@ import { IMainSection } from "../../interface/products";
 import { buildProductsHref } from "../../helpers";
 import { ProductList } from "../product-list";
 import { Paginator } from "../paginator";
+import { SearchForm } from "../search-form";
 
 interface IProps {
   content: IMainSection;
@@ -16,6 +17,8 @@ interface IProps {
   pagination: IPagination;
   /** Slug de la categoría activa; vacío = "Todas". */
   selectedCategory?: string;
+  /** Texto de búsqueda activo. */
+  searchQuery?: string;
 }
 
 export const MainSection = ({
@@ -24,6 +27,7 @@ export const MainSection = ({
   categories,
   pagination,
   selectedCategory,
+  searchQuery,
 }: IProps) => {
   const allLabel =
     content.categories.find((c) => c.value === "all")?.label ?? "Todas";
@@ -36,8 +40,8 @@ export const MainSection = ({
   const showEmptyState = products.length === 0;
 
   return (
-    <Container className="px-4 py-12 sm:py-16">
-      <section className="flex flex-col items-center gap-6">
+    <Container className="px-4 py-8 sm:py-16">
+      <section className="flex flex-col items-center gap-4 sm:gap-6">
         <h2 className="heading-3 text-center font-bold text-ink">
           {content.title}
         </h2>
@@ -48,7 +52,7 @@ export const MainSection = ({
             return (
               <Link
                 key={chip.value || "all"}
-                href={buildProductsHref(1, chip.value)}
+                href={buildProductsHref(1, chip.value, searchQuery)}
                 aria-current={isActive ? "true" : undefined}
                 className={clsx(
                   "w-max text-nowrap rounded-full px-4 py-1.5 text-sm font-semibold transition-colors",
@@ -62,6 +66,8 @@ export const MainSection = ({
             );
           })}
         </div>
+
+        <SearchForm searchQuery={searchQuery} category={selectedCategory} />
       </section>
 
       {showEmptyState ? (
@@ -78,7 +84,7 @@ export const MainSection = ({
           <ProductList products={products} content={content.cardContent} />
           <Paginator
             pagination={pagination}
-            buildHref={(p) => buildProductsHref(p, selectedCategory)}
+            buildHref={(p) => buildProductsHref(p, selectedCategory, searchQuery)}
           />
         </>
       )}

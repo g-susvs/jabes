@@ -7,7 +7,7 @@ import { Providers } from "../providers";
 // TODO: mover a CMS (Site Settings / SEO global)
 export const metadata: Metadata = {
   title: {
-    default: "Jabes — Vivero y Jardinería",
+    default: "Jabes - Vivero y Jardinería",
     template: "%s | Jabes",
   },
   description:

@@ -13,6 +13,7 @@ interface IGetPagedParams {
   page?: number;
   size?: number;
   categorySlug?: string;
+  search?: string;
 }
 
 // ── Supabase row types ─────────────────────────────────
@@ -165,6 +166,10 @@ export class SupabaseProductService {
 
     if (params?.categorySlug) {
       parts.push(`category.slug=eq.${encodeURIComponent(params.categorySlug)}`);
+    }
+
+    if (params?.search) {
+      parts.push(`name=ilike.*${encodeURIComponent(params.search)}*`);
     }
 
     const { data, total } = await supabaseRest<ISupabaseProductRow[]>(

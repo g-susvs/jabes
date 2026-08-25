@@ -11,6 +11,7 @@ interface IProps {
   categories: ICategory[];
   pagination: IPagination;
   selectedCategory?: string;
+  searchQuery?: string;
 }
 
 export const ProductsPage = ({
@@ -19,6 +20,7 @@ export const ProductsPage = ({
   categories,
   pagination,
   selectedCategory,
+  searchQuery,
 }: IProps) => {
   return (
     <>
@@ -30,6 +32,7 @@ export const ProductsPage = ({
         categories={categories}
         pagination={pagination}
         selectedCategory={selectedCategory}
+        searchQuery={searchQuery}
       />
     </>
   );

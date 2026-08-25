@@ -8,19 +8,19 @@ import { CategoryService } from "@/shared/services/category.service";
 import { buildProductsHref, parseSearchParams } from "@/modules/public/products/helpers";
 import { PRODUCTS_PAGE_SIZE } from "@/shared/constants";
 
-type SearchParams = Promise<{ page?: string; category?: string }>;
+type SearchParams = Promise<{ page?: string; category?: string; search?: string }>;
 
 export async function generateMetadata({
   searchParams,
 }: {
   searchParams: SearchParams;
 }): Promise<Metadata> {
-  const { page, category } = parseSearchParams(await searchParams);
+  const { page, category, search } = parseSearchParams(await searchParams);
   const content = await getProductsContent();
 
   return buildMetadata({
     seo: content?.seo,
-    path: buildProductsHref(page, category),
+    path: buildProductsHref(page, category, search),
     fallback: SEO_FALLBACK.products,
   });
 }
@@ -30,7 +30,7 @@ export default async function Products({
 }: {
   searchParams: SearchParams;
 }) {
-  const { page, category } = parseSearchParams(await searchParams);
+  const { page, category, search } = parseSearchParams(await searchParams);
 
   const [content, categories, paged] = await Promise.all([
     getProductsContent(),
@@ -39,6 +39,7 @@ export default async function Products({
       page,
       size: PRODUCTS_PAGE_SIZE,
       categorySlug: category,
+      search,
     }),
   ]);
 
@@ -51,6 +52,7 @@ export default async function Products({
       categories={categories}
       pagination={paged.pagination}
       selectedCategory={category}
+      searchQuery={search}
     />
   );
 }
