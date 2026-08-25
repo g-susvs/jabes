@@ -26,7 +26,7 @@ export const OurServicesSection = ({ content }: IProps) => {
           )}
         </div>
 
-        <div className="mt-12 flex flex-wrap justify-center gap-8">
+        <div className="mt-12 flex flex-wrap justify-center gap-6 sm:gap-8">
           {content.services.map((service, index) => {
             const serviceImage = service.img.src || IMAGE_NOT_FOUND_URL;
             return (

@@ -11,7 +11,7 @@ interface IProps {
 
 export const ProductList = ({ content }: IProps) => {
   return (
-    <div className="mt-12 flex flex-wrap justify-center gap-8">
+    <div className="mt-12 flex flex-wrap justify-center gap-6 sm:gap-8">
       {content.products.map((product) => {
         const productImage = product.imageUrl || IMAGE_NOT_FOUND_URL;
         const price = formatPrice(product.price);
